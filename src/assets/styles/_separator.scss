@@ -1,0 +1,653 @@
+@use "media-queries" as *;
+// separator
+
+.separator-1 {
+  margin: 1rem 20rem;
+  height: 6px;
+  border-radius: 5px;
+  width: 80rem;
+  background-color: var(--green_01);
+  animation-name: chargement;
+  animation-duration: 1.8s;
+  @keyframes chargement {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
+.separator-2 {
+  position: fixed;
+  top: 10rem;
+  margin: 0;
+  background: var(--green_02);
+  height: 2px;
+  width: 25rem;
+  grid-area: separator-2;
+  animation-name: separator-2;
+  animation-duration: 1.8s;
+  z-index: 2;
+  @keyframes separator-2 {
+    from {
+      transform: translateY(15rem);
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.separator-3 {
+  position: fixed;
+  top: 10rem;
+  left: 25rem;
+  margin: 0;
+  background: var(--orange_01);
+  height: 2px;
+  width: 100%;
+  grid-area: separator-3;
+  animation-name: separator-3;
+  animation-duration: 1.8s;
+  z-index: 2;
+  @keyframes separator-3 {
+    from {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.separator-4 {
+  height: 4rem;
+  width: 1rem;
+  // border-radius: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    top: 0;
+    transition-delay: 0.8s;
+  }
+}
+.separator-4::before {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 0.6s;
+  z-index: -1;
+}
+.separator-6 {
+  height: 4rem;
+  width: 1rem;
+
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1.4s;
+    top: 0;
+  }
+}
+.separator-6::before {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 0.6s;
+  z-index: -1;
+}
+.separator-9 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1.9s;
+    left: 0;
+  }
+}
+.separator-9::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  z-index: -1;
+}
+
+.separator-11 {
+  height: 4rem;
+  width: 1rem;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 2s;
+    top: 0;
+  }
+}
+
+.separator-11::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -4rem;
+  background: var(--blue);
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+.separator-14 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1.9s;
+    right: 0;
+  }
+}
+.separator-14::before {
+  content: "";
+  position: absolute;
+  right: -2rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  z-index: -1;
+}
+.separator-15 {
+  height: 4rem;
+  width: 1rem;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1.4s;
+    top: 0;
+  }
+}
+.separator-15::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -4rem;
+  background: var(--blue);
+  transition: all 0.6s;
+  z-index: -1;
+}
+.separator-16 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1s;
+    top: 0;
+  }
+}
+.separator-16::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+  z-index: -1;
+}
+.separator-17 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1s;
+    top: 0;
+  }
+}
+.separator-17::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+  z-index: -1;
+}
+.separator-18 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1s;
+    top: 0;
+  }
+}
+.separator-18::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+  z-index: -1;
+}
+.separator-19 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &.active::before {
+    transition-delay: 1s;
+    top: 0;
+  }
+}
+.separator-19::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  background: var(--blue);
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.separator-20 {
+  margin-top: 4rem;
+  height: 6px;
+  width: 55rem;
+  border-radius: 5px;
+  background: var(--green_01);
+  animation-name: chargement;
+  animation-duration: 1.8s;
+  @keyframes chargement {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// separator-container
+
+.separator-container-2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+// separator-ligne
+
+.content-separator-ligne {
+  grid-area: separator-ligne;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  margin: 0 0 0 0;
+}
+
+.container-separator-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+
+  .separator-ligne-1 {
+    margin: 0;
+    height: 4rem;
+    width: 50%;
+    position: relative;
+    &.active::before {
+      width: 1%;
+      border-radius: 3rem;
+      margin-left: 1rem;
+    }
+  }
+  .separator-ligne-1::before {
+    content: "";
+    position: absolute;
+    background: var(--green_01);
+    // background: #d6d6d6;
+    height: 4rem;
+    width: 100%;
+    transition: all 1s;
+  }
+  .separator-ligne-2 {
+    margin: 0;
+    height: 4rem;
+    width: 2rem;
+    position: relative;
+    &.active::before {
+      width: 1rem;
+      border-radius: 3rem;
+      margin-right: 1rem;
+    }
+  }
+  .separator-ligne-2::before {
+    content: "";
+    position: absolute;
+    background: var(--green_01);
+    // background: #d6d6d6;
+    height: 4rem;
+    width: 106rem;
+    @include xxl {
+      width: 141.2rem;
+    }
+    right: 0;
+    transition: all 1s;
+  }
+}
+
+// .separator-4 {
+//   width: 0.6rem;
+//   height: 5rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     top: 0;
+//     transition-delay: 1s;
+//   }
+// }
+// .separator-4::before {
+//   content: "";
+//   position: absolute;
+//   top: -5rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 0.4s;
+//   z-index: -1;
+// }
+
+// .separator-5 {
+//   width: 45.6rem;
+//   height: 0.6rem;
+//   margin-top: 1.4rem;
+//   border-radius: 3rem 0 0 0;
+//   transform: rotate(-9deg);
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.6s;
+//     right: 0;
+//   }
+// }
+// .separator-5::before {
+//   content: "";
+//   position: absolute;
+//   right: -48rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+
+// .separator-6 {
+//   height: 5rem;
+//   width: 0.6rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1s;
+//     top: 0;
+//   }
+// }
+// .separator-6::before {
+//   content: "";
+//   position: absolute;
+//   top: -5rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-7 {
+//   width: 45.6rem;
+//   height: 0.6rem;
+//   margin-top: 1.4rem;
+//   border-radius: 0 3rem 0 0;
+//   transform: rotate(9deg);
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.6s;
+//     right: 0;
+//   }
+// }
+// .separator-7::before {
+//   content: "";
+//   position: absolute;
+//   right: 48rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-8 {
+//   border-radius: 3rem 0 0;
+//   height: 6rem;
+//   width: 0.6rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.4s;
+//     top: 0;
+//   }
+// }
+// .separator-8::before {
+//   content: "";
+//   position: absolute;
+//   top: -6rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-9 {
+//   height: 6rem;
+//   width: 0.6rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.2s;
+//     top: 0;
+//   }
+// }
+// .separator-9::before {
+//   content: "";
+//   position: absolute;
+//   top: -6rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-10 {
+//   width: 36rem;
+//   height: 0.6rem;
+//   margin-top: 5rem;
+//   transform: rotate(20deg);
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.4s;
+//     right: 0;
+//   }
+// }
+// .separator-10::before {
+//   content: "";
+//   position: absolute;
+//   right: 36rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-11 {
+//   height: 10rem;
+//   width: 0.6rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.4s;
+//     top: 0;
+//   }
+// }
+// .separator-11::before {
+//   content: "";
+//   position: absolute;
+//   top: -11rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-12 {
+//   width: 36rem;
+//   height: 0.6rem;
+//   margin-top: 5rem;
+//   transform: rotate(-20deg);
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.2s;
+//     right: 0;
+//   }
+// }
+// .separator-12::before {
+//   content: "";
+//   position: absolute;
+//   right: -36rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-13 {
+//   border-radius: 0 3rem 0 0;
+//   height: 6rem;
+//   width: 0.6rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1.4s;
+//     top: 0;
+//   }
+// }
+// .separator-13::before {
+//   content: "";
+//   position: absolute;
+//   top: -6rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+
+// .separator-14 {
+//   width: 0.6rem;
+//   height: 5rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 0.4s;
+//     top: 0;
+//   }
+// }
+// .separator-14::before {
+//   content: "";
+//   position: absolute;
+//   top: -50rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }
+// .separator-15 {
+//   width: 0.6rem;
+//   height: 5rem;
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+//   &.active::before {
+//     transition-delay: 1s;
+//     top: 0;
+//   }
+// }
+// .separator-15::before {
+//   content: "";
+//   position: absolute;
+//   top: -50rem;
+//   background: var(--blue);
+//   height: 100%;
+//   width: 100%;
+//   transition: all 1s;
+//   z-index: -1;
+// }

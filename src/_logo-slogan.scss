@@ -1,0 +1,71 @@
+@use "media-queries" as *;
+
+// logo & slogan
+
+.logo-content {
+  grid-area: slogan-container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 1fr;
+  height: 70rem;
+  @include xxl {
+    height: 121rem;
+  }
+}
+.logo-container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  animation-name: logo-2;
+  animation-duration: 1.8s;
+  @keyframes logo-2 {
+    from {
+      transform: scaley(0);
+    }
+    to {
+      transform: scaley(1);
+    }
+  }
+  .logo-2 {
+    height: 25rem;
+    width: 60rem;
+  }
+}
+.slogan-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  min-width: 30rem;
+  border-radius: 0.8rem;
+  animation-name: apparition;
+}
+.h2 {
+  margin-left: 2rem;
+  margin-top: 3rem;
+  color: var(--blue);
+  font-family: var(--font-family-strasua);
+  font-weight: 200;
+  font-size: 3.1rem;
+  letter-spacing: 0.5rem;
+  animation-name: h2;
+  animation-duration: 1.8s;
+
+  @keyframes h2 {
+    0% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+div {
+  display: flex;
+}
+div {
+  margin: 0 1rem;
+}

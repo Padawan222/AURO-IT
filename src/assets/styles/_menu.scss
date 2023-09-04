@@ -1,0 +1,73 @@
+.content-menu {
+  position: sticky;
+  top: 10.2rem;
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 5rem;
+  background: #eee;
+  z-index: 1;
+  animation-name: content-menu;
+  animation-duration: 3s;
+  margin: 0;
+  @keyframes content-menu {
+    0% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.menu-container {
+  margin: 0 1rem;
+  height: 4rem;
+}
+
+.menu-container-general {
+  position: absolute;
+  top: 0;
+  display: none;
+  margin: 0;
+}
+
+.menu-content-general {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 4rem;
+  width: 32rem;
+  background: linear-gradient(var(--green_01), var(--blue));
+  border-radius: 3rem;
+  margin: 0;
+  cursor: pointer;
+  &:hover > .menu-container-general {
+    display: flex;
+  }
+  &:hover {
+    background: none;
+  }
+  &:hover > h3 {
+    display: none;
+  }
+  h3 {
+    font-family: var(--font-family-strasua);
+    letter-spacing: 0.2rem;
+    font-weight: 200;
+    color: white;
+  }
+}
+
+// divers - menu
+
+.fa-solid {
+  font-size: 2.5rem;
+  color: var(--orange_02);
+}

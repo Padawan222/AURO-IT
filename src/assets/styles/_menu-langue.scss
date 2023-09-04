@@ -1,0 +1,75 @@
+.leader {
+  color: var(--orange_01);
+}
+
+#menu-langue,
+#menu-langue ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+#menu-langue li {
+  display: inline-block;
+  position: relative;
+  border-radius: 8px 8px 0 0;
+}
+#menu-langue ul li {
+  display: inherit;
+  border-radius: 0;
+}
+#menu-langue ul li:hover {
+  border-radius: 0;
+}
+#menu-langue ul li:last-child {
+  border-radius: 0 0 8px 8px;
+}
+#menu-langue ul {
+  position: absolute;
+  z-index: 1000;
+  max-height: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  -moz-transition: 0.7s all 0.2s;
+  -webkit-transition: 0.5s all 0.2s;
+  transition: 0.5s all 0.2s;
+}
+#menu-langue li:hover ul {
+  max-height: 15em;
+}
+/* background des liens menus */
+
+#menu-langue li:last-child {
+  // background: var(--orange_01);
+}
+/* background des liens sous menus */
+#menu-langue li:last-child li {
+  background: white;
+}
+/* background des liens menus et sous menus au survol */
+#menu-langue li:last-child:hover {
+  background: white;
+}
+#menu-langue li:last-child li:hover {
+  transition: all 0.4s;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+/* les a href */
+#menu-langue a {
+  width: 15rem;
+  text-decoration: none;
+  display: block;
+  padding: 8px 32px;
+  font-family: arial;
+}
+#menu-langue ul a {
+  padding: 8px 0;
+  color: var(--orange_01);
+}
+#menu-langue li:hover li a {
+  color: var(--orange_01);
+  text-transform: inherit;
+}

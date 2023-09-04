@@ -1,0 +1,89 @@
+@use "media-queries" as *;
+.container {
+  display: grid;
+  background: #eee;
+  grid:
+    "img header" 10rem
+    "separator-2 separator-3" auto
+    "slogan-container slogan-container" auto
+    "menu menu" auto
+    "general general" auto
+    "mail mail" auto
+    "footer footer" auto
+    / 25rem auto;
+}
+.cercle-content {
+  margin: 0 0 0 0;
+  height: 35rem;
+  grid-area: slogan-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cerlce-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18rem;
+  width: 110rem;
+  border-radius: 3rem;
+  animation-name: logo-2;
+  animation-duration: 1.8s;
+  @keyframes logo-2 {
+    from {
+      transform: scaley(0);
+    }
+    to {
+      transform: scaley(1);
+    }
+  }
+  p {
+    margin-top: 5rem;
+    font-weight: 400;
+    font-size: 3.2rem;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-family: var(--font-family-strasua);
+    color: var(--orange_01);
+  }
+}
+.img-content {
+  margin-right: 1rem;
+  height: 18rem;
+  width: 18rem;
+}
+
+.general-content {
+  grid-area: general;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  .text-content {
+    margin: 6rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    height: 30rem;
+  }
+}
+.separator-29 {
+  margin-top: 4rem;
+  height: 6px;
+  width: 95rem;
+  border-radius: 5px;
+  background: var(--green_01);
+  animation-name: chargement;
+  animation-duration: 1.8s;
+  @keyframes chargement {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}

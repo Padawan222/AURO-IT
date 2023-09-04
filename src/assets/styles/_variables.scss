@@ -1,0 +1,19 @@
+:root {
+  // font-family
+  --font-family-strasua: "strasua";
+  --font-family-title: "Cinzel Decorative", cursive;
+  --font-family: "Nunito Sans", sans-serif;
+
+  // color
+  --text: #333;
+  --blue: #6eb2bd;
+  --orange_01: #df5b13;
+  --orange_02: #fd8342;
+  --green_01: #7ccbab;
+  --green_02: #11a67e;
+  --background: #d6d6d6;
+
+  // box-shadow
+  --box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
