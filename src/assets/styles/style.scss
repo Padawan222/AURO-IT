@@ -21,7 +21,7 @@ header {
   background: white;
   animation-name: header;
   animation-duration: 1.8s;
-  min-width: 100%;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -32,6 +32,10 @@ header {
     to {
     }
   }
+  @include xs {
+    display: flex;
+    position: none;
+  }
 }
 .h1 {
   margin-top: 2rem;
@@ -41,6 +45,24 @@ header {
   font-size: 3.1rem;
   letter-spacing: 0.2rem;
   margin-left: 2rem;
+  @include xs {
+    display: none;
+  }
+}
+.h1-xs {
+  grid-area: h1-xs;
+  display: none;
+  margin-top: 2rem;
+  color: var(--green_02);
+  font-family: var(--font-family-strasua);
+  font-weight: 200;
+  font-size: 2.1rem;
+  letter-spacing: 0.2rem;
+
+  @include xs {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 // logo header
@@ -48,7 +70,7 @@ header {
 .a-img {
   grid-area: img;
   height: 10rem;
-  min-width: 25rem;
+  width: 25rem;
   animation-name: logo-1;
   animation-duration: 1.8s;
   position: sticky;
@@ -60,6 +82,9 @@ header {
     }
     to {
     }
+  }
+  @include xs {
+    width: 24rem;
   }
 }
 
@@ -78,6 +103,9 @@ header {
     font-size: 2rem;
     letter-spacing: 0.2rem;
     // text-decoration: underline;
+  }
+  @include xs {
+    display: none;
   }
 }
 

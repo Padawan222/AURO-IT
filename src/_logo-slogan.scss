@@ -13,6 +13,9 @@
   @include xxl {
     height: 121rem;
   }
+  @include xs {
+    display: none;
+  }
 }
 .logo-container {
   margin-top: 1rem;

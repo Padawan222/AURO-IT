@@ -12,6 +12,18 @@
     "mail mail" auto
     "footer footer" auto
     / 25rem auto;
+  @include xs {
+    grid:
+      "img header" 10rem
+      "h1-xs h1-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22.5rem auto;
+  }
 }
 
 .general-content {
