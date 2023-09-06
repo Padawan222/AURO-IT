@@ -373,39 +373,39 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// separator-ligne-1
+// // separator-ligne-1
 
-const separatorLigne1 = document.querySelector(".separator-ligne-1");
+// const separatorLigne1 = document.querySelector(".separator-ligne-1");
 
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
+// window.addEventListener("scroll", () => {
+//   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = separatorLigne1.getBoundingClientRect().top;
+//   const topElementToTopViewport = separatorLigne1.getBoundingClientRect().top;
 
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
-  ) {
-    separatorLigne1.classList.add("active");
-  }
-});
+//   if (
+//     scrollTop >
+//     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
+//   ) {
+//     separatorLigne1.classList.add("active");
+//   }
+// });
 
-// separator-ligne-2
+// // separator-ligne-2
 
-const separatorLigne2 = document.querySelector(".separator-ligne-2");
+// const separatorLigne2 = document.querySelector(".separator-ligne-2");
 
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
+// window.addEventListener("scroll", () => {
+//   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = separatorLigne2.getBoundingClientRect().top;
+//   const topElementToTopViewport = separatorLigne2.getBoundingClientRect().top;
 
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
-  ) {
-    separatorLigne2.classList.add("active");
-  }
-});
+//   if (
+//     scrollTop >
+//     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
+//   ) {
+//     separatorLigne2.classList.add("active");
+//   }
+// });
 
 // mail-content-1
 

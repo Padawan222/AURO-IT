@@ -33,7 +33,7 @@
   margin: 0;
 
   .text-content-1 {
-    margin: 5rem 0 0 0;
+    margin: 4rem 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@
   .sous-titre-1 {
     display: flex;
     justify-content: center;
-    margin: 5.5rem 2rem 2rem 2rem;
+    margin: 4rem 2rem 2rem 2rem;
     width: 30rem;
     border-radius: 3rem;
     color: var(--orange_01);
@@ -497,13 +497,12 @@
   background: var(--green_01);
   color: white;
   border-radius: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   position: relative;
   right: -156rem;
   @include xxl {
     right: -192rem;
   }
-  margin-bottom: 10rem;
   &.active {
     right: 0;
     transition: all 1.8s;
