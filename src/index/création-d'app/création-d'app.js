@@ -323,7 +323,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
   ) {
     text13.classList.add("active");
   }

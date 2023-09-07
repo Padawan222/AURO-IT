@@ -286,7 +286,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
   ) {
     textContainer20.classList.add("active");
   }
@@ -579,7 +579,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
   ) {
     text21.classList.add("active");
   }

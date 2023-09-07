@@ -126,6 +126,9 @@ header {
   width: calc(50% - 10rem);
   margin: 0;
   transform: translateX(-96rem);
+  @include xxl {
+    transform: translateX(-126rem);
+  }
   transition: all 1s;
   border-radius: 0 3rem 3rem 0;
   z-index: 0;
@@ -140,6 +143,9 @@ header {
   width: calc(50% - 10rem);
   margin: 0;
   transform: translateX(96rem);
+  @include xxl {
+    transform: translateX(126rem);
+  }
   transition: all 1s;
   border-radius: 3rem 0 0 3rem;
   z-index: 0;

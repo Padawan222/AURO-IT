@@ -108,6 +108,9 @@
     content: "";
     position: absolute;
     left: -170rem;
+    @include xxl {
+      left: -200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -128,6 +131,9 @@
     content: "";
     position: absolute;
     left: 170rem;
+    @include xxl {
+      left: 200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -147,6 +153,9 @@
     content: "";
     position: absolute;
     left: -170rem;
+    @include xxl {
+      left: -200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -166,6 +175,9 @@
     content: "";
     position: absolute;
     left: 170rem;
+    @include xxl {
+      left: 200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -185,6 +197,9 @@
     content: "";
     position: absolute;
     left: -170rem;
+    @include xxl {
+      left: -200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -204,6 +219,9 @@
     content: "";
     position: absolute;
     left: 170rem;
+    @include xxl {
+      left: 200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -223,6 +241,9 @@
     content: "";
     position: absolute;
     left: -170rem;
+    @include xxl {
+      left: -200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -242,6 +263,9 @@
     content: "";
     position: absolute;
     left: 170rem;
+    @include xxl {
+      left: 200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -261,6 +285,9 @@
     content: "";
     position: absolute;
     left: -170rem;
+    @include xxl {
+      left: -200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
@@ -281,6 +308,9 @@
     content: "";
     position: absolute;
     left: 170rem;
+    @include xxl {
+      left: 200rem;
+    }
     background: var(--green_01);
     width: 100%;
     height: 100%;
