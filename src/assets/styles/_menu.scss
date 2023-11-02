@@ -1,7 +1,6 @@
 @use "media-queries" as *;
 
 // .content-menu {
-
 //   position: sticky;
 //   top: 10.2rem;
 //   grid-area: menu;
@@ -129,13 +128,13 @@
     border-radius: 3rem;
     margin: 0;
     cursor: pointer;
-    &:active > .menu-container-general {
+    &:hover > .menu-container-general {
       display: flex;
     }
-    &:active {
+    &:hover {
       background: none;
     }
-    &:active > h3 {
+    &:hover > h3 {
       display: none;
     }
     h3 {
