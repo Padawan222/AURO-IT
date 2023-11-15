@@ -7,27 +7,27 @@ module.exports = {
     // main
 
     main1: path.join(__dirname, "src/index.js"),
-    main2: path.join(__dirname, "src/index/création-d'app/création-d'app.js"),
+    main2: path.join(__dirname, "src/index/creation-d-app/creation-d-app.js"),
     main3: path.join(
       __dirname,
-      "src/index/création-de-site-internet/création-de-site-internet.js"
+      "src/index/creation-de-site-internet/creation-de-site-internet.js"
     ),
     main4: path.join(
       __dirname,
       "src/index/gestions-de-projet-et-de-programme/gestions-de-projet-et-de-programme.js"
     ),
     main5: path.join(__dirname, "src/index/grand-comptes/grand-comptes.js"),
-    main6: path.join(__dirname, "src/index/nos-compétences/nos-compétences.js"),
+    main6: path.join(__dirname, "src/index/nos-competences/nos-competences.js"),
     main7: path.join(__dirname, "src/index/nos-valeurs/nos-valeurs.js"),
-    main8: path.join(__dirname, "src/index/notre-équipe/notre-équipe.js"),
-    main9: path.join(__dirname, "src/index/notre-réseau/notre-réseau.js"),
+    main8: path.join(__dirname, "src/index/notre-equipe/notre-equipe.js"),
+    main9: path.join(__dirname, "src/index/notre-reseau/notre-reseau.js"),
     main10: path.join(
       __dirname,
       "src/index/pme-organisations/pme-organisations.js"
     ),
     main11: path.join(
       __dirname,
-      "src/index/stratégie-digital/stratégie-digital.js"
+      "src/index/strategie-digital/strategie-digital.js"
     ),
     main12: path.join(
       __dirname,
@@ -43,11 +43,11 @@ module.exports = {
     ),
     main15: path.join(
       __dirname,
-      "src/index/j'ai-un-projet-de-migration-de-données/j'ai-un-projet-de-migration-de-données.js"
+      "src/index/j-ai-un-projet-de-migration-de-donnees/j-ai-un-projet-de-migration-de-donnees.js"
     ),
     main16: path.join(
       __dirname,
-      "src/index/j'ai-un-projet-de-transformation-digital/j'ai-un-projet-de-transformation-digital.js"
+      "src/index/j-ai-un-projet-de-transformation-digital/j-ai-un-projet-de-transformation-digital.js"
     ),
     main17: path.join(
       __dirname,
@@ -68,11 +68,11 @@ module.exports = {
     catalan1: path.join(__dirname, "src/catalan/catalan.js"),
     catalan2: path.join(
       __dirname,
-      "src/catalan/cat-création-d'app/cat-création-d'app.js"
+      "src/catalan/cat-creation-d-app/cat-creation-d-app.js"
     ),
     catalan3: path.join(
       __dirname,
-      "src/catalan/cat-création-de-site-internet/cat-création-de-site-internet.js"
+      "src/catalan/cat-creation-de-site-internet/cat-creation-de-site-internet.js"
     ),
     catalan4: path.join(
       __dirname,
@@ -84,7 +84,7 @@ module.exports = {
     ),
     catalan6: path.join(
       __dirname,
-      "src/catalan/cat-nos-compétences/cat-nos-compétences.js"
+      "src/catalan/cat-nos-competences/cat-nos-competences.js"
     ),
     catalan7: path.join(
       __dirname,
@@ -92,11 +92,11 @@ module.exports = {
     ),
     catalan8: path.join(
       __dirname,
-      "src/catalan/cat-notre-équipe/cat-notre-équipe.js"
+      "src/catalan/cat-notre-equipe/cat-notre-equipe.js"
     ),
     catalan9: path.join(
       __dirname,
-      "src/catalan/cat-notre-réseau/cat-notre-réseau.js"
+      "src/catalan/cat-notre-reseau/cat-notre-reseau.js"
     ),
     catalan10: path.join(
       __dirname,
@@ -104,7 +104,7 @@ module.exports = {
     ),
     catalan11: path.join(
       __dirname,
-      "src/catalan/cat-stratégie-digital/cat-stratégie-digital.js"
+      "src/catalan/cat-strategie-digital/cat-strategie-digital.js"
     ),
     catalan12: path.join(
       __dirname,
@@ -120,11 +120,11 @@ module.exports = {
     ),
     catalan15: path.join(
       __dirname,
-      "src/catalan/cat-j'ai-un-projet-de-migration-de-données/cat-j'ai-un-projet-de-migration-de-données.js"
+      "src/catalan/cat-j-ai-un-projet-de-migration-de-donnees/cat-j-ai-un-projet-de-migration-de-donnees.js"
     ),
     catalan16: path.join(
       __dirname,
-      "src/catalan/cat-j'ai-un-projet-de-transformation-digital/cat-j'ai-un-projet-de-transformation-digital.js"
+      "src/catalan/cat-j-ai-un-projet-de-transformation-digital/cat-j-ai-un-projet-de-transformation-digital.js"
     ),
     catalan17: path.join(
       __dirname,
@@ -148,11 +148,11 @@ module.exports = {
     english1: path.join(__dirname, "src/english/english.js"),
     english2: path.join(
       __dirname,
-      "src/english/eng-création-d'app/eng-création-d'app.js"
+      "src/english/eng-creation-d-app/eng-creation-d-app.js"
     ),
     english3: path.join(
       __dirname,
-      "src/english/eng-création-de-site-internet/eng-création-de-site-internet.js"
+      "src/english/eng-creation-de-site-internet/eng-creation-de-site-internet.js"
     ),
     english4: path.join(
       __dirname,
@@ -164,7 +164,7 @@ module.exports = {
     ),
     english6: path.join(
       __dirname,
-      "src/english/eng-nos-compétences/eng-nos-compétences.js"
+      "src/english/eng-nos-competences/eng-nos-competences.js"
     ),
     english7: path.join(
       __dirname,
@@ -172,11 +172,11 @@ module.exports = {
     ),
     english8: path.join(
       __dirname,
-      "src/english/eng-notre-équipe/eng-notre-équipe.js"
+      "src/english/eng-notre-equipe/eng-notre-equipe.js"
     ),
     english9: path.join(
       __dirname,
-      "src/english/eng-notre-réseau/eng-notre-réseau.js"
+      "src/english/eng-notre-reseau/eng-notre-reseau.js"
     ),
     english10: path.join(
       __dirname,
@@ -184,7 +184,7 @@ module.exports = {
     ),
     english11: path.join(
       __dirname,
-      "src/english/eng-stratégie-digital/eng-stratégie-digital.js"
+      "src/english/eng-strategie-digital/eng-strategie-digital.js"
     ),
     english12: path.join(
       __dirname,
@@ -200,11 +200,11 @@ module.exports = {
     ),
     english15: path.join(
       __dirname,
-      "src/english/eng-j'ai-un-projet-de-migration-de-données/eng-j'ai-un-projet-de-migration-de-données.js"
+      "src/english/eng-j-ai-un-projet-de-migration-de-donnees/eng-j-ai-un-projet-de-migration-de-donnees.js"
     ),
     english16: path.join(
       __dirname,
-      "src/english/eng-j'ai-un-projet-de-transformation-digital/eng-j'ai-un-projet-de-transformation-digital.js"
+      "src/english/eng-j-ai-un-projet-de-transformation-digital/eng-j-ai-un-projet-de-transformation-digital.js"
     ),
     english17: path.join(
       __dirname,
@@ -228,11 +228,11 @@ module.exports = {
     spanish1: path.join(__dirname, "src/spanish/spanish.js"),
     spanish2: path.join(
       __dirname,
-      "src/spanish/spa-création-d'app/spa-création-d'app.js"
+      "src/spanish/spa-creation-d-app/spa-creation-d-app.js"
     ),
     spanish3: path.join(
       __dirname,
-      "src/spanish/spa-création-de-site-internet/spa-création-de-site-internet.js"
+      "src/spanish/spa-creation-de-site-internet/spa-creation-de-site-internet.js"
     ),
     spanish4: path.join(
       __dirname,
@@ -244,7 +244,7 @@ module.exports = {
     ),
     spanish6: path.join(
       __dirname,
-      "src/spanish/spa-nos-compétences/spa-nos-compétences.js"
+      "src/spanish/spa-nos-competences/spa-nos-competences.js"
     ),
     spanish7: path.join(
       __dirname,
@@ -252,11 +252,11 @@ module.exports = {
     ),
     spanish8: path.join(
       __dirname,
-      "src/spanish/spa-notre-équipe/spa-notre-équipe.js"
+      "src/spanish/spa-notre-equipe/spa-notre-equipe.js"
     ),
     spanish9: path.join(
       __dirname,
-      "src/spanish/spa-notre-réseau/spa-notre-réseau.js"
+      "src/spanish/spa-notre-reseau/spa-notre-reseau.js"
     ),
     spanish10: path.join(
       __dirname,
@@ -264,7 +264,7 @@ module.exports = {
     ),
     spanish11: path.join(
       __dirname,
-      "src/spanish/spa-stratégie-digital/spa-stratégie-digital.js"
+      "src/spanish/spa-strategie-digital/spa-strategie-digital.js"
     ),
     spanish12: path.join(
       __dirname,
@@ -280,11 +280,11 @@ module.exports = {
     ),
     spanish15: path.join(
       __dirname,
-      "src/spanish/spa-j'ai-un-projet-de-migration-de-données/spa-j'ai-un-projet-de-migration-de-données.js"
+      "src/spanish/spa-j-ai-un-projet-de-migration-de-donnees/spa-j-ai-un-projet-de-migration-de-donnees.js"
     ),
     spanish16: path.join(
       __dirname,
-      "src/spanish/spa-j'ai-un-projet-de-transformation-digital/spa-j'ai-un-projet-de-transformation-digital.js"
+      "src/spanish/spa-j-ai-un-projet-de-transformation-digital/spa-j-ai-un-projet-de-transformation-digital.js"
     ),
     spanish17: path.join(
       __dirname,
@@ -353,14 +353,14 @@ module.exports = {
       chunks: ["main1"],
     }),
     new HtmlWebpackPlugin({
-      filename: "création-d'app.html",
-      template: "./src/index/création-d'app/création-d'app.html",
+      filename: "creation-d-app.html",
+      template: "./src/index/creation-d-app/creation-d-app.html",
       chunks: ["main2"],
     }),
     new HtmlWebpackPlugin({
-      filename: "création-de-site-internet.html",
+      filename: "creation-de-site-internet.html",
       template:
-        "./src/index/création-de-site-internet/création-de-site-internet.html",
+        "./src/index/creation-de-site-internet/creation-de-site-internet.html",
       chunks: ["main3"],
     }),
     new HtmlWebpackPlugin({
@@ -375,8 +375,8 @@ module.exports = {
       chunks: ["main5"],
     }),
     new HtmlWebpackPlugin({
-      filename: "nos-compétences.html",
-      template: "./src/index/nos-compétences/nos-compétences.html",
+      filename: "nos-competences.html",
+      template: "./src/index/nos-competences/nos-competences.html",
       chunks: ["main6"],
     }),
     new HtmlWebpackPlugin({
@@ -385,13 +385,13 @@ module.exports = {
       chunks: ["main7"],
     }),
     new HtmlWebpackPlugin({
-      filename: "notre-équipe.html",
-      template: "./src/index/notre-équipe/notre-équipe.html",
+      filename: "notre-equipe.html",
+      template: "./src/index/notre-equipe/notre-equipe.html",
       chunks: ["main8"],
     }),
     new HtmlWebpackPlugin({
-      filename: "notre-réseau.html",
-      template: "./src/index/notre-réseau/notre-réseau.html",
+      filename: "notre-reseau.html",
+      template: "./src/index/notre-reseau/notre-reseau.html",
       chunks: ["main9"],
     }),
     new HtmlWebpackPlugin({
@@ -400,8 +400,8 @@ module.exports = {
       chunks: ["main10"],
     }),
     new HtmlWebpackPlugin({
-      filename: "stratégie-digital.html",
-      template: "./src/index/stratégie-digital/stratégie-digital.html",
+      filename: "strategie-digital.html",
+      template: "./src/index/strategie-digital/strategie-digital.html",
       chunks: ["main11"],
     }),
     new HtmlWebpackPlugin({
@@ -422,15 +422,15 @@ module.exports = {
       chunks: ["main14"],
     }),
     new HtmlWebpackPlugin({
-      filename: "j'ai-un-projet-de-migration-de-données.html",
+      filename: "j-ai-un-projet-de-migration-de-donnees.html",
       template:
-        "./src/index/j'ai-un-projet-de-migration-de-données/j'ai-un-projet-de-migration-de-données.html",
+        "./src/index/j-ai-un-projet-de-migration-de-donnees/j-ai-un-projet-de-migration-de-donnees.html",
       chunks: ["main15"],
     }),
     new HtmlWebpackPlugin({
-      filename: "j'ai-un-projet-de-transformation-digital.html",
+      filename: "j-ai-un-projet-de-transformation-digital.html",
       template:
-        "./src/index/j'ai-un-projet-de-transformation-digital/j'ai-un-projet-de-transformation-digital.html",
+        "./src/index/j-ai-un-projet-de-transformation-digital/j-ai-un-projet-de-transformation-digital.html",
       chunks: ["main16"],
     }),
     new HtmlWebpackPlugin({
@@ -464,14 +464,14 @@ module.exports = {
       chunks: ["catalan1"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-création-d'app.html",
-      template: "./src/catalan/cat-création-d'app/cat-création-d'app.html",
+      filename: "cat-creation-d-app.html",
+      template: "./src/catalan/cat-creation-d-app/cat-creation-d-app.html",
       chunks: ["catalan2"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-création-de-site-internet.html",
+      filename: "cat-creation-de-site-internet.html",
       template:
-        "./src/catalan/cat-création-de-site-internet/cat-création-de-site-internet.html",
+        "./src/catalan/cat-creation-de-site-internet/cat-creation-de-site-internet.html",
       chunks: ["catalan3"],
     }),
     new HtmlWebpackPlugin({
@@ -486,8 +486,8 @@ module.exports = {
       chunks: ["catalan5"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-nos-compétences.html",
-      template: "./src/catalan/cat-nos-compétences/cat-nos-compétences.html",
+      filename: "cat-nos-competences.html",
+      template: "./src/catalan/cat-nos-competences/cat-nos-competences.html",
       chunks: ["catalan6"],
     }),
     new HtmlWebpackPlugin({
@@ -496,13 +496,13 @@ module.exports = {
       chunks: ["catalan7"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-notre-équipe.html",
-      template: "./src/catalan/cat-notre-équipe/cat-notre-équipe.html",
+      filename: "cat-notre-equipe.html",
+      template: "./src/catalan/cat-notre-equipe/cat-notre-equipe.html",
       chunks: ["catalan8"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-notre-réseau.html",
-      template: "./src/catalan/cat-notre-réseau/cat-notre-réseau.html",
+      filename: "cat-notre-reseau.html",
+      template: "./src/catalan/cat-notre-reseau/cat-notre-reseau.html",
       chunks: ["main9"],
     }),
     new HtmlWebpackPlugin({
@@ -512,9 +512,9 @@ module.exports = {
       chunks: ["catalan10"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-stratégie-digital.html",
+      filename: "cat-strategie-digital.html",
       template:
-        "./src/catalan/cat-stratégie-digital/cat-stratégie-digital.html",
+        "./src/catalan/cat-strategie-digital/cat-strategie-digital.html",
       chunks: ["catalan11"],
     }),
     new HtmlWebpackPlugin({
@@ -535,15 +535,15 @@ module.exports = {
       chunks: ["catalan14"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-j'ai-un-projet-de-migration-de-données.html",
+      filename: "cat-j-ai-un-projet-de-migration-de-donnees.html",
       template:
-        "./src/catalan/cat-j'ai-un-projet-de-migration-de-données/cat-j'ai-un-projet-de-migration-de-données.html",
+        "./src/catalan/cat-j-ai-un-projet-de-migration-de-donnees/cat-j-ai-un-projet-de-migration-de-donnees.html",
       chunks: ["catalan15"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-j'ai-un-projet-de-transformation-digital.html",
+      filename: "cat-j-ai-un-projet-de-transformation-digital.html",
       template:
-        "./src/catalan/cat-j'ai-un-projet-de-transformation-digital/cat-j'ai-un-projet-de-transformation-digital.html",
+        "./src/catalan/cat-j-ai-un-projet-de-transformation-digital/cat-j-ai-un-projet-de-transformation-digital.html",
       chunks: ["catalan16"],
     }),
     new HtmlWebpackPlugin({
@@ -578,14 +578,14 @@ module.exports = {
       chunks: ["english1"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-création-d'app.html",
-      template: "./src/english/eng-création-d'app/eng-création-d'app.html",
+      filename: "eng-creation-d-app.html",
+      template: "./src/english/eng-creation-d-app/eng-creation-d-app.html",
       chunks: ["english2"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-création-de-site-internet.html",
+      filename: "eng-creation-de-site-internet.html",
       template:
-        "./src/english/eng-création-de-site-internet/eng-création-de-site-internet.html",
+        "./src/english/eng-creation-de-site-internet/eng-creation-de-site-internet.html",
       chunks: ["english3"],
     }),
     new HtmlWebpackPlugin({
@@ -600,8 +600,8 @@ module.exports = {
       chunks: ["english5"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-nos-compétences.html",
-      template: "./src/english/eng-nos-compétences/eng-nos-compétences.html",
+      filename: "eng-nos-competences.html",
+      template: "./src/english/eng-nos-competences/eng-nos-competences.html",
       chunks: ["english6"],
     }),
     new HtmlWebpackPlugin({
@@ -610,13 +610,13 @@ module.exports = {
       chunks: ["english7"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-notre-équipe.html",
-      template: "./src/english/eng-notre-équipe/eng-notre-équipe.html",
+      filename: "eng-notre-equipe.html",
+      template: "./src/english/eng-notre-equipe/eng-notre-equipe.html",
       chunks: ["english8"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-notre-réseau.html",
-      template: "./src/english/eng-notre-réseau/eng-notre-réseau.html",
+      filename: "eng-notre-reseau.html",
+      template: "./src/english/eng-notre-reseau/eng-notre-reseau.html",
       chunks: ["english9"],
     }),
     new HtmlWebpackPlugin({
@@ -626,9 +626,9 @@ module.exports = {
       chunks: ["english10"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-stratégie-digital.html",
+      filename: "eng-strategie-digital.html",
       template:
-        "./src/english/eng-stratégie-digital/eng-stratégie-digital.html",
+        "./src/english/eng-strategie-digital/eng-strategie-digital.html",
       chunks: ["english11"],
     }),
     new HtmlWebpackPlugin({
@@ -649,15 +649,15 @@ module.exports = {
       chunks: ["english14"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-j'ai-un-projet-de-migration-de-données.html",
+      filename: "eng-j-ai-un-projet-de-migration-de-donnees.html",
       template:
-        "./src/english/eng-j'ai-un-projet-de-migration-de-données/eng-j'ai-un-projet-de-migration-de-données.html",
+        "./src/english/eng-j-ai-un-projet-de-migration-de-donnees/eng-j-ai-un-projet-de-migration-de-donnees.html",
       chunks: ["english15"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-j'ai-un-projet-de-transformation-digital.html",
+      filename: "eng-j-ai-un-projet-de-transformation-digital.html",
       template:
-        "./src/english/eng-j'ai-un-projet-de-transformation-digital/eng-j'ai-un-projet-de-transformation-digital.html",
+        "./src/english/eng-j-ai-un-projet-de-transformation-digital/eng-j-ai-un-projet-de-transformation-digital.html",
       chunks: ["english16"],
     }),
     new HtmlWebpackPlugin({
@@ -692,14 +692,14 @@ module.exports = {
       chunks: ["spanish"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-création-d'app.html",
-      template: "./src/spanish/spa-création-d'app/spa-création-d'app.html",
+      filename: "spa-creation-d-app.html",
+      template: "./src/spanish/spa-creation-d-app/spa-creation-d-app.html",
       chunks: ["spanish2"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-création-de-site-internet.html",
+      filename: "spa-creation-de-site-internet.html",
       template:
-        "./src/spanish/spa-création-de-site-internet/spa-création-de-site-internet.html",
+        "./src/spanish/spa-creation-de-site-internet/spa-creation-de-site-internet.html",
       chunks: ["spanish3"],
     }),
     new HtmlWebpackPlugin({
@@ -714,8 +714,8 @@ module.exports = {
       chunks: ["spanish5"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-nos-compétences.html",
-      template: "./src/spanish/spa-nos-compétences/spa-nos-compétences.html",
+      filename: "spa-nos-competences.html",
+      template: "./src/spanish/spa-nos-competences/spa-nos-competences.html",
       chunks: ["spanish6"],
     }),
     new HtmlWebpackPlugin({
@@ -724,13 +724,13 @@ module.exports = {
       chunks: ["spanish7"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-notre-équipe.html",
-      template: "./src/spanish/spa-notre-équipe/spa-notre-équipe.html",
+      filename: "spa-notre-equipe.html",
+      template: "./src/spanish/spa-notre-equipe/spa-notre-equipe.html",
       chunks: ["spanish8"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-notre-réseau.html",
-      template: "./src/spanish/spa-notre-réseau/spa-notre-réseau.html",
+      filename: "spa-notre-reseau.html",
+      template: "./src/spanish/spa-notre-reseau/spa-notre-reseau.html",
       chunks: ["spanish9"],
     }),
     new HtmlWebpackPlugin({
@@ -740,9 +740,9 @@ module.exports = {
       chunks: ["spanish10"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-stratégie-digital.html",
+      filename: "spa-strategie-digital.html",
       template:
-        "./src/spanish/spa-stratégie-digital/spa-stratégie-digital.html",
+        "./src/spanish/spa-strategie-digital/spa-strategie-digital.html",
       chunks: ["spanish11"],
     }),
     new HtmlWebpackPlugin({
@@ -763,15 +763,15 @@ module.exports = {
       chunks: ["spanish14"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-j'ai-un-projet-de-migration-de-données.html",
+      filename: "spa-j-ai-un-projet-de-migration-de-donnees.html",
       template:
-        "./src/spanish/spa-j'ai-un-projet-de-migration-de-données/spa-j'ai-un-projet-de-migration-de-données.html",
+        "./src/spanish/spa-j-ai-un-projet-de-migration-de-donnees/spa-j-ai-un-projet-de-migration-de-donnees.html",
       chunks: ["spanish15"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-j'ai-un-projet-de-transformation-digital.html",
+      filename: "spa-j-ai-un-projet-de-transformation-digital.html",
       template:
-        "./src/spanish/spa-j'ai-un-projet-de-transformation-digital/spa-j'ai-un-projet-de-transformation-digital.html",
+        "./src/spanish/spa-j-ai-un-projet-de-transformation-digital/spa-j-ai-un-projet-de-transformation-digital.html",
       chunks: ["spanish16"],
     }),
     new HtmlWebpackPlugin({

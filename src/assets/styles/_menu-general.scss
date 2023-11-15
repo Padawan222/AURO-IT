@@ -1,8 +1,3 @@
-.reseau {
-  &:hover {
-    font-size: 2rem;
-  }
-}
 #menu-general,
 #menu-general ul {
   padding: 0;
@@ -13,7 +8,10 @@
 #menu-general li {
   display: inline-block;
   position: relative;
-  border-radius: 8px 8px 0 0;
+  transition: all 1s;
+  &:hover {
+    border-radius: 8px 8px 0 0;
+  }
 }
 #menu-general ul li {
   display: inherit;

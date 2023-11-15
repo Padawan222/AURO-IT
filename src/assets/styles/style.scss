@@ -9,6 +9,7 @@
 @use "fonts" as *;
 @use "separator" as *;
 @use "menu" as *;
+@use "contact" as *;
 
 // header
 
@@ -17,7 +18,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 10rem;
+  height: 10rem;
   background: white;
   animation-name: header;
   animation-duration: 1.8s;
@@ -33,8 +34,7 @@ header {
     }
   }
   @include xs {
-    display: flex;
-    position: none;
+    height: 8rem;
   }
 }
 .h1 {
@@ -49,20 +49,15 @@ header {
     display: none;
   }
 }
+
 .h1-xs {
   grid-area: h1-xs;
-  display: none;
   margin-top: 2rem;
   color: var(--green_02);
   font-family: var(--font-family-strasua);
   font-weight: 200;
   font-size: 2.1rem;
   letter-spacing: 0.2rem;
-
-  @include xs {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 // logo header
@@ -84,7 +79,8 @@ header {
     }
   }
   @include xs {
-    width: 24rem;
+    height: 8rem;
+    width: 22rem;
   }
 }
 
@@ -96,111 +92,17 @@ header {
   align-items: center;
   width: 100rem;
   height: 10rem;
+  @include xs {
+    display: none;
+  }
   a {
     color: var(--orange_02);
     font-family: var(--font-family-strasua);
     font-weight: 200;
     font-size: 2rem;
     letter-spacing: 0.2rem;
-    // text-decoration: underline;
-  }
-  @include xs {
-    display: none;
   }
 }
-
-// mail
-
-.mail-container {
-  grid-area: mail;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 5rem;
-  margin: 0;
-}
-
-.mail-content-1 {
-  background: white;
-  height: 5rem;
-  width: calc(50% - 10rem);
-  margin: 0;
-  transform: translateX(-96rem);
-  @include xxl {
-    transform: translateX(-126rem);
-  }
-  transition: all 1s;
-  border-radius: 0 3rem 3rem 0;
-  z-index: 0;
-  &.active {
-    transform: translateX(0);
-    border-radius: 0;
-  }
-}
-.mail-content-2 {
-  background: white;
-  height: 5rem;
-  width: calc(50% - 10rem);
-  margin: 0;
-  transform: translateX(96rem);
-  @include xxl {
-    transform: translateX(126rem);
-  }
-  transition: all 1s;
-  border-radius: 3rem 0 0 3rem;
-  z-index: 0;
-  &.active {
-    transform: translateX(0);
-    border-radius: 0;
-  }
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  height: 5rem;
-  width: 20rem;
-  background-color: #eee;
-  color: #eee;
-  position: relative;
-  overflow: hidden;
-  p {
-    font-family: var(--font-family);
-    letter-spacing: 0.1rem;
-    font-size: 2rem;
-    font-weight: 400;
-  }
-  &:hover::before {
-    opacity: 1;
-  }
-  &.active {
-    background: white;
-    color: var(--blue);
-    transition: all 1s;
-    transition-delay: 0.8s;
-  }
-}
-
-.contact::before {
-  content: "Email@exemple.com";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--blue);
-  background: white;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 1s;
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-family: var(--font-family);
-  text-decoration: underline;
-  letter-spacing: 0.1rem;
-  border-radius: 0;
-  opacity: 0;
-}
-
 // footer
 
 footer {

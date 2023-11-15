@@ -38,6 +38,10 @@
       opacity: 1;
     }
   }
+  @include xs {
+    top: 8rem;
+    width: 22rem;
+  }
 }
 .separator-3 {
   position: fixed;
@@ -60,6 +64,10 @@
       opacity: 1;
       transform: scaleX(1);
     }
+  }
+  @include xs {
+    top: 8rem;
+    left: 22rem;
   }
 }
 

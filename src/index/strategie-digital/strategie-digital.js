@@ -1,171 +1,20 @@
-import "./assets/styles/style.scss";
-import "./index.scss";
+import "./strategie-digital.scss";
+import "C:/Users/Azstras/OneDrive/Bureau/AURO-IT/src/assets/styles/style.scss";
 
-// menu general
+// text-container-2
 
-const votreBesoincloseOpenMenu = document.querySelector(
-  ".votre-besoin-close-open-menu"
-);
-const notreReseaucloseOpenMenu = document.querySelector(
-  ".notre-reseau-close-open-menu"
-);
-
-notreReseaucloseOpenMenu.addEventListener("mouseover", () => {
-  votreBesoincloseOpenMenu.style.display = "none";
-});
-notreReseaucloseOpenMenu.addEventListener("mouseout", () => {
-  votreBesoincloseOpenMenu.style.display = "flex";
-});
-votreBesoincloseOpenMenu.addEventListener("mouseover", () => {
-  notreReseaucloseOpenMenu.style.display = "none";
-});
-votreBesoincloseOpenMenu.addEventListener("mouseout", () => {
-  notreReseaucloseOpenMenu.style.display = "flex";
-});
-
-// menu-xs
-
-const menuXsContent = document.querySelector(".menu-xs-content");
-const buttonOpen = document.querySelector(".btn-open-close");
-const btnBarre1 = document.querySelector(".btn-barre-1");
-const btnBarre2 = document.querySelector(".btn-barre-2");
-
-// button open/close
-
-buttonOpen.addEventListener("click", () => {
-  const menuTransform1 = getComputedStyle(btnBarre1).transform;
-  const menuTransform2 = getComputedStyle(btnBarre2).transform;
-
-  const rotation1 = getRotationAngle(menuTransform1);
-  const rotation2 = getRotationAngle(menuTransform2);
-
-  btnBarre1.style.transform = rotation1 === 0 ? "rotate(45deg)" : "rotate(0)";
-  btnBarre2.style.transform = rotation2 === 0 ? "rotate(-45deg)" : "rotate(0)";
-});
-
-function getRotationAngle(transformValue) {
-  if (!transformValue) {
-    return 0;
-  }
-
-  const transformValues = transformValue.split("(");
-  if (transformValues.length < 2) {
-    return 0;
-  }
-
-  const matrixValues = transformValues[1].split(")")[0].split(",");
-  const a = parseFloat(matrixValues[0]);
-  const b = parseFloat(matrixValues[1]);
-  const c = parseFloat(matrixValues[2]);
-  const d = parseFloat(matrixValues[3]);
-
-  const angle = Math.atan2(b, a) * (180 / Math.PI);
-
-  console.log("Raw angle:", angle);
-
-  const positiveAngle = angle < 0 ? angle + 360 : angle;
-
-  console.log("Positive angle:", positiveAngle);
-
-  return positiveAngle;
-}
-
-// menu open/close
-
-buttonOpen.addEventListener("click", () => {
-  const menuDisplay = getComputedStyle(menuXsContent).display;
-
-  console.log("hello");
-
-  if (menuDisplay === "none") {
-    menuXsContent.style.display = "flex";
-  } else {
-    menuXsContent.style.display = "none";
-  }
-});
-
-// sous-titre-1
-
-const sousTitre1 = document.querySelector(".sous-titre-1");
+const textContainer2 = document.querySelector(".text-container-2");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = sousTitre1.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer2.getBoundingClientRect().top;
 
   if (
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    sousTitre1.classList.add("active");
-  }
-});
-
-// sous-titre-2
-
-const sousTitre2 = document.querySelector(".sous-titre-2");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = sousTitre2.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    sousTitre2.classList.add("active");
-  }
-});
-
-// sous-titre-3
-
-const sousTitre3 = document.querySelector(".sous-titre-3");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = sousTitre3.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    sousTitre3.classList.add("active");
-  }
-});
-
-// text-container-1
-
-const textContainer1 = document.querySelector(".text-container-1");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = textContainer1.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    textContainer1.classList.add("active");
-  }
-});
-
-// text-container-3
-
-const textContainer3 = document.querySelector(".text-container-3");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = textContainer3.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    textContainer3.classList.add("active");
+    textContainer2.classList.add("active");
   }
 });
 
@@ -197,12 +46,11 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
     textContainer5.classList.add("active");
   }
 });
-
 // text-container-6
 
 const textContainer6 = document.querySelector(".text-container-6");
@@ -214,7 +62,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
     textContainer6.classList.add("active");
   }
@@ -230,7 +78,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
     textContainer7.classList.add("active");
   }
@@ -251,106 +99,116 @@ window.addEventListener("scroll", () => {
     textContainer8.classList.add("active");
   }
 });
+// text-container-9
 
-// div-text-container-1
-
-const DivTextContainer1 = document.querySelector(".div-text-container-1");
+const textContainer9 = document.querySelector(".text-container-9");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = DivTextContainer1.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer9.getBoundingClientRect().top;
 
   if (
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    DivTextContainer1.classList.add("active");
+    textContainer9.classList.add("active");
   }
 });
+// text-container-10
 
-// div-text-container-2
-
-const DivTextContainer2 = document.querySelector(".div-text-container-2");
+const textContainer10 = document.querySelector(".text-container-10");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = DivTextContainer2.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer10.getBoundingClientRect().top;
 
   if (
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    DivTextContainer2.classList.add("active");
+    textContainer10.classList.add("active");
   }
 });
+// text-container-11
 
-// div-text-container-3
-
-const DivTextContainer3 = document.querySelector(".div-text-container-3");
+const textContainer11 = document.querySelector(".text-container-11");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = DivTextContainer3.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer11.getBoundingClientRect().top;
 
   if (
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    DivTextContainer3.classList.add("active");
+    textContainer11.classList.add("active");
   }
 });
+// text-container-12
 
-// text-1
-
-const text1 = document.querySelector(".text-1");
+const textContainer12 = document.querySelector(".text-container-12");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = text1.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer12.getBoundingClientRect().top;
 
   if (
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    text1.classList.add("active");
+    textContainer12.classList.add("active");
   }
 });
+// text-container-13
 
-// text-2
-
-const text2 = document.querySelector(".text-2");
+const textContainer13 = document.querySelector(".text-container-13");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = text2.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer13.getBoundingClientRect().top;
 
   if (
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    text2.classList.add("active");
+    textContainer13.classList.add("active");
   }
 });
+// text-container-14
 
-// text-3
-
-const text3 = document.querySelector(".text-3");
+const textContainer14 = document.querySelector(".text-container-14");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = text3.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer14.getBoundingClientRect().top;
 
   if (
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    text3.classList.add("active");
+    textContainer14.classList.add("active");
+  }
+});
+// text-container-15
+
+const textContainer15 = document.querySelector(".text-container-15");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer15.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    textContainer15.classList.add("active");
   }
 });
 
@@ -404,7 +262,6 @@ window.addEventListener("scroll", () => {
     text6.classList.add("active");
   }
 });
-
 // text-7
 
 const text7 = document.querySelector(".text-7");
@@ -421,7 +278,6 @@ window.addEventListener("scroll", () => {
     text7.classList.add("active");
   }
 });
-
 // text-8
 
 const text8 = document.querySelector(".text-8");
@@ -438,7 +294,6 @@ window.addEventListener("scroll", () => {
     text8.classList.add("active");
   }
 });
-
 // text-9
 
 const text9 = document.querySelector(".text-9");
@@ -453,6 +308,120 @@ window.addEventListener("scroll", () => {
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
     text9.classList.add("active");
+  }
+});
+// text-10
+
+const text10 = document.querySelector(".text-10");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text10.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text10.classList.add("active");
+  }
+});
+// text-11
+
+const text11 = document.querySelector(".text-11");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text11.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text11.classList.add("active");
+  }
+});
+
+// text-12
+
+const text12 = document.querySelector(".text-12");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text12.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text12.classList.add("active");
+  }
+});
+
+// text-13
+
+const text13 = document.querySelector(".text-13");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text13.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text13.classList.add("active");
+  }
+});
+// text-14
+
+const text14 = document.querySelector(".text-14");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text14.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text14.classList.add("active");
+  }
+});
+// text-15
+
+const text15 = document.querySelector(".text-15");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text15.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text15.classList.add("active");
+  }
+});
+// text-16
+
+const text16 = document.querySelector(".text-16");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text16.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text16.classList.add("active");
   }
 });
 
