@@ -26,13 +26,13 @@ votreBesoincloseOpenMenu.addEventListener("mouseout", () => {
 // menu-xs
 
 const menuXsContent = document.querySelector(".menu-xs-content");
-const buttonOpen = document.querySelector(".btn-open-close");
+const btnOpen = document.querySelector(".btn-open-close");
 const btnBarre1 = document.querySelector(".btn-barre-1");
 const btnBarre2 = document.querySelector(".btn-barre-2");
 
-// button open/close
+// btn open/close
 
-buttonOpen.addEventListener("click", () => {
+btnOpen.addEventListener("click", () => {
   const menuTransform1 = getComputedStyle(btnBarre1).transform;
   const menuTransform2 = getComputedStyle(btnBarre2).transform;
 
@@ -72,16 +72,45 @@ function getRotationAngle(transformValue) {
 
 // menu open/close
 
-buttonOpen.addEventListener("click", () => {
+btnOpen.addEventListener("click", () => {
   const menuDisplay = getComputedStyle(menuXsContent).display;
-
-  console.log("hello");
 
   if (menuDisplay === "none") {
     menuXsContent.style.display = "flex";
   } else {
     menuXsContent.style.display = "none";
+    menuXsLangueContainer.style.display = "none";
   }
+});
+
+// menu langue open/close
+
+const btnCloseMenuLangue = document.querySelector(".btn-close-menu-langue-xs");
+const btnOpenMenuLangue = document.querySelector(".btn-open-menu-langue-xs");
+const btnMenuXsContentlangueClose = document.querySelector(
+  ".btn-close-menu-langue-xs-content"
+);
+const menuXsLangueContainer = document.querySelector(
+  ".menu-xs-langue-container"
+);
+
+btnOpenMenuLangue.addEventListener("click", () => {
+  menuXsLangueContainer.style.display = "flex";
+  menuXsLangueContainer.classList.remove("animation-close-menu-langue-xs");
+  btnMenuXsContentlangueClose.classList.remove(
+    "btn-close-menu-langue-xs-close"
+  );
+});
+
+btnCloseMenuLangue.addEventListener("click", () => {
+  menuXsLangueContainer.classList.add("animation-close-menu-langue-xs");
+  setTimeout(() => {
+    menuXsLangueContainer.classList.remove("animation-close-menu-langue-xs");
+    menuXsLangueContainer.style.display = "none";
+  }, 990);
+});
+btnCloseMenuLangue.addEventListener("click", () => {
+  btnMenuXsContentlangueClose.classList.add("btn-close-menu-langue-xs-close");
 });
 
 // sous-titre-1
