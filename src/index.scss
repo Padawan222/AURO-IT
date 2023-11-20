@@ -3,6 +3,7 @@
 .container {
   display: grid;
   background: #eee;
+  width: 100%;
   grid:
     "img header" 10rem
     "separator-2 separator-3" auto
@@ -16,9 +17,9 @@
     grid:
       "img header" 8rem
       "menu-xs menu-xs" auto
-      "h1-xs h1-xs" auto
       "separator-2 separator-3" auto
       "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
       "menu menu" auto
       "general general" auto
       "mail mail" auto
@@ -31,6 +32,7 @@
   grid-area: general;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 0;
 
   .text-content-1 {
@@ -38,19 +40,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     text-align: center;
     background: #d6d6d6;
+    @include xs {
+      margin: 0;
+    }
   }
   .sous-titre-1 {
     display: flex;
     justify-content: center;
-    margin: 4rem 2rem 2rem 2rem;
+    align-items: center;
     width: 30rem;
     border-radius: 3rem;
     color: var(--orange_01);
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
@@ -65,6 +74,9 @@
     border-radius: 3rem;
     transition: all 0.8s;
     z-index: -1;
+    @include xs {
+      top: 0;
+    }
   }
   .text-container-1 {
     margin: 2rem;
@@ -74,6 +86,10 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
@@ -83,6 +99,7 @@
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
+      margin-bottom: 2rem;
     }
   }
   .text-container-1::before {
@@ -95,18 +112,25 @@
     border-radius: 3rem;
     transition: all 0.8s;
     z-index: -1;
+    @include xs {
+      top: 0;
+    }
   }
 
   .sous-titre-2 {
     display: flex;
     justify-content: center;
-    margin: 2rem;
+    align-items: center;
     width: 38rem;
     border-radius: 3rem;
     color: var(--orange_01);
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      width: calc(100% - 4rem);
+      font-size: 1.8rem;
+    }
     &.active::before {
       top: 0;
     }
@@ -121,12 +145,18 @@
     border-radius: 3rem;
     transition: all 0.8s;
     z-index: -1;
+    @include xs {
+      top: 0;
+    }
   }
 
   .text-container-2 {
     display: flex;
     flex-direction: row nowrap;
     margin: 0;
+    @include xs {
+      flex-direction: column;
+    }
   }
 
   .div-text-container-1 {
@@ -139,6 +169,10 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       right: 0;
     }
@@ -148,6 +182,9 @@
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
     }
   }
   .div-text-container-1::before {
@@ -160,6 +197,9 @@
     border-radius: 3rem;
     transition: all 0.8s;
     z-index: -1;
+    @include xs {
+      right: 0;
+    }
   }
   .div-text-container-2 {
     display: flex;
@@ -171,15 +211,23 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      height: auto;
+
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
     p {
       color: white;
-      margin: 2rem 2rem 1rem 2rem;
+      margin: 2rem;
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
     }
   }
   .div-text-container-2::before {
@@ -192,6 +240,9 @@
     border-radius: 3rem;
     transition: all 0.8s;
     z-index: -1;
+    @include xs {
+      top: 0;
+    }
   }
   .div-text-container-3 {
     display: flex;
@@ -202,6 +253,10 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       left: 0;
     }
@@ -211,6 +266,9 @@
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
     }
   }
   .div-text-container-3::before {
@@ -223,6 +281,9 @@
     border-radius: 3rem;
     transition: all 1s;
     z-index: -1;
+    @include xs {
+      left: 0;
+    }
   }
   .text-container-3 {
     display: flex;
@@ -234,6 +295,10 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
@@ -243,6 +308,9 @@
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
     }
   }
   .text-container-3::before {
@@ -255,6 +323,9 @@
     border-radius: 3rem;
     transition: all 1.8s;
     z-index: -1;
+    @include xs {
+      top: 0;
+    }
   }
   .text-container-4 {
     display: flex;
@@ -263,10 +334,13 @@
     height: 15rem;
     width: 50rem;
     border-radius: 3rem;
-    margin-bottom: 8rem;
     position: relative;
     z-index: 0;
     overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
@@ -276,6 +350,9 @@
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
     }
   }
   .text-container-4::before {
@@ -288,8 +365,166 @@
     border-radius: 3rem;
     transition: all 1.8s;
     z-index: -1;
+    @include xs {
+      top: 0;
+    }
   }
 
+  // text-content-2
+
+  .text-content-2 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background: #d6d6d6;
+  }
+
+  .sous-titre-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    border-radius: 3rem;
+    color: var(--orange_01);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      top: 0;
+    }
+  }
+  .sous-titre-3::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 1s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+  }
+
+  .text-container-5 {
+    height: 25rem;
+    width: 100rem;
+    border-radius: 3rem;
+    color: white;
+    background: var(--green_01);
+    position: relative;
+    left: -156rem;
+    @include xs {
+      left: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include xxl {
+      left: -192rem;
+    }
+    &.active {
+      left: 0;
+      transition: all 1.8s;
+    }
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+
+  .text-container-6 {
+    height: 20rem;
+    width: 100rem;
+    background: var(--green_01);
+    color: white;
+    border-radius: 3rem;
+    position: relative;
+    overflow-x: hidden;
+    right: -156rem;
+    @include xs {
+      right: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include xxl {
+      right: -192rem;
+    }
+    &.active {
+      right: 0;
+      transition: all 1.8s;
+    }
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+  .text-container-7 {
+    height: 20rem;
+    width: 100rem;
+    background: var(--green_01);
+    color: white;
+    border-radius: 3rem;
+    position: relative;
+    left: -156rem;
+    @include xs {
+      left: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include xxl {
+      left: -192rem;
+    }
+    &.active {
+      left: 0;
+      transition: all 2s;
+    }
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+  .text-container-8 {
+    height: 15rem;
+    width: 100rem;
+    background: var(--green_01);
+    color: white;
+    border-radius: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+    right: -156rem;
+    @include xs {
+      right: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include xxl {
+      right: -192rem;
+    }
+    &.active {
+      right: 0;
+      transition: all 1.8s;
+    }
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
   .sous-titre {
     font-weight: 400;
     letter-spacing: 0.5rem;
@@ -384,135 +619,6 @@
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8s;
     opacity: 1;
-  }
-}
-
-// text-content-2
-
-.text-content-2 {
-  margin: 5rem 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: #d6d6d6;
-}
-
-.sous-titre-3 {
-  display: flex;
-  justify-content: center;
-  margin: 0rem 2rem 2rem 2rem;
-  width: 25rem;
-  border-radius: 3rem;
-  color: var(--orange_01);
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-  &.active::before {
-    top: 0;
-  }
-}
-.sous-titre-3::before {
-  content: "";
-  position: absolute;
-  top: -4rem;
-  background: var(--green_01);
-  height: 100%;
-  width: 100%;
-  border-radius: 3rem;
-  transition: all 1s;
-  z-index: -1;
-}
-
-.text-container-5 {
-  height: 25rem;
-  width: 100rem;
-  border-radius: 3rem;
-  color: white;
-  background: var(--green_01);
-  position: relative;
-  left: -156rem;
-  @include xxl {
-    left: -192rem;
-  }
-  &.active {
-    left: 0;
-    transition: all 1.8s;
-  }
-  p {
-    margin: 2rem 2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-}
-
-.text-container-6 {
-  height: 20rem;
-  width: 100rem;
-  background: var(--green_01);
-  color: white;
-  border-radius: 3rem;
-  position: relative;
-  overflow-x: hidden;
-  right: -156rem;
-  @include xxl {
-    right: -192rem;
-  }
-  &.active {
-    right: 0;
-    transition: all 1.8s;
-  }
-  p {
-    margin: 2rem 2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-}
-.text-container-7 {
-  height: 20rem;
-  width: 100rem;
-  background: var(--green_01);
-  color: white;
-  border-radius: 3rem;
-  position: relative;
-  left: -156rem;
-  @include xxl {
-    left: -192rem;
-  }
-  &.active {
-    left: 0;
-    transition: all 2s;
-  }
-  p {
-    margin: 2rem 2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-}
-.text-container-8 {
-  height: 15rem;
-  width: 100rem;
-  background: var(--green_01);
-  color: white;
-  border-radius: 3rem;
-  margin-bottom: 4rem;
-  position: relative;
-  right: -156rem;
-  @include xxl {
-    right: -192rem;
-  }
-  &.active {
-    right: 0;
-    transition: all 1.8s;
-  }
-  p {
-    margin: 2rem 2rem;
-    letter-spacing: 0.1rem;
-    font-size: 1.8rem;
-    font-weight: 700;
   }
 }
 

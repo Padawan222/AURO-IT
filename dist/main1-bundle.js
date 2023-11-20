@@ -706,13 +706,6 @@ img {
   }
 }
 
-.separator-xs-1 {
-  height: 1px;
-  width: 40%;
-  background: white;
-  margin: 0 0.5rem;
-}
-
 .container-separator-xs-2 {
   display: flex;
   justify-content: center;
@@ -872,7 +865,7 @@ img {
   }
   .menu-xs-content {
     position: fixed;
-    display: flex;
+    display: none;
     top: 0rem;
     height: 100vh;
     width: 100%;
@@ -941,6 +934,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
     width: 100%;
     margin-top: 2rem;
   }
@@ -1199,6 +1193,11 @@ img {
   height: 5rem;
   margin: 0;
 }
+@media (max-width: 480px) {
+  .mail-container {
+    display: none;
+  }
+}
 
 .mail-content-1 {
   background: white;
@@ -1321,16 +1320,28 @@ header {
   }
 }
 
-.h1-xs {
-  grid-area: h1-xs;
-  margin-top: 2rem;
-  color: var(--green_02);
-  font-family: var(--font-family-strasua);
-  font-weight: 200;
-  font-size: 2.1rem;
-  letter-spacing: 0.2rem;
+.content-h1-xs {
+  display: none;
 }
 
+@media (max-width: 480px) {
+  .content-h1-xs {
+    grid-area: h1-xs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+  }
+  .h1-xs {
+    grid-area: h1-xs;
+    color: var(--green_02);
+    font-family: var(--font-family-strasua);
+    font-weight: 200;
+    font-size: 2.1rem;
+    letter-spacing: 0.2rem;
+  }
+}
 .a-img {
   grid-area: img;
   height: 10rem;
@@ -1424,7 +1435,7 @@ footer::before {
   transition: all 2s;
   transition-delay: 1s;
   color: var(--orange_01);
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_classes.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_utils.scss","webpack://./src/assets/styles/_menu-langue.scss","webpack://./src/assets/styles/_menu-general.scss","webpack://./src/assets/styles/_fonts.scss","webpack://./src/assets/styles/_separator.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_contact.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n  // overflow-x: hidden;\n}\np {\n  margin: 1rem 0;\n  font-weight: 400 !important;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 1rem 0 2rem 0;\n}\nh2 {\n  margin: 2rem 1rem;\n}\nh3 {\n  font-weight: 400;\n  margin: 1rem 0.5rem 1rem 0.5rem;\n}\n\nul {\n  list-style: none;\n}\na {\n  color: var(--text);\n  text-decoration: none;\n}\nimg {\n  max-width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"menu-langue\" as *;\r\n@use \"menu-general\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"menu\" as *;\r\n@use \"contact\" as *;\r\n\r\n// header\r\n\r\nheader {\r\n  grid-area: header;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 10rem;\r\n  background: white;\r\n  animation-name: header;\r\n  animation-duration: 1.8s;\r\n  width: 100%;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n  @include xs {\r\n    z-index: 5;\r\n  }\r\n  @keyframes header {\r\n    from {\r\n      transform: translateY(-10rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n  }\r\n}\r\n.h1 {\r\n  margin-top: 2rem;\r\n  color: var(--green_02);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.2rem;\r\n  margin-left: 2rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.h1-xs {\r\n  grid-area: h1-xs;\r\n  margin-top: 2rem;\r\n  color: var(--green_02);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 2.1rem;\r\n  letter-spacing: 0.2rem;\r\n}\r\n\r\n// logo header\r\n\r\n.a-img {\r\n  grid-area: img;\r\n  height: 10rem;\r\n  width: 25rem;\r\n  animation-name: logo-1;\r\n  animation-duration: 1.8s;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n  @keyframes logo-1 {\r\n    from {\r\n      transform: translateY(5rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n\r\n.repere-content {\r\n  position: absolute;\r\n  right: 16rem;\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  width: 100rem;\r\n  height: 10rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  a {\r\n    color: var(--orange_02);\r\n    font-family: var(--font-family-strasua);\r\n    font-weight: 200;\r\n    font-size: 2rem;\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n// footer\r\n\r\nfooter {\r\n  grid-area: footer;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  position: relative;\r\n  overflow: hidden;\r\n  z-index: 0;\r\n  &.active::before {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\nfooter::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -10rem;\r\n  background-color: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  border-radius: 3rem;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n\r\n.text-footer {\r\n  font-family: var(--font-family-strasua);\r\n  font-size: 1.8rem;\r\n  letter-spacing: 0.2rem;\r\n  color: #eee;\r\n  margin: 0;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n\r\n.copyright {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #eee;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n",".title {\n  &-small {\n    letter-spacing: 0.5rem;\n    font-size: 1.6rem;\n    font-family: var(--font-family-small);\n  }\n}\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 979px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  // font-family\r\n  --font-family-strasua: \"strasua\";\r\n  --font-family-title: \"Cinzel Decorative\", cursive;\r\n  --font-family: \"Nunito Sans\", sans-serif;\r\n\r\n  // color\r\n  --text: #333;\r\n  --blue: #6eb2bd;\r\n  --orange_01: #df5b13;\r\n  --orange_02: #fd8342;\r\n  --green_01: #7ccbab;\r\n  --green_02: #11a67e;\r\n  --background: #d6d6d6;\r\n\r\n  // box-shadow\r\n  --box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),\r\n    0 1px 3px 1px rgba(60, 64, 67, 0.15);\r\n}\r\n",".mb_2 {\n  margin-bottom: 2rem !important;\n}\n.mb_5 {\n  margin-bottom: 5rem !important;\n}\n.mx_1 {\n  margin-left: 1rem;\n  margin-right: 1rem;\n}\n.my_1 {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n}\n",".leader {\r\n  color: var(--orange_01);\r\n}\r\n\r\n#menu-langue,\r\n#menu-langue ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-langue li {\r\n  display: inline-block;\r\n  position: relative;\r\n  border-radius: 8px 8px 0 0;\r\n}\r\n#menu-langue ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-langue ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-langue li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-langue li:last-child {\r\n  // background: var(--orange_01);\r\n}\r\n/* background des liens sous menus */\r\n#menu-langue li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-langue li:last-child:hover {\r\n  background: white;\r\n}\r\n#menu-langue li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-langue a {\r\n  width: 15rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: arial;\r\n}\r\n#menu-langue ul a {\r\n  padding: 8px 0;\r\n  color: var(--orange_01);\r\n}\r\n#menu-langue li:hover li a {\r\n  color: var(--orange_01);\r\n  text-transform: inherit;\r\n}\r\n","#menu-general,\r\n#menu-general ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-general li {\r\n  display: inline-block;\r\n  position: relative;\r\n  transition: all 1s;\r\n  &:hover {\r\n    border-radius: 8px 8px 0 0;\r\n  }\r\n}\r\n#menu-general ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-general ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-general li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-general li:last-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n/* background des liens sous menus */\r\n#menu-general li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-general li:first-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n#menu-general li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-general a {\r\n  width: 32rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.2rem;\r\n  font-weight: 200;\r\n  color: white;\r\n}\r\n#menu-general ul a {\r\n  padding: 8px 0;\r\n  color: white;\r\n}\r\n#menu-general li:hover li a {\r\n  color: var(--blue);\r\n  text-transform: inherit;\r\n}\r\n\r\n// #menu-demo2 li:hover a,\r\n// #menu-demo2 li li:hover a {\r\n// }\r\n","@font-face {\r\n  font-family: \"strasua\";\r\n  src: url(\"C:/Users/Azstras/OneDrive/Documents/polices/strasua.otf\")\r\n    format(opentype);\r\n}\r\n","@use \"media-queries\" as *;\r\n// separator\r\n\r\n.separator-1 {\r\n  margin: 1rem 20rem;\r\n  height: 6px;\r\n  border-radius: 5px;\r\n  width: 80rem;\r\n  background-color: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n.separator-2 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  margin: 0;\r\n  background: var(--green_02);\r\n  height: 2px;\r\n  width: 25rem;\r\n  grid-area: separator-2;\r\n  animation-name: separator-2;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-2 {\r\n    from {\r\n      transform: translateY(15rem);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n.separator-3 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  left: 25rem;\r\n  margin: 0;\r\n  background: var(--orange_01);\r\n  height: 2px;\r\n  width: 100%;\r\n  grid-area: separator-3;\r\n  animation-name: separator-3;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-3 {\r\n    from {\r\n      transform: scaleX(0);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    left: 22rem;\r\n  }\r\n}\r\n\r\n.separator-4 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  // border-radius: 100%;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    top: 0;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n.separator-4::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-6 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-6::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-9 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    left: 0;\r\n  }\r\n}\r\n.separator-9::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  left: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-11 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 2s;\r\n    top: 0;\r\n  }\r\n}\r\n\r\n.separator-11::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-14 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    right: 0;\r\n  }\r\n}\r\n.separator-14::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  right: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n.separator-15 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-15::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-16 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-16::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-17 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-17::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-18 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-18::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-19 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-19::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-20 {\r\n  margin-top: 4rem;\r\n  height: 6px;\r\n  width: 55rem;\r\n  border-radius: 5px;\r\n  background: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n\r\n// separator-container\r\n\r\n.separator-container-2 {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0;\r\n}\r\n\r\n// separator-ligne\r\n\r\n.content-separator-ligne {\r\n  grid-area: separator-ligne;\r\n  height: 4rem;\r\n  width: 100%;\r\n  display: flex;\r\n  margin: 0 0 0 0;\r\n}\r\n\r\n.container-separator-ligne {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .separator-ligne-1 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 50%;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1%;\r\n      border-radius: 3rem;\r\n      margin-left: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 100%;\r\n    transition: all 1s;\r\n  }\r\n  .separator-ligne-2 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 2rem;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1rem;\r\n      border-radius: 3rem;\r\n      margin-right: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 106rem;\r\n    @include xxl {\r\n      width: 141.2rem;\r\n    }\r\n    right: 0;\r\n    transition: all 1s;\r\n  }\r\n}\r\n\r\n// separator xs\r\n\r\n.separator-xs-1 {\r\n  height: 1px;\r\n  width: 40%;\r\n  background: white;\r\n  margin: 0 0.5rem;\r\n}\r\n\r\n.container-separator-xs-2 {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 2px;\r\n  width: 100%;\r\n  margin: 1rem 0.5rem;\r\n\r\n  .separator-xs-2 {\r\n    height: 2px;\r\n    width: 75%;\r\n    background: #ddd;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n.content-menu {\r\n  position: sticky;\r\n  top: 10.2rem;\r\n  grid-area: menu;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 5rem;\r\n  background: #eee;\r\n  z-index: 1;\r\n  animation-name: content-menu;\r\n  animation-duration: 3s;\r\n  margin: 0;\r\n  @keyframes content-menu {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.menu-container {\r\n  margin: 0 1rem;\r\n  height: 4rem;\r\n}\r\n\r\n.menu-container-general {\r\n  position: absolute;\r\n  top: 4rem;\r\n  display: none;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 7rem;\r\n  width: 105rem;\r\n  border-radius: 0 0 2rem 2rem;\r\n  background: #eee;\r\n  margin: 0;\r\n  animation-name: containerMenu;\r\n  animation-duration: 1.6s;\r\n\r\n  @keyframes containerMenu {\r\n    0% {\r\n      opacity: 0;\r\n      transform: translateY(-5rem);\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n      transform: translateY(0rem);\r\n    }\r\n  }\r\n}\r\n\r\n.menu-content-general {\r\n  position: relative;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 4rem;\r\n  width: 32rem;\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n  border-radius: 3rem;\r\n  margin: 0 2rem;\r\n  cursor: default;\r\n  transition: all 1s;\r\n  &:hover > .menu-container-general {\r\n    display: flex;\r\n  }\r\n  &:hover {\r\n    width: 100rem;\r\n    border-radius: 2rem 2rem 0 0;\r\n  }\r\n}\r\n\r\n.titre {\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  &:hover {\r\n    font-size: 2rem;\r\n  }\r\n}\r\n\r\n.titre-votre-besoins {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: default;\r\n}\r\n.titre-notre-reseau {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: pointer;\r\n  &:hover {\r\n    font-size: 2.2rem;\r\n  }\r\n}\r\n\r\n.border-radius-1 {\r\n  border-radius: 0 0 0 8px;\r\n}\r\n.border-radius-3 {\r\n  border-radius: 0 0 8px 0;\r\n}\r\n\r\n// menu-langue\r\n\r\n.menu-langue {\r\n  margin-right: 1rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n// menu mobiles\r\n\r\n.menu-xs,\r\n.menu-xs-content {\r\n  display: none;\r\n}\r\n\r\n@include xs {\r\n  .menu-xs {\r\n    display: flex;\r\n    width: 100%;\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n\r\n  // menu-xs-open\r\n\r\n  .menu-xs-content {\r\n    position: fixed;\r\n    display: flex;\r\n    top: 0rem;\r\n    height: 100vh;\r\n    width: 100%;\r\n    margin: 0;\r\n    background: white;\r\n    z-index: 4;\r\n    animation: menu-xs 0.8s;\r\n    &.animate-open {\r\n      animation: menu-xs-open 0.8s;\r\n    }\r\n\r\n    &.animate-close {\r\n      animation: menu-xs-close 0.8s;\r\n    }\r\n  }\r\n\r\n  .menu-xs-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    margin: 3rem 0 0 0;\r\n  }\r\n\r\n  // menu langue xs\r\n\r\n  .menu-xs-langue {\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    width: 100%;\r\n    margin: 0 2rem 0 1rem;\r\n    a {\r\n      color: white;\r\n      font-family: var(--font-family-strasua);\r\n      letter-spacing: 0.2rem;\r\n      font-size: 1.5rem;\r\n      margin-left: 1rem;\r\n    }\r\n  }\r\n  .menu-xs-langue-content {\r\n    z-index: 3;\r\n    display: flex;\r\n    margin: 0;\r\n  }\r\n\r\n  .menu-xs-langue-container {\r\n    display: none;\r\n    flex-direction: column;\r\n    height: 10rem;\r\n    width: 13rem;\r\n    margin: 0;\r\n    background: var(--orange_02);\r\n    border-radius: 0.8rem;\r\n    animation: menu-xs-langue-container-open 1s;\r\n    @keyframes menu-xs-langue-container-open {\r\n      0% {\r\n        width: 0;\r\n        height: 2.5rem;\r\n      }\r\n      40% {\r\n        height: 2.5rem;\r\n      }\r\n      50% {\r\n        width: 13rem;\r\n      }\r\n      100% {\r\n        height: 10rem;\r\n      }\r\n    }\r\n  }\r\n\r\n  // menu general xs\r\n\r\n  .menu-general-xs-content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 100%;\r\n    margin-top: 2rem;\r\n\r\n    a {\r\n      font-size: 2rem;\r\n      font-family: var(--font-family-strasua);\r\n      color: var(--orange_02);\r\n      letter-spacing: 0.2rem;\r\n    }\r\n  }\r\n  .menu-general-xs-container {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 1.5rem 1rem;\r\n  }\r\n\r\n  .animation-menu-general-xs-container {\r\n    animation: animation-container-menu-general-xs 1.8s;\r\n  }\r\n  .menu-general-xs-content-opacity {\r\n    opacity: 0;\r\n  }\r\n\r\n  .content-link-menu-general-xs {\r\n    display: none;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    text-align: center;\r\n    height: 100%;\r\n    width: 90%;\r\n    margin: 0 1rem;\r\n    border-radius: 3rem;\r\n    background: var(--orange_02);\r\n    animation: open-content-link-menu-general-xs 1s;\r\n    margin: 0;\r\n    .link-menu-general-xs {\r\n      margin: 0.5rem 0;\r\n      font-size: 2rem;\r\n      font-family: var(--font-family-strasua);\r\n      color: white;\r\n      letter-spacing: 0.2rem;\r\n    }\r\n  }\r\n\r\n  .animation-content-link-menu-general-xs {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0;\r\n    animation: open-link-menu-general-xs 1s;\r\n  }\r\n\r\n  // link\r\n\r\n  // link menu langue xs\r\n\r\n  .link-menu-container-langue-xs {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: start;\r\n    margin: 0;\r\n  }\r\n\r\n  .first-link-menu-xs-langue {\r\n    font-family: var(--font-family-strasua);\r\n    letter-spacing: 0.2rem;\r\n    font-size: 1.5rem;\r\n  }\r\n\r\n  .link-menu-xs-langue {\r\n    margin: 0.5rem 0;\r\n  }\r\n}\r\n.menu-langue-xs-link-mid {\r\n  margin-top: 0;\r\n  margin-bottom: 0;\r\n}\r\n\r\n// btn\r\n\r\n// btn-menu-xs\r\n\r\n.btn {\r\n  position: relative;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  height: 2rem;\r\n  width: 2rem;\r\n  margin: 0 2rem 0 0;\r\n}\r\n.btn-barre {\r\n  position: absolute;\r\n  height: 0.2rem;\r\n  width: 2.6rem;\r\n  background: var(--orange_02);\r\n  margin: 0;\r\n  transition: all 0.8s;\r\n}\r\n.btn-barre-1 {\r\n  transform-origin: 0 0;\r\n  left: 1.5px;\r\n}\r\n.btn-barre-2 {\r\n  top: 1.8rem;\r\n  transform-origin: 0 100%;\r\n  left: 1.5px;\r\n}\r\n\r\n// btn menu langue xs\r\n\r\n.btn-open-menu-langue-xs {\r\n  margin: 0 1rem 0 0;\r\n}\r\n.btn-close-menu-langue-xs-content {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 2.5rem;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  animation: btn-close-menu-langue-xs 1s;\r\n  @keyframes btn-close-menu-langue-xs {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\n\r\n.btn-close-menu-langue-xs-close {\r\n  opacity: 0;\r\n}\r\n\r\n.btn-close-menu-langue-xs {\r\n  margin: 0.8rem;\r\n  color: white;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n// btn menu general xs\r\n.btn-open-close-content-link-menu-general-xs {\r\n  margin-left: 1rem;\r\n  font-size: 2rem;\r\n  color: var(--orange_02);\r\n  transition: all 1s;\r\n}\r\n\r\n// animation\r\n\r\n@keyframes menu-xs-open {\r\n  0% {\r\n    transform: translateY(-100vh);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(0);\r\n  }\r\n}\r\n\r\n@keyframes menu-xs-close {\r\n  0% {\r\n    transform: translateY(0);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(-100vh);\r\n  }\r\n}\r\n\r\n// animation menu general xs\r\n\r\n.first-animation-menu-general-xs {\r\n  animation: first-animation-menu-general-xs 1.3s;\r\n  @keyframes first-animation-menu-general-xs {\r\n    0% {\r\n      transform: scaleY(0);\r\n    }\r\n    80% {\r\n      transform: scaleY(0);\r\n    }\r\n    100% {\r\n      transform: scaleY(1);\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes animation-container-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  80% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes open-content-link-menu-general-xs {\r\n  0% {\r\n    height: 0;\r\n  }\r\n  100% {\r\n    height: 100%;\r\n  }\r\n}\r\n\r\n.close-content-link-menu-general-xs {\r\n  animation: close-content-link-menu-general-xs 1s;\r\n  @keyframes close-content-link-menu-general-xs {\r\n    0% {\r\n      height: 20.8rem;\r\n    }\r\n    100% {\r\n      height: 0;\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes open-link-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  30% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n.close-link-menu-general-xs {\r\n  animation: close-link-menu-general-xs 1s;\r\n  @keyframes close-link-menu-general-xs {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 0;\r\n    }\r\n  }\r\n}\r\n\r\n// animation menu langue xs\r\n\r\n.animation-close-menu-langue-xs {\r\n  animation: menu-xs-langue-container-close 1s;\r\n  @keyframes menu-xs-langue-container-close {\r\n    0% {\r\n      height: 10rem;\r\n    }\r\n    40% {\r\n      width: 13rem;\r\n    }\r\n    50% {\r\n      height: 2.5rem;\r\n    }\r\n    100% {\r\n      height: 2.5rem;\r\n      width: 0;\r\n    }\r\n  }\r\n}\r\n// divers - menu\r\n\r\n.fa-globe {\r\n  font-size: 2.5rem;\r\n  color: var(--orange_02);\r\n}\r\n",".mail-container {\r\n  grid-area: mail;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  width: 100%;\r\n  height: 5rem;\r\n  margin: 0;\r\n}\r\n\r\n.mail-content-1 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(-96rem);\r\n  transition: all 1s;\r\n  border-radius: 0 3rem 3rem 0;\r\n  z-index: 0;\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n.mail-content-2 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(96rem);\r\n  transition: all 1s;\r\n  border-radius: 3rem 0 0 3rem;\r\n  z-index: 0;\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\n.contact {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  width: 20rem;\r\n  background-color: #eee;\r\n  color: #eee;\r\n  position: relative;\r\n  overflow: hidden;\r\n  p {\r\n    font-family: var(--font-family);\r\n    letter-spacing: 0.1rem;\r\n    font-size: 2rem;\r\n    font-weight: 400;\r\n  }\r\n  &:hover::before {\r\n    opacity: 1;\r\n  }\r\n  &.active {\r\n    background: white;\r\n    color: var(--blue);\r\n    transition: all 1s;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n\r\n.contact::before {\r\n  content: \"Email@exemple.com\";\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  color: var(--blue);\r\n  background: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  transition: all 1s;\r\n  font-weight: 400;\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family);\r\n  text-decoration: underline;\r\n  letter-spacing: 0.1rem;\r\n  border-radius: 0;\r\n  opacity: 0;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_classes.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_utils.scss","webpack://./src/assets/styles/_menu-langue.scss","webpack://./src/assets/styles/_menu-general.scss","webpack://./src/assets/styles/_fonts.scss","webpack://./src/assets/styles/_separator.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_contact.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n  // overflow-x: hidden;\n}\np {\n  margin: 1rem 0;\n  font-weight: 400 !important;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 1rem 0 2rem 0;\n}\nh2 {\n  margin: 2rem 1rem;\n}\nh3 {\n  font-weight: 400;\n  margin: 1rem 0.5rem 1rem 0.5rem;\n}\n\nul {\n  list-style: none;\n}\na {\n  color: var(--text);\n  text-decoration: none;\n}\nimg {\n  max-width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"menu-langue\" as *;\r\n@use \"menu-general\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"menu\" as *;\r\n@use \"contact\" as *;\r\n\r\n// header\r\n\r\nheader {\r\n  grid-area: header;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 10rem;\r\n  background: white;\r\n  animation-name: header;\r\n  animation-duration: 1.8s;\r\n  width: 100%;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n  @include xs {\r\n    z-index: 5;\r\n  }\r\n  @keyframes header {\r\n    from {\r\n      transform: translateY(-10rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n  }\r\n}\r\n.h1 {\r\n  margin-top: 2rem;\r\n  color: var(--green_02);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.2rem;\r\n  margin-left: 2rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n// h1-xs\r\n\r\n.content-h1-xs {\r\n  display: none;\r\n}\r\n\r\n@include xs {\r\n  .content-h1-xs {\r\n    grid-area: h1-xs;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: calc(100% - 1rem);\r\n    margin: 0.5rem;\r\n  }\r\n  .h1-xs {\r\n    grid-area: h1-xs;\r\n    color: var(--green_02);\r\n    font-family: var(--font-family-strasua);\r\n    font-weight: 200;\r\n    font-size: 2.1rem;\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n\r\n// logo header\r\n\r\n.a-img {\r\n  grid-area: img;\r\n  height: 10rem;\r\n  width: 25rem;\r\n  animation-name: logo-1;\r\n  animation-duration: 1.8s;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n  @keyframes logo-1 {\r\n    from {\r\n      transform: translateY(5rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n\r\n.repere-content {\r\n  position: absolute;\r\n  right: 16rem;\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  width: 100rem;\r\n  height: 10rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  a {\r\n    color: var(--orange_02);\r\n    font-family: var(--font-family-strasua);\r\n    font-weight: 200;\r\n    font-size: 2rem;\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n// footer\r\n\r\nfooter {\r\n  grid-area: footer;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  position: relative;\r\n  overflow: hidden;\r\n  z-index: 0;\r\n  &.active::before {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\nfooter::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -10rem;\r\n  background-color: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  border-radius: 3rem;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n\r\n.text-footer {\r\n  font-family: var(--font-family-strasua);\r\n  font-size: 1.8rem;\r\n  letter-spacing: 0.2rem;\r\n  color: #eee;\r\n  margin: 0;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n\r\n.copyright {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #eee;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n",".title {\n  &-small {\n    letter-spacing: 0.5rem;\n    font-size: 1.6rem;\n    font-family: var(--font-family-small);\n  }\n}\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 979px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  // font-family\r\n  --font-family-strasua: \"strasua\";\r\n  --font-family-title: \"Cinzel Decorative\", cursive;\r\n  --font-family: \"Nunito Sans\", sans-serif;\r\n\r\n  // color\r\n  --text: #333;\r\n  --blue: #6eb2bd;\r\n  --orange_01: #df5b13;\r\n  --orange_02: #fd8342;\r\n  --green_01: #7ccbab;\r\n  --green_02: #11a67e;\r\n  --background: #d6d6d6;\r\n\r\n  // box-shadow\r\n  --box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),\r\n    0 1px 3px 1px rgba(60, 64, 67, 0.15);\r\n}\r\n",".mb_2 {\n  margin-bottom: 2rem !important;\n}\n.mb_5 {\n  margin-bottom: 5rem !important;\n}\n.mx_1 {\n  margin-left: 1rem;\n  margin-right: 1rem;\n}\n.my_1 {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n}\n",".leader {\r\n  color: var(--orange_01);\r\n}\r\n\r\n#menu-langue,\r\n#menu-langue ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-langue li {\r\n  display: inline-block;\r\n  position: relative;\r\n  border-radius: 8px 8px 0 0;\r\n}\r\n#menu-langue ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-langue ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-langue li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-langue li:last-child {\r\n  // background: var(--orange_01);\r\n}\r\n/* background des liens sous menus */\r\n#menu-langue li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-langue li:last-child:hover {\r\n  background: white;\r\n}\r\n#menu-langue li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-langue a {\r\n  width: 15rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: arial;\r\n}\r\n#menu-langue ul a {\r\n  padding: 8px 0;\r\n  color: var(--orange_01);\r\n}\r\n#menu-langue li:hover li a {\r\n  color: var(--orange_01);\r\n  text-transform: inherit;\r\n}\r\n","#menu-general,\r\n#menu-general ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-general li {\r\n  display: inline-block;\r\n  position: relative;\r\n  transition: all 1s;\r\n  &:hover {\r\n    border-radius: 8px 8px 0 0;\r\n  }\r\n}\r\n#menu-general ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-general ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-general li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-general li:last-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n/* background des liens sous menus */\r\n#menu-general li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-general li:first-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n#menu-general li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-general a {\r\n  width: 32rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.2rem;\r\n  font-weight: 200;\r\n  color: white;\r\n}\r\n#menu-general ul a {\r\n  padding: 8px 0;\r\n  color: white;\r\n}\r\n#menu-general li:hover li a {\r\n  color: var(--blue);\r\n  text-transform: inherit;\r\n}\r\n\r\n// #menu-demo2 li:hover a,\r\n// #menu-demo2 li li:hover a {\r\n// }\r\n","@font-face {\r\n  font-family: \"strasua\";\r\n  src: url(\"C:/Users/Azstras/OneDrive/Documents/polices/strasua.otf\")\r\n    format(opentype);\r\n}\r\n","@use \"media-queries\" as *;\r\n// separator\r\n\r\n.separator-1 {\r\n  margin: 1rem 20rem;\r\n  height: 6px;\r\n  border-radius: 5px;\r\n  width: 80rem;\r\n  background-color: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n.separator-2 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  margin: 0;\r\n  background: var(--green_02);\r\n  height: 2px;\r\n  width: 25rem;\r\n  grid-area: separator-2;\r\n  animation-name: separator-2;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-2 {\r\n    from {\r\n      transform: translateY(15rem);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n.separator-3 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  left: 25rem;\r\n  margin: 0;\r\n  background: var(--orange_01);\r\n  height: 2px;\r\n  width: 100%;\r\n  grid-area: separator-3;\r\n  animation-name: separator-3;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-3 {\r\n    from {\r\n      transform: scaleX(0);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    left: 22rem;\r\n  }\r\n}\r\n\r\n.separator-4 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  // border-radius: 100%;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    top: 0;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n.separator-4::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-6 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-6::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-9 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    left: 0;\r\n  }\r\n}\r\n.separator-9::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  left: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-11 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 2s;\r\n    top: 0;\r\n  }\r\n}\r\n\r\n.separator-11::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-14 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    right: 0;\r\n  }\r\n}\r\n.separator-14::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  right: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n.separator-15 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-15::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-16 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-16::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-17 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-17::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-18 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-18::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-19 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-19::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-20 {\r\n  margin-top: 4rem;\r\n  height: 6px;\r\n  width: 55rem;\r\n  border-radius: 5px;\r\n  background: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n\r\n// separator-container\r\n\r\n.separator-container-2 {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0;\r\n}\r\n\r\n// separator-ligne\r\n\r\n.content-separator-ligne {\r\n  grid-area: separator-ligne;\r\n  height: 4rem;\r\n  width: 100%;\r\n  display: flex;\r\n  margin: 0 0 0 0;\r\n}\r\n\r\n.container-separator-ligne {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .separator-ligne-1 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 50%;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1%;\r\n      border-radius: 3rem;\r\n      margin-left: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 100%;\r\n    transition: all 1s;\r\n  }\r\n  .separator-ligne-2 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 2rem;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1rem;\r\n      border-radius: 3rem;\r\n      margin-right: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 106rem;\r\n    @include xxl {\r\n      width: 141.2rem;\r\n    }\r\n    right: 0;\r\n    transition: all 1s;\r\n  }\r\n}\r\n\r\n// separator xs\r\n\r\n.container-separator-xs-2 {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 2px;\r\n  width: 100%;\r\n  margin: 1rem 0.5rem;\r\n\r\n  .separator-xs-2 {\r\n    height: 2px;\r\n    width: 75%;\r\n    background: #ddd;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n.content-menu {\r\n  position: sticky;\r\n  top: 10.2rem;\r\n  grid-area: menu;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 5rem;\r\n  background: #eee;\r\n  z-index: 1;\r\n  animation-name: content-menu;\r\n  animation-duration: 3s;\r\n  margin: 0;\r\n  @keyframes content-menu {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.menu-container {\r\n  margin: 0 1rem;\r\n  height: 4rem;\r\n}\r\n\r\n.menu-container-general {\r\n  position: absolute;\r\n  top: 4rem;\r\n  display: none;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 7rem;\r\n  width: 105rem;\r\n  border-radius: 0 0 2rem 2rem;\r\n  background: #eee;\r\n  margin: 0;\r\n  animation-name: containerMenu;\r\n  animation-duration: 1.6s;\r\n\r\n  @keyframes containerMenu {\r\n    0% {\r\n      opacity: 0;\r\n      transform: translateY(-5rem);\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n      transform: translateY(0rem);\r\n    }\r\n  }\r\n}\r\n\r\n.menu-content-general {\r\n  position: relative;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 4rem;\r\n  width: 32rem;\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n  border-radius: 3rem;\r\n  margin: 0 2rem;\r\n  cursor: default;\r\n  transition: all 1s;\r\n  &:hover > .menu-container-general {\r\n    display: flex;\r\n  }\r\n  &:hover {\r\n    width: 100rem;\r\n    border-radius: 2rem 2rem 0 0;\r\n  }\r\n}\r\n\r\n.titre {\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  &:hover {\r\n    font-size: 2rem;\r\n  }\r\n}\r\n\r\n.titre-votre-besoins {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: default;\r\n}\r\n.titre-notre-reseau {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: pointer;\r\n  &:hover {\r\n    font-size: 2.2rem;\r\n  }\r\n}\r\n\r\n.border-radius-1 {\r\n  border-radius: 0 0 0 8px;\r\n}\r\n.border-radius-3 {\r\n  border-radius: 0 0 8px 0;\r\n}\r\n\r\n// menu-langue\r\n\r\n.menu-langue {\r\n  margin-right: 1rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n// menu mobiles\r\n\r\n.menu-xs,\r\n.menu-xs-content {\r\n  display: none;\r\n}\r\n\r\n@include xs {\r\n  .menu-xs {\r\n    display: flex;\r\n    width: 100%;\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n\r\n  // menu-xs-open\r\n\r\n  .menu-xs-content {\r\n    position: fixed;\r\n    display: none;\r\n    top: 0rem;\r\n    height: 100vh;\r\n    width: 100%;\r\n    margin: 0;\r\n    background: white;\r\n    z-index: 4;\r\n    animation: menu-xs 0.8s;\r\n    &.animate-open {\r\n      animation: menu-xs-open 0.8s;\r\n    }\r\n\r\n    &.animate-close {\r\n      animation: menu-xs-close 0.8s;\r\n    }\r\n  }\r\n\r\n  .menu-xs-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    margin: 3rem 0 0 0;\r\n  }\r\n\r\n  // menu langue xs\r\n\r\n  .menu-xs-langue {\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    width: 100%;\r\n    margin: 0 2rem 0 1rem;\r\n    a {\r\n      color: white;\r\n      font-family: var(--font-family-strasua);\r\n      letter-spacing: 0.2rem;\r\n      font-size: 1.5rem;\r\n      margin-left: 1rem;\r\n    }\r\n  }\r\n  .menu-xs-langue-content {\r\n    z-index: 3;\r\n    display: flex;\r\n    margin: 0;\r\n  }\r\n\r\n  .menu-xs-langue-container {\r\n    display: none;\r\n    flex-direction: column;\r\n    height: 10rem;\r\n    width: 13rem;\r\n    margin: 0;\r\n    background: var(--orange_02);\r\n    border-radius: 0.8rem;\r\n    animation: menu-xs-langue-container-open 1s;\r\n    @keyframes menu-xs-langue-container-open {\r\n      0% {\r\n        width: 0;\r\n        height: 2.5rem;\r\n      }\r\n      40% {\r\n        height: 2.5rem;\r\n      }\r\n      50% {\r\n        width: 13rem;\r\n      }\r\n      100% {\r\n        height: 10rem;\r\n      }\r\n    }\r\n  }\r\n\r\n  // menu general xs\r\n\r\n  .menu-general-xs-content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100%;\r\n    width: 100%;\r\n    margin-top: 2rem;\r\n\r\n    a {\r\n      font-size: 2rem;\r\n      font-family: var(--font-family-strasua);\r\n      color: var(--orange_02);\r\n      letter-spacing: 0.2rem;\r\n    }\r\n  }\r\n  .menu-general-xs-container {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 1.5rem 1rem;\r\n  }\r\n\r\n  .animation-menu-general-xs-container {\r\n    animation: animation-container-menu-general-xs 1.8s;\r\n  }\r\n  .menu-general-xs-content-opacity {\r\n    opacity: 0;\r\n  }\r\n\r\n  .content-link-menu-general-xs {\r\n    display: none;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    text-align: center;\r\n    height: 100%;\r\n    width: 90%;\r\n    margin: 0 1rem;\r\n    border-radius: 3rem;\r\n    background: var(--orange_02);\r\n    animation: open-content-link-menu-general-xs 1s;\r\n    margin: 0;\r\n    .link-menu-general-xs {\r\n      margin: 0.5rem 0;\r\n      font-size: 2rem;\r\n      font-family: var(--font-family-strasua);\r\n      color: white;\r\n      letter-spacing: 0.2rem;\r\n    }\r\n  }\r\n\r\n  .animation-content-link-menu-general-xs {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0;\r\n    animation: open-link-menu-general-xs 1s;\r\n  }\r\n\r\n  // link\r\n\r\n  // link menu langue xs\r\n\r\n  .link-menu-container-langue-xs {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: start;\r\n    margin: 0;\r\n  }\r\n\r\n  .first-link-menu-xs-langue {\r\n    font-family: var(--font-family-strasua);\r\n    letter-spacing: 0.2rem;\r\n    font-size: 1.5rem;\r\n  }\r\n\r\n  .link-menu-xs-langue {\r\n    margin: 0.5rem 0;\r\n  }\r\n}\r\n.menu-langue-xs-link-mid {\r\n  margin-top: 0;\r\n  margin-bottom: 0;\r\n}\r\n\r\n// btn\r\n\r\n// btn-menu-xs\r\n\r\n.btn {\r\n  position: relative;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  height: 2rem;\r\n  width: 2rem;\r\n  margin: 0 2rem 0 0;\r\n}\r\n.btn-barre {\r\n  position: absolute;\r\n  height: 0.2rem;\r\n  width: 2.6rem;\r\n  background: var(--orange_02);\r\n  margin: 0;\r\n  transition: all 0.8s;\r\n}\r\n.btn-barre-1 {\r\n  transform-origin: 0 0;\r\n  left: 1.5px;\r\n}\r\n.btn-barre-2 {\r\n  top: 1.8rem;\r\n  transform-origin: 0 100%;\r\n  left: 1.5px;\r\n}\r\n\r\n// btn menu langue xs\r\n\r\n.btn-open-menu-langue-xs {\r\n  margin: 0 1rem 0 0;\r\n}\r\n.btn-close-menu-langue-xs-content {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 2.5rem;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  animation: btn-close-menu-langue-xs 1s;\r\n  @keyframes btn-close-menu-langue-xs {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\n\r\n.btn-close-menu-langue-xs-close {\r\n  opacity: 0;\r\n}\r\n\r\n.btn-close-menu-langue-xs {\r\n  margin: 0.8rem;\r\n  color: white;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n// btn menu general xs\r\n.btn-open-close-content-link-menu-general-xs {\r\n  margin-left: 1rem;\r\n  font-size: 2rem;\r\n  color: var(--orange_02);\r\n  transition: all 1s;\r\n}\r\n\r\n// animation\r\n\r\n@keyframes menu-xs-open {\r\n  0% {\r\n    transform: translateY(-100vh);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(0);\r\n  }\r\n}\r\n\r\n@keyframes menu-xs-close {\r\n  0% {\r\n    transform: translateY(0);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(-100vh);\r\n  }\r\n}\r\n\r\n// animation menu general xs\r\n\r\n.first-animation-menu-general-xs {\r\n  animation: first-animation-menu-general-xs 1.3s;\r\n  @keyframes first-animation-menu-general-xs {\r\n    0% {\r\n      transform: scaleY(0);\r\n    }\r\n    80% {\r\n      transform: scaleY(0);\r\n    }\r\n    100% {\r\n      transform: scaleY(1);\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes animation-container-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  80% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes open-content-link-menu-general-xs {\r\n  0% {\r\n    height: 0;\r\n  }\r\n  100% {\r\n    height: 100%;\r\n  }\r\n}\r\n\r\n.close-content-link-menu-general-xs {\r\n  animation: close-content-link-menu-general-xs 1s;\r\n  @keyframes close-content-link-menu-general-xs {\r\n    0% {\r\n      height: 20.8rem;\r\n    }\r\n    100% {\r\n      height: 0;\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes open-link-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  30% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n.close-link-menu-general-xs {\r\n  animation: close-link-menu-general-xs 1s;\r\n  @keyframes close-link-menu-general-xs {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 0;\r\n    }\r\n  }\r\n}\r\n\r\n// animation menu langue xs\r\n\r\n.animation-close-menu-langue-xs {\r\n  animation: menu-xs-langue-container-close 1s;\r\n  @keyframes menu-xs-langue-container-close {\r\n    0% {\r\n      height: 10rem;\r\n    }\r\n    40% {\r\n      width: 13rem;\r\n    }\r\n    50% {\r\n      height: 2.5rem;\r\n    }\r\n    100% {\r\n      height: 2.5rem;\r\n      width: 0;\r\n    }\r\n  }\r\n}\r\n// divers - menu\r\n\r\n.fa-globe {\r\n  font-size: 2.5rem;\r\n  color: var(--orange_02);\r\n}\r\n","@use \"media-queries\" as *;\r\n.mail-container {\r\n  grid-area: mail;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  width: 100%;\r\n  height: 5rem;\r\n  margin: 0;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.mail-content-1 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(-96rem);\r\n  transition: all 1s;\r\n  border-radius: 0 3rem 3rem 0;\r\n  z-index: 0;\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n.mail-content-2 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(96rem);\r\n  transition: all 1s;\r\n  border-radius: 3rem 0 0 3rem;\r\n  z-index: 0;\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\n.contact {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  width: 20rem;\r\n  background-color: #eee;\r\n  color: #eee;\r\n  position: relative;\r\n  overflow: hidden;\r\n  p {\r\n    font-family: var(--font-family);\r\n    letter-spacing: 0.1rem;\r\n    font-size: 2rem;\r\n    font-weight: 400;\r\n  }\r\n  &:hover::before {\r\n    opacity: 1;\r\n  }\r\n  &.active {\r\n    background: white;\r\n    color: var(--blue);\r\n    transition: all 1s;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n\r\n.contact::before {\r\n  content: \"Email@exemple.com\";\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  color: var(--blue);\r\n  background: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  transition: all 1s;\r\n  font-weight: 400;\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family);\r\n  text-decoration: underline;\r\n  letter-spacing: 0.1rem;\r\n  border-radius: 0;\r\n  opacity: 0;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1535,11 +1546,12 @@ div {
 .container {
   display: grid;
   background: #eee;
+  width: 100%;
   grid: "img header" 10rem "separator-2 separator-3" auto "slogan-container slogan-container" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/25rem auto;
 }
 @media (max-width: 480px) {
   .container {
-    grid: "img header" 8rem "menu-xs menu-xs" auto "h1-xs h1-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
+    grid: "img header" 8rem "menu-xs menu-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "h1-xs h1-xs" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
   }
 }
 
@@ -1547,6 +1559,7 @@ div {
   grid-area: general;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 0;
 }
 .general-content .text-content-1 {
@@ -1554,19 +1567,30 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   text-align: center;
   background: #d6d6d6;
+}
+@media (max-width: 480px) {
+  .general-content .text-content-1 {
+    margin: 0;
+  }
 }
 .general-content .sous-titre-1 {
   display: flex;
   justify-content: center;
-  margin: 4rem 2rem 2rem 2rem;
+  align-items: center;
   width: 30rem;
   border-radius: 3rem;
   color: var(--orange_01);
   position: relative;
   z-index: 0;
   overflow: hidden;
+}
+@media (max-width: 480px) {
+  .general-content .sous-titre-1 {
+    width: calc(100% - 4rem);
+  }
 }
 .general-content .sous-titre-1.active::before {
   top: 0;
@@ -1582,6 +1606,11 @@ div {
   transition: all 0.8s;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  .general-content .sous-titre-1::before {
+    top: 0;
+  }
+}
 .general-content .text-container-1 {
   margin: 2rem;
   height: 28rem;
@@ -1590,6 +1619,12 @@ div {
   position: relative;
   z-index: 0;
   overflow: hidden;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-1 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
 }
 .general-content .text-container-1.active::before {
   top: 0;
@@ -1600,6 +1635,7 @@ div {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   font-weight: 700;
+  margin-bottom: 2rem;
 }
 .general-content .text-container-1::before {
   content: "";
@@ -1612,16 +1648,27 @@ div {
   transition: all 0.8s;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  .general-content .text-container-1::before {
+    top: 0;
+  }
+}
 .general-content .sous-titre-2 {
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  align-items: center;
   width: 38rem;
   border-radius: 3rem;
   color: var(--orange_01);
   position: relative;
   z-index: 0;
   overflow: hidden;
+}
+@media (max-width: 480px) {
+  .general-content .sous-titre-2 {
+    width: calc(100% - 4rem);
+    font-size: 1.8rem;
+  }
 }
 .general-content .sous-titre-2.active::before {
   top: 0;
@@ -1637,10 +1684,20 @@ div {
   transition: all 0.8s;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  .general-content .sous-titre-2::before {
+    top: 0;
+  }
+}
 .general-content .text-container-2 {
   display: flex;
   flex-direction: row nowrap;
   margin: 0;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-2 {
+    flex-direction: column;
+  }
 }
 .general-content .div-text-container-1 {
   display: flex;
@@ -1653,6 +1710,12 @@ div {
   z-index: 0;
   overflow: hidden;
 }
+@media (max-width: 480px) {
+  .general-content .div-text-container-1 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .div-text-container-1.active::before {
   right: 0;
 }
@@ -1662,6 +1725,11 @@ div {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   font-weight: 700;
+}
+@media (max-width: 480px) {
+  .general-content .div-text-container-1 p {
+    margin: 2rem;
+  }
 }
 .general-content .div-text-container-1::before {
   content: "";
@@ -1674,6 +1742,11 @@ div {
   transition: all 0.8s;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  .general-content .div-text-container-1::before {
+    right: 0;
+  }
+}
 .general-content .div-text-container-2 {
   display: flex;
   align-items: center;
@@ -1685,15 +1758,26 @@ div {
   z-index: 0;
   overflow: hidden;
 }
+@media (max-width: 480px) {
+  .general-content .div-text-container-2 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .div-text-container-2.active::before {
   top: 0;
 }
 .general-content .div-text-container-2 p {
   color: white;
-  margin: 2rem 2rem 1rem 2rem;
+  margin: 2rem;
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   font-weight: 700;
+}
+@media (max-width: 480px) {
+  .general-content .div-text-container-2 p {
+    margin: 2rem;
+  }
 }
 .general-content .div-text-container-2::before {
   content: "";
@@ -1706,6 +1790,11 @@ div {
   transition: all 0.8s;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  .general-content .div-text-container-2::before {
+    top: 0;
+  }
+}
 .general-content .div-text-container-3 {
   display: flex;
   border-radius: 3rem;
@@ -1716,6 +1805,12 @@ div {
   z-index: 0;
   overflow: hidden;
 }
+@media (max-width: 480px) {
+  .general-content .div-text-container-3 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .div-text-container-3.active::before {
   left: 0;
 }
@@ -1725,6 +1820,11 @@ div {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   font-weight: 700;
+}
+@media (max-width: 480px) {
+  .general-content .div-text-container-3 p {
+    margin: 2rem;
+  }
 }
 .general-content .div-text-container-3::before {
   content: "";
@@ -1737,6 +1837,11 @@ div {
   transition: all 1s;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  .general-content .div-text-container-3::before {
+    left: 0;
+  }
+}
 .general-content .text-container-3 {
   display: flex;
   justify-content: center;
@@ -1748,6 +1853,12 @@ div {
   z-index: 0;
   overflow: hidden;
 }
+@media (max-width: 480px) {
+  .general-content .text-container-3 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .text-container-3.active::before {
   top: 0;
 }
@@ -1757,6 +1868,11 @@ div {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   font-weight: 700;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-3 p {
+    margin: 2rem;
+  }
 }
 .general-content .text-container-3::before {
   content: "";
@@ -1769,6 +1885,11 @@ div {
   transition: all 1.8s;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  .general-content .text-container-3::before {
+    top: 0;
+  }
+}
 .general-content .text-container-4 {
   display: flex;
   justify-content: center;
@@ -1776,10 +1897,15 @@ div {
   height: 15rem;
   width: 50rem;
   border-radius: 3rem;
-  margin-bottom: 8rem;
   position: relative;
   z-index: 0;
   overflow: hidden;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-4 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
 }
 .general-content .text-container-4.active::before {
   top: 0;
@@ -1791,6 +1917,11 @@ div {
   font-size: 1.8rem;
   font-weight: 700;
 }
+@media (max-width: 480px) {
+  .general-content .text-container-4 p {
+    margin: 2rem;
+  }
+}
 .general-content .text-container-4::before {
   content: "";
   position: absolute;
@@ -1801,6 +1932,181 @@ div {
   border-radius: 3rem;
   transition: all 1.8s;
   z-index: -1;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-4::before {
+    top: 0;
+  }
+}
+.general-content .text-content-2 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background: #d6d6d6;
+}
+.general-content .sous-titre-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  border-radius: 3rem;
+  color: var(--orange_01);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .general-content .sous-titre-3 {
+    width: calc(100% - 4rem);
+  }
+}
+.general-content .sous-titre-3.active::before {
+  top: 0;
+}
+.general-content .sous-titre-3::before {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  background: var(--green_01);
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  transition: all 1s;
+  z-index: -1;
+}
+@media (max-width: 480px) {
+  .general-content .sous-titre-3::before {
+    top: 0;
+  }
+}
+.general-content .text-container-5 {
+  height: 25rem;
+  width: 100rem;
+  border-radius: 3rem;
+  color: white;
+  background: var(--green_01);
+  position: relative;
+  left: -156rem;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-5 {
+    left: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 2559px) {
+  .general-content .text-container-5 {
+    left: -192rem;
+  }
+}
+.general-content .text-container-5.active {
+  left: 0;
+  transition: all 1.8s;
+}
+.general-content .text-container-5 p {
+  margin: 2rem 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.general-content .text-container-6 {
+  height: 20rem;
+  width: 100rem;
+  background: var(--green_01);
+  color: white;
+  border-radius: 3rem;
+  position: relative;
+  overflow-x: hidden;
+  right: -156rem;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-6 {
+    right: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 2559px) {
+  .general-content .text-container-6 {
+    right: -192rem;
+  }
+}
+.general-content .text-container-6.active {
+  right: 0;
+  transition: all 1.8s;
+}
+.general-content .text-container-6 p {
+  margin: 2rem 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.general-content .text-container-7 {
+  height: 20rem;
+  width: 100rem;
+  background: var(--green_01);
+  color: white;
+  border-radius: 3rem;
+  position: relative;
+  left: -156rem;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-7 {
+    left: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 2559px) {
+  .general-content .text-container-7 {
+    left: -192rem;
+  }
+}
+.general-content .text-container-7.active {
+  left: 0;
+  transition: all 2s;
+}
+.general-content .text-container-7 p {
+  margin: 2rem 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.general-content .text-container-8 {
+  height: 15rem;
+  width: 100rem;
+  background: var(--green_01);
+  color: white;
+  border-radius: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+  right: -156rem;
+}
+@media (max-width: 480px) {
+  .general-content .text-container-8 {
+    right: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 2559px) {
+  .general-content .text-container-8 {
+    right: -192rem;
+  }
+}
+.general-content .text-container-8.active {
+  right: 0;
+  transition: all 1.8s;
+}
+.general-content .text-container-8 p {
+  margin: 2rem 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 .general-content .sous-titre {
   font-weight: 400;
@@ -1905,144 +2211,6 @@ div {
   opacity: 1;
 }
 
-.text-content-2 {
-  margin: 5rem 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: #d6d6d6;
-}
-
-.sous-titre-3 {
-  display: flex;
-  justify-content: center;
-  margin: 0rem 2rem 2rem 2rem;
-  width: 25rem;
-  border-radius: 3rem;
-  color: var(--orange_01);
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-.sous-titre-3.active::before {
-  top: 0;
-}
-
-.sous-titre-3::before {
-  content: "";
-  position: absolute;
-  top: -4rem;
-  background: var(--green_01);
-  height: 100%;
-  width: 100%;
-  border-radius: 3rem;
-  transition: all 1s;
-  z-index: -1;
-}
-
-.text-container-5 {
-  height: 25rem;
-  width: 100rem;
-  border-radius: 3rem;
-  color: white;
-  background: var(--green_01);
-  position: relative;
-  left: -156rem;
-}
-@media (min-width: 2559px) {
-  .text-container-5 {
-    left: -192rem;
-  }
-}
-.text-container-5.active {
-  left: 0;
-  transition: all 1.8s;
-}
-.text-container-5 p {
-  margin: 2rem 2rem;
-  letter-spacing: 0.1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.text-container-6 {
-  height: 20rem;
-  width: 100rem;
-  background: var(--green_01);
-  color: white;
-  border-radius: 3rem;
-  position: relative;
-  overflow-x: hidden;
-  right: -156rem;
-}
-@media (min-width: 2559px) {
-  .text-container-6 {
-    right: -192rem;
-  }
-}
-.text-container-6.active {
-  right: 0;
-  transition: all 1.8s;
-}
-.text-container-6 p {
-  margin: 2rem 2rem;
-  letter-spacing: 0.1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.text-container-7 {
-  height: 20rem;
-  width: 100rem;
-  background: var(--green_01);
-  color: white;
-  border-radius: 3rem;
-  position: relative;
-  left: -156rem;
-}
-@media (min-width: 2559px) {
-  .text-container-7 {
-    left: -192rem;
-  }
-}
-.text-container-7.active {
-  left: 0;
-  transition: all 2s;
-}
-.text-container-7 p {
-  margin: 2rem 2rem;
-  letter-spacing: 0.1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.text-container-8 {
-  height: 15rem;
-  width: 100rem;
-  background: var(--green_01);
-  color: white;
-  border-radius: 3rem;
-  margin-bottom: 4rem;
-  position: relative;
-  right: -156rem;
-}
-@media (min-width: 2559px) {
-  .text-container-8 {
-    right: -192rem;
-  }
-}
-.text-container-8.active {
-  right: 0;
-  transition: all 1.8s;
-}
-.text-container-8 p {
-  margin: 2rem 2rem;
-  letter-spacing: 0.1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
 .text-9 {
   color: none;
   opacity: 0;
@@ -2056,7 +2224,7 @@ div {
 
 div {
   margin: 2rem 0;
-}`, "",{"version":3,"sources":["webpack://./src/_media-queries.scss","webpack://./src/_logo-slogan.scss","webpack://./src/index.scss"],"names":[],"mappings":"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","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 979px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// logo & slogan\r\n\r\n.logo-content {\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  height: 70rem;\r\n  @include xxl {\r\n    height: 104rem;\r\n  }\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n.logo-container {\r\n  margin-top: 1rem;\r\n  margin-bottom: 2rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  .logo-2 {\r\n    height: 25rem;\r\n    width: 60rem;\r\n  }\r\n}\r\n.slogan-container {\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: flex;\r\n  min-width: 30rem;\r\n  border-radius: 0.8rem;\r\n  animation-name: apparition;\r\n}\r\n.h2 {\r\n  margin-left: 2rem;\r\n  margin-top: 3rem;\r\n  color: var(--blue);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.5rem;\r\n  animation-name: h2;\r\n  animation-duration: 1.8s;\r\n\r\n  @keyframes h2 {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\ndiv {\r\n  display: flex;\r\n}\r\ndiv {\r\n  margin: 0 1rem;\r\n}\r\n","@use \"media-queries\" as *;\r\n@use \"logo-slogan\" as *;\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n  @include xs {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin: 0;\r\n\r\n  .text-content-1 {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    text-align: center;\r\n    background: #d6d6d6;\r\n  }\r\n  .sous-titre-1 {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 4rem 2rem 2rem 2rem;\r\n    width: 30rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n  }\r\n  .text-container-1 {\r\n    margin: 2rem;\r\n    height: 28rem;\r\n    width: 110rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n  }\r\n\r\n  .sous-titre-2 {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 2rem;\r\n    width: 38rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n  }\r\n\r\n  .text-container-2 {\r\n    display: flex;\r\n    flex-direction: row nowrap;\r\n    margin: 0;\r\n  }\r\n\r\n  .div-text-container-1 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      right: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .div-text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    right: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n  }\r\n  .div-text-container-2 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .div-text-container-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -20rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n  }\r\n  .div-text-container-3 {\r\n    display: flex;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      left: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .div-text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n  }\r\n  .text-container-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 8rem;\r\n    width: 58rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n  }\r\n  .text-container-4 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 15rem;\r\n    width: 50rem;\r\n    border-radius: 3rem;\r\n    margin-bottom: 8rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-4::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n  }\r\n\r\n  .sous-titre {\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n.text-decoration-1 {\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.5rem;\r\n  font-size: 1.6rem;\r\n  font-weight: 300;\r\n  color: var(--orange_01);\r\n}\r\n\r\n.text-1 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-2 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-3 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  width: 100%;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// text-content-2\r\n\r\n.text-content-2 {\r\n  margin: 5rem 0 0 0;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  text-align: center;\r\n  background: #d6d6d6;\r\n}\r\n\r\n.sous-titre-3 {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 0rem 2rem 2rem 2rem;\r\n  width: 25rem;\r\n  border-radius: 3rem;\r\n  color: var(--orange_01);\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    top: 0;\r\n  }\r\n}\r\n.sous-titre-3::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--green_01);\r\n  height: 100%;\r\n  width: 100%;\r\n  border-radius: 3rem;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n\r\n.text-container-5 {\r\n  height: 25rem;\r\n  width: 100rem;\r\n  border-radius: 3rem;\r\n  color: white;\r\n  background: var(--green_01);\r\n  position: relative;\r\n  left: -156rem;\r\n  @include xxl {\r\n    left: -192rem;\r\n  }\r\n  &.active {\r\n    left: 0;\r\n    transition: all 1.8s;\r\n  }\r\n  p {\r\n    margin: 2rem 2rem;\r\n    letter-spacing: 0.1rem;\r\n    font-size: 1.8rem;\r\n    font-weight: 700;\r\n  }\r\n}\r\n\r\n.text-container-6 {\r\n  height: 20rem;\r\n  width: 100rem;\r\n  background: var(--green_01);\r\n  color: white;\r\n  border-radius: 3rem;\r\n  position: relative;\r\n  overflow-x: hidden;\r\n  right: -156rem;\r\n  @include xxl {\r\n    right: -192rem;\r\n  }\r\n  &.active {\r\n    right: 0;\r\n    transition: all 1.8s;\r\n  }\r\n  p {\r\n    margin: 2rem 2rem;\r\n    letter-spacing: 0.1rem;\r\n    font-size: 1.8rem;\r\n    font-weight: 700;\r\n  }\r\n}\r\n.text-container-7 {\r\n  height: 20rem;\r\n  width: 100rem;\r\n  background: var(--green_01);\r\n  color: white;\r\n  border-radius: 3rem;\r\n  position: relative;\r\n  left: -156rem;\r\n  @include xxl {\r\n    left: -192rem;\r\n  }\r\n  &.active {\r\n    left: 0;\r\n    transition: all 2s;\r\n  }\r\n  p {\r\n    margin: 2rem 2rem;\r\n    letter-spacing: 0.1rem;\r\n    font-size: 1.8rem;\r\n    font-weight: 700;\r\n  }\r\n}\r\n.text-container-8 {\r\n  height: 15rem;\r\n  width: 100rem;\r\n  background: var(--green_01);\r\n  color: white;\r\n  border-radius: 3rem;\r\n  margin-bottom: 4rem;\r\n  position: relative;\r\n  right: -156rem;\r\n  @include xxl {\r\n    right: -192rem;\r\n  }\r\n  &.active {\r\n    right: 0;\r\n    transition: all 1.8s;\r\n  }\r\n  p {\r\n    margin: 2rem 2rem;\r\n    letter-spacing: 0.1rem;\r\n    font-size: 1.8rem;\r\n    font-weight: 700;\r\n  }\r\n}\r\n\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// footer\r\n\r\n// .test {\r\n//   color: var(--orange_01);\r\n// }\r\n\r\n// menu\r\n\r\ndiv {\r\n  margin: 2rem 0;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/_media-queries.scss","webpack://./src/_logo-slogan.scss","webpack://./src/index.scss"],"names":[],"mappings":"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","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 979px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// logo & slogan\r\n\r\n.logo-content {\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  height: 70rem;\r\n  @include xxl {\r\n    height: 104rem;\r\n  }\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n.logo-container {\r\n  margin-top: 1rem;\r\n  margin-bottom: 2rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  .logo-2 {\r\n    height: 25rem;\r\n    width: 60rem;\r\n  }\r\n}\r\n.slogan-container {\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: flex;\r\n  min-width: 30rem;\r\n  border-radius: 0.8rem;\r\n  animation-name: apparition;\r\n}\r\n.h2 {\r\n  margin-left: 2rem;\r\n  margin-top: 3rem;\r\n  color: var(--blue);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.5rem;\r\n  animation-name: h2;\r\n  animation-duration: 1.8s;\r\n\r\n  @keyframes h2 {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\ndiv {\r\n  display: flex;\r\n}\r\ndiv {\r\n  margin: 0 1rem;\r\n}\r\n","@use \"media-queries\" as *;\r\n@use \"logo-slogan\" as *;\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  width: 100%;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n  @include xs {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .text-content-1 {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 100%;\r\n    text-align: center;\r\n    background: #d6d6d6;\r\n    @include xs {\r\n      margin: 0;\r\n    }\r\n  }\r\n  .sous-titre-1 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 30rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-1 {\r\n    margin: 2rem;\r\n    height: 28rem;\r\n    width: 110rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      margin-bottom: 2rem;\r\n    }\r\n  }\r\n  .text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .sous-titre-2 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 38rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-2 {\r\n    display: flex;\r\n    flex-direction: row nowrap;\r\n    margin: 0;\r\n    @include xs {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n\r\n  .div-text-container-1 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      right: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    right: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      right: 0;\r\n    }\r\n  }\r\n  .div-text-container-2 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -20rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n  .div-text-container-3 {\r\n    display: flex;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      left: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      left: 0;\r\n    }\r\n  }\r\n  .text-container-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 8rem;\r\n    width: 58rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-4 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 15rem;\r\n    width: 50rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-4::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  // text-content-2\r\n\r\n  .text-content-2 {\r\n    margin: 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #d6d6d6;\r\n  }\r\n\r\n  .sous-titre-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 25rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-5 {\r\n    height: 25rem;\r\n    width: 100rem;\r\n    border-radius: 3rem;\r\n    color: white;\r\n    background: var(--green_01);\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n\r\n  .text-container-6 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    overflow-x: hidden;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-7 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 2s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-8 {\r\n    height: 15rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    margin-bottom: 4rem;\r\n    position: relative;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .sous-titre {\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n.text-decoration-1 {\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.5rem;\r\n  font-size: 1.6rem;\r\n  font-weight: 300;\r\n  color: var(--orange_01);\r\n}\r\n\r\n.text-1 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-2 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-3 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  width: 100%;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// footer\r\n\r\n// .test {\r\n//   color: var(--orange_01);\r\n// }\r\n\r\n// menu\r\n\r\ndiv {\r\n  margin: 2rem 0;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2789,6 +2957,13 @@ btnOpen.addEventListener("click", function () {
       menuXsContent.style.display = "none";
       menuXsLangueContainer.style.display = "none";
       contentLinkMenuGeneralXs.style.display = "none";
+      contentLinkMenuGeneralXs2.style.display = "none";
+      contentLinkMenuGeneralXs3.style.display = "none";
+      contentLinkMenuGeneralXs4.style.display = "none";
+      btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+      btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+      btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+      btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
     }, {
       once: true
     });
@@ -2843,16 +3018,43 @@ btnCloseMenuLangue.addEventListener("click", function () {
 
 // menu general xs
 
-// btn 1
+// const  btn 1
 
 var contentLinkMenuGeneralXs = document.querySelector(".content-link-menu-general-xs");
 var btnOpenCloseContentLinkMenuGeneralXs = document.querySelector(".btn-open-close-content-link-menu-general-xs");
 var linkMenuGeneralXs = document.querySelector(".animation-content-link-menu-general-xs");
+
+// const btn 2
+
+var contentLinkMenuGeneralXs2 = document.querySelector(".content-link-menu-general-xs-2");
+var btnOpenCloseContentLinkMenuGeneralXs2 = document.querySelector(".btn-open-close-content-link-menu-general-xs-2");
+var linkMenuGeneralXs2 = document.querySelector(".animation-content-link-menu-general-xs-2");
+
+//  btn 3
+
+var contentLinkMenuGeneralXs3 = document.querySelector(".content-link-menu-general-xs-3");
+var btnOpenCloseContentLinkMenuGeneralXs3 = document.querySelector(".btn-open-close-content-link-menu-general-xs-3");
+var linkMenuGeneralXs3 = document.querySelector(".animation-content-link-menu-general-xs-3");
+
+//  btn 4
+
+var contentLinkMenuGeneralXs4 = document.querySelector(".content-link-menu-general-xs-4");
+var btnOpenCloseContentLinkMenuGeneralXs4 = document.querySelector(".btn-open-close-content-link-menu-general-xs-4");
+var linkMenuGeneralXs4 = document.querySelector(".animation-content-link-menu-general-xs-4");
+
+// btn 1
+
 btnOpenCloseContentLinkMenuGeneralXs.addEventListener("click", function () {
   var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs).getPropertyValue("display");
   if (menuDisplay === "none") {
     btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(90deg)";
     contentLinkMenuGeneralXs.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
   } else {
     contentLinkMenuGeneralXs.classList.add("close-content-link-menu-general-xs");
     linkMenuGeneralXs.classList.add("close-link-menu-general-xs");
@@ -2867,14 +3069,17 @@ btnOpenCloseContentLinkMenuGeneralXs.addEventListener("click", function () {
 
 // btn 2
 
-var contentLinkMenuGeneralXs2 = document.querySelector(".content-link-menu-general-xs-2");
-var btnOpenCloseContentLinkMenuGeneralXs2 = document.querySelector(".btn-open-close-content-link-menu-general-xs-2");
-var linkMenuGeneralXs2 = document.querySelector(".animation-content-link-menu-general-xs-2");
 btnOpenCloseContentLinkMenuGeneralXs2.addEventListener("click", function () {
   var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs2).getPropertyValue("display");
   if (menuDisplay === "none") {
     btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(90deg)";
     contentLinkMenuGeneralXs2.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
   } else {
     contentLinkMenuGeneralXs2.classList.add("close-content-link-menu-general-xs");
     linkMenuGeneralXs2.classList.add("close-link-menu-general-xs");
@@ -2889,14 +3094,17 @@ btnOpenCloseContentLinkMenuGeneralXs2.addEventListener("click", function () {
 
 // btn 3
 
-var contentLinkMenuGeneralXs3 = document.querySelector(".content-link-menu-general-xs-3");
-var btnOpenCloseContentLinkMenuGeneralXs3 = document.querySelector(".btn-open-close-content-link-menu-general-xs-3");
-var linkMenuGeneralXs3 = document.querySelector(".animation-content-link-menu-general-xs-3");
 btnOpenCloseContentLinkMenuGeneralXs3.addEventListener("click", function () {
   var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs3).getPropertyValue("display");
   if (menuDisplay === "none") {
     btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(90deg)";
     contentLinkMenuGeneralXs3.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
   } else {
     contentLinkMenuGeneralXs3.classList.add("close-content-link-menu-general-xs");
     linkMenuGeneralXs3.classList.add("close-link-menu-general-xs");
@@ -2905,6 +3113,30 @@ btnOpenCloseContentLinkMenuGeneralXs3.addEventListener("click", function () {
       contentLinkMenuGeneralXs3.style.display = "none";
       contentLinkMenuGeneralXs3.classList.remove("close-content-link-menu-general-xs");
       linkMenuGeneralXs3.classList.remove("close-link-menu-general-xs");
+    }, 990);
+  }
+});
+// btn 4
+
+btnOpenCloseContentLinkMenuGeneralXs4.addEventListener("click", function () {
+  var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs4).getPropertyValue("display");
+  if (menuDisplay === "none") {
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(90deg)";
+    contentLinkMenuGeneralXs4.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+  } else {
+    contentLinkMenuGeneralXs4.classList.add("close-content-link-menu-general-xs");
+    linkMenuGeneralXs4.classList.add("close-link-menu-general-xs");
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    setTimeout(function () {
+      contentLinkMenuGeneralXs4.style.display = "none";
+      contentLinkMenuGeneralXs4.classList.remove("close-content-link-menu-general-xs");
+      linkMenuGeneralXs4.classList.remove("close-link-menu-general-xs");
     }, 990);
   }
 });
@@ -2922,7 +3154,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// sous-titre-2
+// // sous-titre-2
 
 var sousTitre2 = document.querySelector(".sous-titre-2");
 window.addEventListener("scroll", function () {
@@ -3076,7 +3308,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-1
+// // text-1
 
 var text1 = document.querySelector(".text-1");
 window.addEventListener("scroll", function () {
@@ -3089,7 +3321,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-2
+// // text-2
 
 var text2 = document.querySelector(".text-2");
 window.addEventListener("scroll", function () {
@@ -3102,7 +3334,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-3
+// // text-3
 
 var text3 = document.querySelector(".text-3");
 window.addEventListener("scroll", function () {
@@ -3115,7 +3347,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-4
+// // text-4
 
 var text4 = document.querySelector(".text-4");
 window.addEventListener("scroll", function () {
@@ -3128,7 +3360,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-5
+// // text-5
 
 var text5 = document.querySelector(".text-5");
 window.addEventListener("scroll", function () {
@@ -3141,7 +3373,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-6
+// // text-6
 
 var text6 = document.querySelector(".text-6");
 window.addEventListener("scroll", function () {
@@ -3154,7 +3386,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-7
+// // text-7
 
 var text7 = document.querySelector(".text-7");
 window.addEventListener("scroll", function () {
@@ -3167,7 +3399,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// text-8
+// // text-8
 
 var text8 = document.querySelector(".text-8");
 window.addEventListener("scroll", function () {

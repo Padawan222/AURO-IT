@@ -46,6 +46,13 @@ btnOpen.addEventListener("click", () => {
         menuXsContent.style.display = "none";
         menuXsLangueContainer.style.display = "none";
         contentLinkMenuGeneralXs.style.display = "none";
+        contentLinkMenuGeneralXs2.style.display = "none";
+        contentLinkMenuGeneralXs3.style.display = "none";
+        contentLinkMenuGeneralXs4.style.display = "none";
+        btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+        btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+        btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+        btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
       },
       { once: true }
     );
@@ -116,7 +123,7 @@ btnCloseMenuLangue.addEventListener("click", () => {
 
 // menu general xs
 
-// btn 1
+// const  btn 1
 
 const contentLinkMenuGeneralXs = document.querySelector(
   ".content-link-menu-general-xs"
@@ -128,6 +135,44 @@ const linkMenuGeneralXs = document.querySelector(
   ".animation-content-link-menu-general-xs"
 );
 
+// const btn 2
+
+const contentLinkMenuGeneralXs2 = document.querySelector(
+  ".content-link-menu-general-xs-2"
+);
+const btnOpenCloseContentLinkMenuGeneralXs2 = document.querySelector(
+  ".btn-open-close-content-link-menu-general-xs-2"
+);
+const linkMenuGeneralXs2 = document.querySelector(
+  ".animation-content-link-menu-general-xs-2"
+);
+
+//  btn 3
+
+const contentLinkMenuGeneralXs3 = document.querySelector(
+  ".content-link-menu-general-xs-3"
+);
+const btnOpenCloseContentLinkMenuGeneralXs3 = document.querySelector(
+  ".btn-open-close-content-link-menu-general-xs-3"
+);
+const linkMenuGeneralXs3 = document.querySelector(
+  ".animation-content-link-menu-general-xs-3"
+);
+
+//  btn 4
+
+const contentLinkMenuGeneralXs4 = document.querySelector(
+  ".content-link-menu-general-xs-4"
+);
+const btnOpenCloseContentLinkMenuGeneralXs4 = document.querySelector(
+  ".btn-open-close-content-link-menu-general-xs-4"
+);
+const linkMenuGeneralXs4 = document.querySelector(
+  ".animation-content-link-menu-general-xs-4"
+);
+
+// btn 1
+
 btnOpenCloseContentLinkMenuGeneralXs.addEventListener("click", () => {
   const menuDisplay = window
     .getComputedStyle(contentLinkMenuGeneralXs)
@@ -136,6 +181,12 @@ btnOpenCloseContentLinkMenuGeneralXs.addEventListener("click", () => {
   if (menuDisplay === "none") {
     btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(90deg)";
     contentLinkMenuGeneralXs.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
   } else {
     contentLinkMenuGeneralXs.classList.add(
       "close-content-link-menu-general-xs"
@@ -154,16 +205,6 @@ btnOpenCloseContentLinkMenuGeneralXs.addEventListener("click", () => {
 
 // btn 2
 
-const contentLinkMenuGeneralXs2 = document.querySelector(
-  ".content-link-menu-general-xs-2"
-);
-const btnOpenCloseContentLinkMenuGeneralXs2 = document.querySelector(
-  ".btn-open-close-content-link-menu-general-xs-2"
-);
-const linkMenuGeneralXs2 = document.querySelector(
-  ".animation-content-link-menu-general-xs-2"
-);
-
 btnOpenCloseContentLinkMenuGeneralXs2.addEventListener("click", () => {
   const menuDisplay = window
     .getComputedStyle(contentLinkMenuGeneralXs2)
@@ -172,6 +213,12 @@ btnOpenCloseContentLinkMenuGeneralXs2.addEventListener("click", () => {
   if (menuDisplay === "none") {
     btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(90deg)";
     contentLinkMenuGeneralXs2.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
   } else {
     contentLinkMenuGeneralXs2.classList.add(
       "close-content-link-menu-general-xs"
@@ -190,16 +237,6 @@ btnOpenCloseContentLinkMenuGeneralXs2.addEventListener("click", () => {
 
 // btn 3
 
-const contentLinkMenuGeneralXs3 = document.querySelector(
-  ".content-link-menu-general-xs-3"
-);
-const btnOpenCloseContentLinkMenuGeneralXs3 = document.querySelector(
-  ".btn-open-close-content-link-menu-general-xs-3"
-);
-const linkMenuGeneralXs3 = document.querySelector(
-  ".animation-content-link-menu-general-xs-3"
-);
-
 btnOpenCloseContentLinkMenuGeneralXs3.addEventListener("click", () => {
   const menuDisplay = window
     .getComputedStyle(contentLinkMenuGeneralXs3)
@@ -208,6 +245,12 @@ btnOpenCloseContentLinkMenuGeneralXs3.addEventListener("click", () => {
   if (menuDisplay === "none") {
     btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(90deg)";
     contentLinkMenuGeneralXs3.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
   } else {
     contentLinkMenuGeneralXs3.classList.add(
       "close-content-link-menu-general-xs"
@@ -220,6 +263,37 @@ btnOpenCloseContentLinkMenuGeneralXs3.addEventListener("click", () => {
         "close-content-link-menu-general-xs"
       );
       linkMenuGeneralXs3.classList.remove("close-link-menu-general-xs");
+    }, 990);
+  }
+});
+// btn 4
+
+btnOpenCloseContentLinkMenuGeneralXs4.addEventListener("click", () => {
+  const menuDisplay = window
+    .getComputedStyle(contentLinkMenuGeneralXs4)
+    .getPropertyValue("display");
+
+  if (menuDisplay === "none") {
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(90deg)";
+    contentLinkMenuGeneralXs4.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+  } else {
+    contentLinkMenuGeneralXs4.classList.add(
+      "close-content-link-menu-general-xs"
+    );
+    linkMenuGeneralXs4.classList.add("close-link-menu-general-xs");
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    setTimeout(() => {
+      contentLinkMenuGeneralXs4.style.display = "none";
+      contentLinkMenuGeneralXs4.classList.remove(
+        "close-content-link-menu-general-xs"
+      );
+      linkMenuGeneralXs4.classList.remove("close-link-menu-general-xs");
     }, 990);
   }
 });
@@ -241,7 +315,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// sous-titre-2
+// // sous-titre-2
 
 const sousTitre2 = document.querySelector(".sous-titre-2");
 
@@ -443,7 +517,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-1
+// // text-1
 
 const text1 = document.querySelector(".text-1");
 
@@ -460,7 +534,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-2
+// // text-2
 
 const text2 = document.querySelector(".text-2");
 
@@ -477,7 +551,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-3
+// // text-3
 
 const text3 = document.querySelector(".text-3");
 
@@ -494,7 +568,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-4
+// // text-4
 
 const text4 = document.querySelector(".text-4");
 
@@ -511,7 +585,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-5
+// // text-5
 
 const text5 = document.querySelector(".text-5");
 
@@ -528,7 +602,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-6
+// // text-6
 
 const text6 = document.querySelector(".text-6");
 
@@ -545,7 +619,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-7
+// // text-7
 
 const text7 = document.querySelector(".text-7");
 
@@ -562,7 +636,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// text-8
+// // text-8
 
 const text8 = document.querySelector(".text-8");
 

@@ -53,14 +53,29 @@ header {
   }
 }
 
-.h1-xs {
-  grid-area: h1-xs;
-  margin-top: 2rem;
-  color: var(--green_02);
-  font-family: var(--font-family-strasua);
-  font-weight: 200;
-  font-size: 2.1rem;
-  letter-spacing: 0.2rem;
+// h1-xs
+
+.content-h1-xs {
+  display: none;
+}
+
+@include xs {
+  .content-h1-xs {
+    grid-area: h1-xs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+  }
+  .h1-xs {
+    grid-area: h1-xs;
+    color: var(--green_02);
+    font-family: var(--font-family-strasua);
+    font-weight: 200;
+    font-size: 2.1rem;
+    letter-spacing: 0.2rem;
+  }
 }
 
 // logo header

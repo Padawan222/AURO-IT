@@ -149,7 +149,7 @@
 
   .menu-xs-content {
     position: fixed;
-    display: flex;
+    display: none;
     top: 0rem;
     height: 100vh;
     width: 100%;
@@ -227,6 +227,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
     width: 100%;
     margin-top: 2rem;
 
