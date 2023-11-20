@@ -150,6 +150,7 @@ footer::before {
   z-index: -1;
   @include xs {
     bottom: 0;
+    border-radius: 0;
   }
 }
 
