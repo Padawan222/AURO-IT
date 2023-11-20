@@ -148,6 +148,9 @@ footer::before {
   border-radius: 3rem;
   transition: all 1s;
   z-index: -1;
+  @include xs {
+    bottom: 0;
+  }
 }
 
 .text-footer {
