@@ -548,6 +548,9 @@
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8;
     opacity: 1;
+    @include xs {
+      transition-delay: 0.2s;
+    }
   }
 }
 .text-2 {
@@ -558,6 +561,9 @@
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8s;
     opacity: 1;
+    @include xs {
+      transition-delay: 0.2s;
+    }
   }
 }
 .text-3 {
