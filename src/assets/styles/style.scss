@@ -164,6 +164,9 @@ footer::before {
     transition-delay: 1s;
     color: var(--orange_01);
   }
+  @include xs {
+    color: var(--orange_01);
+  }
 }
 
 .copyright {
@@ -173,6 +176,9 @@ footer::before {
   &.active {
     transition: all 2s;
     transition-delay: 1s;
+    color: var(--orange_01);
+  }
+  @include xs {
     color: var(--orange_01);
   }
 }
