@@ -42,6 +42,14 @@
     top: 8rem;
     width: 22rem;
   }
+  @include sm {
+    top: 8rem;
+    width: 22rem;
+  }
+  @include md {
+    top: 8rem;
+    width: 22rem;
+  }
 }
 .separator-3 {
   position: fixed;
@@ -66,6 +74,14 @@
     }
   }
   @include xs {
+    top: 8rem;
+    left: 22rem;
+  }
+  @include sm {
+    top: 8rem;
+    left: 22rem;
+  }
+  @include md {
     top: 8rem;
     left: 22rem;
   }
@@ -394,16 +410,28 @@
 
 // separator xs
 
-.container-separator-xs-2 {
+.container-separator-xs-1 {
   display: flex;
   justify-content: center;
   height: 2px;
   width: 100%;
   margin: 1rem 0.5rem;
-
-  .separator-xs-2 {
-    height: 2px;
-    width: 75%;
-    background: #ddd;
-  }
+}
+.container-separator-xs-2 {
+  display: flex;
+  justify-content: center;
+  height: 2px;
+  width: 100%;
+  margin: 0;
+  margin: 0.5rem;
+}
+.separator-xs-1 {
+  height: 2px;
+  width: 75%;
+  background: #ddd;
+}
+.separator-xs-2 {
+  height: 2px;
+  width: 60%;
+  background: white;
 }

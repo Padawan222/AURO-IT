@@ -26,9 +26,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
-  @include xs {
-    z-index: 5;
-  }
+
   @keyframes header {
     from {
       transform: translateY(-10rem);
@@ -37,6 +35,12 @@ header {
     }
   }
   @include xs {
+    height: 8rem;
+  }
+  @include sm {
+    height: 8rem;
+  }
+  @include md {
     height: 8rem;
   }
 }
@@ -49,6 +53,12 @@ header {
   letter-spacing: 0.2rem;
   margin-left: 2rem;
   @include xs {
+    display: none;
+  }
+  @include sm {
+    display: none;
+  }
+  @include md {
     display: none;
   }
 }
@@ -68,14 +78,34 @@ header {
     width: calc(100% - 1rem);
     margin: 0.5rem;
   }
-  .h1-xs {
+}
+@include sm {
+  .content-h1-xs {
     grid-area: h1-xs;
-    color: var(--green_02);
-    font-family: var(--font-family-strasua);
-    font-weight: 200;
-    font-size: 2.1rem;
-    letter-spacing: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
   }
+}
+@include md {
+  .content-h1-xs {
+    grid-area: h1-xs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+  }
+}
+.h1-xs {
+  grid-area: h1-xs;
+  color: var(--green_02);
+  font-family: var(--font-family-strasua);
+  font-weight: 200;
+  font-size: 2.1rem;
+  letter-spacing: 0.2rem;
 }
 
 // logo header
@@ -100,6 +130,14 @@ header {
     height: 8rem;
     width: 22rem;
   }
+  @include sm {
+    height: 8rem;
+    width: 22rem;
+  }
+  @include md {
+    height: 8rem;
+    width: 22rem;
+  }
 }
 
 .repere-content {
@@ -111,6 +149,12 @@ header {
   width: 100rem;
   height: 10rem;
   @include xs {
+    display: none;
+  }
+  @include sm {
+    display: none;
+  }
+  @include md {
     display: none;
   }
   a {
@@ -152,6 +196,14 @@ footer::before {
     bottom: 0;
     border-radius: 0;
   }
+  @include sm {
+    bottom: 0;
+    border-radius: 0;
+  }
+  @include md {
+    bottom: 0;
+    border-radius: 0;
+  }
 }
 
 .text-footer {
@@ -168,6 +220,12 @@ footer::before {
   @include xs {
     color: var(--orange_01);
   }
+  @include sm {
+    color: var(--orange_01);
+  }
+  @include md {
+    color: var(--orange_01);
+  }
 }
 
 .copyright {
@@ -180,6 +238,12 @@ footer::before {
     color: var(--orange_01);
   }
   @include xs {
+    color: var(--orange_01);
+  }
+  @include sm {
+    color: var(--orange_01);
+  }
+  @include md {
     color: var(--orange_01);
   }
 }

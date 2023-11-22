@@ -345,6 +345,18 @@ img {
     width: 22rem;
   }
 }
+@media (max-width: 767px) {
+  .separator-2 {
+    top: 8rem;
+    width: 22rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .separator-2 {
+    top: 8rem;
+    width: 22rem;
+  }
+}
 
 .separator-3 {
   position: fixed;
@@ -370,6 +382,18 @@ img {
   }
 }
 @media (max-width: 480px) {
+  .separator-3 {
+    top: 8rem;
+    left: 22rem;
+  }
+}
+@media (max-width: 767px) {
+  .separator-3 {
+    top: 8rem;
+    left: 22rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .separator-3 {
     top: 8rem;
     left: 22rem;
@@ -706,17 +730,33 @@ img {
   }
 }
 
-.container-separator-xs-2 {
+.container-separator-xs-1 {
   display: flex;
   justify-content: center;
   height: 2px;
   width: 100%;
   margin: 1rem 0.5rem;
 }
-.container-separator-xs-2 .separator-xs-2 {
+
+.container-separator-xs-2 {
+  display: flex;
+  justify-content: center;
+  height: 2px;
+  width: 100%;
+  margin: 0;
+  margin: 0.5rem;
+}
+
+.separator-xs-1 {
   height: 2px;
   width: 75%;
   background: #ddd;
+}
+
+.separator-xs-2 {
+  height: 2px;
+  width: 60%;
+  background: white;
 }
 
 .content-menu {
@@ -745,6 +785,16 @@ img {
   }
 }
 @media (max-width: 480px) {
+  .content-menu {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .content-menu {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .content-menu {
     display: none;
   }
@@ -850,6 +900,16 @@ img {
     display: none;
   }
 }
+@media (max-width: 767px) {
+  .menu-langue {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .menu-langue {
+    display: none;
+  }
+}
 
 .menu-xs,
 .menu-xs-content {
@@ -859,145 +919,190 @@ img {
 @media (max-width: 480px) {
   .menu-xs {
     display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .menu-xs-content {
-    position: fixed;
-    display: none;
-    top: 0rem;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    background: white;
-    z-index: 4;
-    animation: menu-xs 0.8s;
-  }
-  .menu-xs-content.animate-open {
-    animation: menu-xs-open 0.8s;
-  }
-  .menu-xs-content.animate-close {
-    animation: menu-xs-close 0.8s;
-  }
-  .menu-xs-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 3rem 0 0 0;
-  }
-  .menu-xs-langue {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 0 2rem 0 1rem;
-  }
-  .menu-xs-langue a {
-    color: white;
-    font-family: var(--font-family-strasua);
-    letter-spacing: 0.2rem;
-    font-size: 1.5rem;
-    margin-left: 1rem;
-  }
-  .menu-xs-langue-content {
-    z-index: 3;
-    display: flex;
-    margin: 0;
-  }
-  .menu-xs-langue-container {
-    display: none;
-    flex-direction: column;
-    height: 10rem;
-    width: 13rem;
-    margin: 0;
-    background: var(--orange_02);
-    border-radius: 0.8rem;
-    animation: menu-xs-langue-container-open 1s;
-  }
-  @keyframes menu-xs-langue-container-open {
-    0% {
-      width: 0;
-      height: 2.5rem;
-    }
-    40% {
-      height: 2.5rem;
-    }
-    50% {
-      width: 13rem;
-    }
-    100% {
-      height: 10rem;
-    }
-  }
-  .menu-general-xs-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 2rem;
-  }
-  .menu-general-xs-content a {
-    font-size: 2rem;
-    font-family: var(--font-family-strasua);
-    color: var(--orange_02);
-    letter-spacing: 0.2rem;
-  }
-  .menu-general-xs-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5rem 1rem;
-  }
-  .animation-menu-general-xs-container {
-    animation: animation-container-menu-general-xs 1.8s;
-  }
-  .menu-general-xs-content-opacity {
-    opacity: 0;
-  }
-  .content-link-menu-general-xs {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    width: 90%;
-    margin: 0 1rem;
-    border-radius: 3rem;
-    background: var(--orange_02);
-    animation: open-content-link-menu-general-xs 1s;
-    margin: 0;
-  }
-  .content-link-menu-general-xs .link-menu-general-xs {
-    margin: 0.5rem 0;
-    font-size: 2rem;
-    font-family: var(--font-family-strasua);
-    color: white;
-    letter-spacing: 0.2rem;
-  }
-  .animation-content-link-menu-general-xs {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    animation: open-link-menu-general-xs 1s;
-  }
-  .link-menu-container-langue-xs {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 0;
-  }
-  .first-link-menu-xs-langue {
-    font-family: var(--font-family-strasua);
-    letter-spacing: 0.2rem;
-    font-size: 1.5rem;
-  }
-  .link-menu-xs-langue {
-    margin: 0.5rem 0;
   }
 }
+@media (max-width: 767px) {
+  .menu-xs {
+    display: flex;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .menu-xs {
+    display: flex;
+  }
+}
+.menu-xs {
+  position: fixed;
+  top: 3rem;
+  right: 0;
+  width: 10%;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 5;
+  animation: menu-xs 2s;
+  margin: 0;
+}
+@keyframes menu-xs {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu-xs-content {
+  position: fixed;
+  display: none;
+  top: 0rem;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background: white;
+  z-index: 4;
+  animation: menu-xs 0.8s;
+}
+.menu-xs-content.animate-open {
+  animation: menu-xs-open 0.8s;
+}
+.menu-xs-content.animate-close {
+  animation: menu-xs-close 0.8s;
+}
+
+.menu-xs-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.menu-xs-langue {
+  display: flex;
+  width: 100%;
+  margin: 2.8rem 2rem 0 1rem;
+}
+.menu-xs-langue a {
+  color: white;
+  font-family: var(--font-family-strasua);
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.menu-xs-langue-content {
+  z-index: 3;
+  display: flex;
+  margin: 0;
+}
+
+.menu-xs-langue-container {
+  display: none;
+  flex-direction: column;
+  height: 10rem;
+  width: 13rem;
+  margin: 0;
+  background: var(--orange_02);
+  border-radius: 0.8rem;
+  animation: menu-xs-langue-container-open 1s;
+}
+@keyframes menu-xs-langue-container-open {
+  0% {
+    width: 0;
+    height: 2.5rem;
+  }
+  40% {
+    height: 2.5rem;
+  }
+  50% {
+    width: 13rem;
+  }
+  100% {
+    height: 10rem;
+  }
+}
+
+.menu-general-xs-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+}
+.menu-general-xs-content a {
+  font-size: 2rem;
+  font-family: var(--font-family-strasua);
+  color: var(--orange_02);
+  letter-spacing: 0.2rem;
+}
+
+.menu-general-xs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 1rem;
+}
+
+.animation-menu-general-xs-container {
+  animation: animation-container-menu-general-xs 1.8s;
+}
+
+.menu-general-xs-content-opacity {
+  opacity: 0;
+}
+
+.content-link-menu-general-xs {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 90%;
+  margin: 0 1rem;
+  border-radius: 3rem;
+  background: var(--orange_02);
+  animation: open-content-link-menu-general-xs 1s;
+  margin: 0;
+}
+.content-link-menu-general-xs .link-menu-general-xs {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-family: var(--font-family-strasua);
+  color: white;
+  letter-spacing: 0.2rem;
+}
+
+.animation-content-link-menu-general-xs {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  animation: open-link-menu-general-xs 1s;
+}
+
+.link-menu-container-langue-xs {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0;
+}
+
+.first-link-menu-xs-langue {
+  font-family: var(--font-family-strasua);
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.link-menu-xs-langue {
+  margin: 0.5rem 0;
+}
+
 .menu-langue-xs-link-mid {
   margin-top: 0;
   margin-bottom: 0;
@@ -1206,7 +1311,17 @@ img {
 }
 @media (max-width: 480px) {
   .mail-content-1 {
-    transform: none;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 767px) {
+  .mail-content-1 {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .mail-content-1 {
+    transform: translateX(0);
   }
 }
 .mail-content-1.active {
@@ -1226,7 +1341,17 @@ img {
 }
 @media (max-width: 480px) {
   .mail-content-2 {
-    transform: none;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 767px) {
+  .mail-content-2 {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .mail-content-2 {
+    transform: translateX(0);
   }
 }
 .mail-content-2.active {
@@ -1294,17 +1419,22 @@ header {
   top: 0;
   z-index: 2;
 }
-@media (max-width: 480px) {
-  header {
-    z-index: 5;
-  }
-}
 @keyframes header {
   from {
     transform: translateY(-10rem);
   }
 }
 @media (max-width: 480px) {
+  header {
+    height: 8rem;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    height: 8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   header {
     height: 8rem;
   }
@@ -1324,6 +1454,16 @@ header {
     display: none;
   }
 }
+@media (max-width: 767px) {
+  .h1 {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .h1 {
+    display: none;
+  }
+}
 
 .content-h1-xs {
   display: none;
@@ -1338,15 +1478,36 @@ header {
     width: calc(100% - 1rem);
     margin: 0.5rem;
   }
-  .h1-xs {
+}
+@media (max-width: 767px) {
+  .content-h1-xs {
     grid-area: h1-xs;
-    color: var(--green_02);
-    font-family: var(--font-family-strasua);
-    font-weight: 200;
-    font-size: 2.1rem;
-    letter-spacing: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
   }
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .content-h1-xs {
+    grid-area: h1-xs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+  }
+}
+.h1-xs {
+  grid-area: h1-xs;
+  color: var(--green_02);
+  font-family: var(--font-family-strasua);
+  font-weight: 200;
+  font-size: 2.1rem;
+  letter-spacing: 0.2rem;
+}
+
 .a-img {
   grid-area: img;
   height: 10rem;
@@ -1368,6 +1529,18 @@ header {
     width: 22rem;
   }
 }
+@media (max-width: 767px) {
+  .a-img {
+    height: 8rem;
+    width: 22rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .a-img {
+    height: 8rem;
+    width: 22rem;
+  }
+}
 
 .repere-content {
   position: absolute;
@@ -1379,6 +1552,16 @@ header {
   height: 10rem;
 }
 @media (max-width: 480px) {
+  .repere-content {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .repere-content {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .repere-content {
     display: none;
   }
@@ -1423,6 +1606,18 @@ footer::before {
     border-radius: 0;
   }
 }
+@media (max-width: 767px) {
+  footer::before {
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  footer::before {
+    bottom: 0;
+    border-radius: 0;
+  }
+}
 
 .text-footer {
   font-family: var(--font-family-strasua);
@@ -1437,6 +1632,16 @@ footer::before {
   color: var(--orange_01);
 }
 @media (max-width: 480px) {
+  .text-footer {
+    color: var(--orange_01);
+  }
+}
+@media (max-width: 767px) {
+  .text-footer {
+    color: var(--orange_01);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .text-footer {
     color: var(--orange_01);
   }
@@ -1456,7 +1661,17 @@ footer::before {
   .copyright {
     color: var(--orange_01);
   }
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_classes.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_utils.scss","webpack://./src/assets/styles/_menu-langue.scss","webpack://./src/assets/styles/_menu-general.scss","webpack://./src/assets/styles/_fonts.scss","webpack://./src/assets/styles/_separator.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_contact.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n  // overflow-x: hidden;\n}\np {\n  margin: 1rem 0;\n  font-weight: 400 !important;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 1rem 0 2rem 0;\n}\nh2 {\n  margin: 2rem 1rem;\n}\nh3 {\n  font-weight: 400;\n  margin: 1rem 0.5rem 1rem 0.5rem;\n}\n\nul {\n  list-style: none;\n}\na {\n  color: var(--text);\n  text-decoration: none;\n}\nimg {\n  max-width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"menu-langue\" as *;\r\n@use \"menu-general\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"menu\" as *;\r\n@use \"contact\" as *;\r\n\r\n// header\r\n\r\nheader {\r\n  grid-area: header;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 10rem;\r\n  background: white;\r\n  animation-name: header;\r\n  animation-duration: 1.8s;\r\n  width: 100%;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n  @include xs {\r\n    z-index: 5;\r\n  }\r\n  @keyframes header {\r\n    from {\r\n      transform: translateY(-10rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n  }\r\n}\r\n.h1 {\r\n  margin-top: 2rem;\r\n  color: var(--green_02);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.2rem;\r\n  margin-left: 2rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n// h1-xs\r\n\r\n.content-h1-xs {\r\n  display: none;\r\n}\r\n\r\n@include xs {\r\n  .content-h1-xs {\r\n    grid-area: h1-xs;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: calc(100% - 1rem);\r\n    margin: 0.5rem;\r\n  }\r\n  .h1-xs {\r\n    grid-area: h1-xs;\r\n    color: var(--green_02);\r\n    font-family: var(--font-family-strasua);\r\n    font-weight: 200;\r\n    font-size: 2.1rem;\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n\r\n// logo header\r\n\r\n.a-img {\r\n  grid-area: img;\r\n  height: 10rem;\r\n  width: 25rem;\r\n  animation-name: logo-1;\r\n  animation-duration: 1.8s;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n  @keyframes logo-1 {\r\n    from {\r\n      transform: translateY(5rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n\r\n.repere-content {\r\n  position: absolute;\r\n  right: 16rem;\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  width: 100rem;\r\n  height: 10rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  a {\r\n    color: var(--orange_02);\r\n    font-family: var(--font-family-strasua);\r\n    font-weight: 200;\r\n    font-size: 2rem;\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n// footer\r\n\r\nfooter {\r\n  grid-area: footer;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  position: relative;\r\n  overflow: hidden;\r\n  z-index: 0;\r\n  &.active::before {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\nfooter::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -10rem;\r\n  background-color: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  border-radius: 3rem;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n  @include xs {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\n.text-footer {\r\n  font-family: var(--font-family-strasua);\r\n  font-size: 1.8rem;\r\n  letter-spacing: 0.2rem;\r\n  color: #eee;\r\n  margin: 0;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n  @include xs {\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n\r\n.copyright {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #eee;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n  @include xs {\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n",".title {\n  &-small {\n    letter-spacing: 0.5rem;\n    font-size: 1.6rem;\n    font-family: var(--font-family-small);\n  }\n}\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 979px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  // font-family\r\n  --font-family-strasua: \"strasua\";\r\n  --font-family-title: \"Cinzel Decorative\", cursive;\r\n  --font-family: \"Nunito Sans\", sans-serif;\r\n\r\n  // color\r\n  --text: #333;\r\n  --blue: #6eb2bd;\r\n  --orange_01: #df5b13;\r\n  --orange_02: #fd8342;\r\n  --green_01: #7ccbab;\r\n  --green_02: #11a67e;\r\n  --background: #d6d6d6;\r\n\r\n  // box-shadow\r\n  --box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),\r\n    0 1px 3px 1px rgba(60, 64, 67, 0.15);\r\n}\r\n",".mb_2 {\n  margin-bottom: 2rem !important;\n}\n.mb_5 {\n  margin-bottom: 5rem !important;\n}\n.mx_1 {\n  margin-left: 1rem;\n  margin-right: 1rem;\n}\n.my_1 {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n}\n",".leader {\r\n  color: var(--orange_01);\r\n}\r\n\r\n#menu-langue,\r\n#menu-langue ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-langue li {\r\n  display: inline-block;\r\n  position: relative;\r\n  border-radius: 8px 8px 0 0;\r\n}\r\n#menu-langue ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-langue ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-langue li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-langue li:last-child {\r\n  // background: var(--orange_01);\r\n}\r\n/* background des liens sous menus */\r\n#menu-langue li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-langue li:last-child:hover {\r\n  background: white;\r\n}\r\n#menu-langue li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-langue a {\r\n  width: 15rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: arial;\r\n}\r\n#menu-langue ul a {\r\n  padding: 8px 0;\r\n  color: var(--orange_01);\r\n}\r\n#menu-langue li:hover li a {\r\n  color: var(--orange_01);\r\n  text-transform: inherit;\r\n}\r\n","#menu-general,\r\n#menu-general ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-general li {\r\n  display: inline-block;\r\n  position: relative;\r\n  transition: all 1s;\r\n  &:hover {\r\n    border-radius: 8px 8px 0 0;\r\n  }\r\n}\r\n#menu-general ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-general ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-general li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-general li:last-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n/* background des liens sous menus */\r\n#menu-general li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-general li:first-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n#menu-general li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-general a {\r\n  width: 32rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.2rem;\r\n  font-weight: 200;\r\n  color: white;\r\n}\r\n#menu-general ul a {\r\n  padding: 8px 0;\r\n  color: white;\r\n}\r\n#menu-general li:hover li a {\r\n  color: var(--blue);\r\n  text-transform: inherit;\r\n}\r\n\r\n// #menu-demo2 li:hover a,\r\n// #menu-demo2 li li:hover a {\r\n// }\r\n","@font-face {\r\n  font-family: \"strasua\";\r\n  src: url(\"C:/Users/Azstras/OneDrive/Documents/polices/strasua.otf\")\r\n    format(opentype);\r\n}\r\n","@use \"media-queries\" as *;\r\n// separator\r\n\r\n.separator-1 {\r\n  margin: 1rem 20rem;\r\n  height: 6px;\r\n  border-radius: 5px;\r\n  width: 80rem;\r\n  background-color: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n.separator-2 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  margin: 0;\r\n  background: var(--green_02);\r\n  height: 2px;\r\n  width: 25rem;\r\n  grid-area: separator-2;\r\n  animation-name: separator-2;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-2 {\r\n    from {\r\n      transform: translateY(15rem);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n.separator-3 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  left: 25rem;\r\n  margin: 0;\r\n  background: var(--orange_01);\r\n  height: 2px;\r\n  width: 100%;\r\n  grid-area: separator-3;\r\n  animation-name: separator-3;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-3 {\r\n    from {\r\n      transform: scaleX(0);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    left: 22rem;\r\n  }\r\n}\r\n\r\n.separator-4 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  // border-radius: 100%;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    top: 0;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n.separator-4::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-6 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-6::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-9 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    left: 0;\r\n  }\r\n}\r\n.separator-9::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  left: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-11 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 2s;\r\n    top: 0;\r\n  }\r\n}\r\n\r\n.separator-11::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-14 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    right: 0;\r\n  }\r\n}\r\n.separator-14::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  right: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n.separator-15 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-15::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-16 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-16::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-17 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-17::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-18 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-18::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-19 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-19::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-20 {\r\n  margin-top: 4rem;\r\n  height: 6px;\r\n  width: 55rem;\r\n  border-radius: 5px;\r\n  background: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n\r\n// separator-container\r\n\r\n.separator-container-2 {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0;\r\n}\r\n\r\n// separator-ligne\r\n\r\n.content-separator-ligne {\r\n  grid-area: separator-ligne;\r\n  height: 4rem;\r\n  width: 100%;\r\n  display: flex;\r\n  margin: 0 0 0 0;\r\n}\r\n\r\n.container-separator-ligne {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .separator-ligne-1 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 50%;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1%;\r\n      border-radius: 3rem;\r\n      margin-left: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 100%;\r\n    transition: all 1s;\r\n  }\r\n  .separator-ligne-2 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 2rem;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1rem;\r\n      border-radius: 3rem;\r\n      margin-right: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 106rem;\r\n    @include xxl {\r\n      width: 141.2rem;\r\n    }\r\n    right: 0;\r\n    transition: all 1s;\r\n  }\r\n}\r\n\r\n// separator xs\r\n\r\n.container-separator-xs-2 {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 2px;\r\n  width: 100%;\r\n  margin: 1rem 0.5rem;\r\n\r\n  .separator-xs-2 {\r\n    height: 2px;\r\n    width: 75%;\r\n    background: #ddd;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n.content-menu {\r\n  position: sticky;\r\n  top: 10.2rem;\r\n  grid-area: menu;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 5rem;\r\n  background: #eee;\r\n  z-index: 1;\r\n  animation-name: content-menu;\r\n  animation-duration: 3s;\r\n  margin: 0;\r\n  @keyframes content-menu {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.menu-container {\r\n  margin: 0 1rem;\r\n  height: 4rem;\r\n}\r\n\r\n.menu-container-general {\r\n  position: absolute;\r\n  top: 4rem;\r\n  display: none;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 7rem;\r\n  width: 105rem;\r\n  border-radius: 0 0 2rem 2rem;\r\n  background: #eee;\r\n  margin: 0;\r\n  animation-name: containerMenu;\r\n  animation-duration: 1.6s;\r\n\r\n  @keyframes containerMenu {\r\n    0% {\r\n      opacity: 0;\r\n      transform: translateY(-5rem);\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n      transform: translateY(0rem);\r\n    }\r\n  }\r\n}\r\n\r\n.menu-content-general {\r\n  position: relative;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 4rem;\r\n  width: 32rem;\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n  border-radius: 3rem;\r\n  margin: 0 2rem;\r\n  cursor: default;\r\n  transition: all 1s;\r\n  &:hover > .menu-container-general {\r\n    display: flex;\r\n  }\r\n  &:hover {\r\n    width: 100rem;\r\n    border-radius: 2rem 2rem 0 0;\r\n  }\r\n}\r\n\r\n.titre {\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  &:hover {\r\n    font-size: 2rem;\r\n  }\r\n}\r\n\r\n.titre-votre-besoins {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: default;\r\n}\r\n.titre-notre-reseau {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: pointer;\r\n  &:hover {\r\n    font-size: 2.2rem;\r\n  }\r\n}\r\n\r\n.border-radius-1 {\r\n  border-radius: 0 0 0 8px;\r\n}\r\n.border-radius-3 {\r\n  border-radius: 0 0 8px 0;\r\n}\r\n\r\n// menu-langue\r\n\r\n.menu-langue {\r\n  margin-right: 1rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n\r\n// menu mobiles\r\n\r\n.menu-xs,\r\n.menu-xs-content {\r\n  display: none;\r\n}\r\n\r\n@include xs {\r\n  .menu-xs {\r\n    display: flex;\r\n    width: 100%;\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n\r\n  // menu-xs-open\r\n\r\n  .menu-xs-content {\r\n    position: fixed;\r\n    display: none;\r\n    top: 0rem;\r\n    height: 100vh;\r\n    width: 100%;\r\n    margin: 0;\r\n    background: white;\r\n    z-index: 4;\r\n    animation: menu-xs 0.8s;\r\n    &.animate-open {\r\n      animation: menu-xs-open 0.8s;\r\n    }\r\n\r\n    &.animate-close {\r\n      animation: menu-xs-close 0.8s;\r\n    }\r\n  }\r\n\r\n  .menu-xs-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    margin: 3rem 0 0 0;\r\n  }\r\n\r\n  // menu langue xs\r\n\r\n  .menu-xs-langue {\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    width: 100%;\r\n    margin: 0 2rem 0 1rem;\r\n    a {\r\n      color: white;\r\n      font-family: var(--font-family-strasua);\r\n      letter-spacing: 0.2rem;\r\n      font-size: 1.5rem;\r\n      margin-left: 1rem;\r\n    }\r\n  }\r\n  .menu-xs-langue-content {\r\n    z-index: 3;\r\n    display: flex;\r\n    margin: 0;\r\n  }\r\n\r\n  .menu-xs-langue-container {\r\n    display: none;\r\n    flex-direction: column;\r\n    height: 10rem;\r\n    width: 13rem;\r\n    margin: 0;\r\n    background: var(--orange_02);\r\n    border-radius: 0.8rem;\r\n    animation: menu-xs-langue-container-open 1s;\r\n    @keyframes menu-xs-langue-container-open {\r\n      0% {\r\n        width: 0;\r\n        height: 2.5rem;\r\n      }\r\n      40% {\r\n        height: 2.5rem;\r\n      }\r\n      50% {\r\n        width: 13rem;\r\n      }\r\n      100% {\r\n        height: 10rem;\r\n      }\r\n    }\r\n  }\r\n\r\n  // menu general xs\r\n\r\n  .menu-general-xs-content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 100%;\r\n    width: 100%;\r\n    margin-top: 2rem;\r\n\r\n    a {\r\n      font-size: 2rem;\r\n      font-family: var(--font-family-strasua);\r\n      color: var(--orange_02);\r\n      letter-spacing: 0.2rem;\r\n    }\r\n  }\r\n  .menu-general-xs-container {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 1.5rem 1rem;\r\n  }\r\n\r\n  .animation-menu-general-xs-container {\r\n    animation: animation-container-menu-general-xs 1.8s;\r\n  }\r\n  .menu-general-xs-content-opacity {\r\n    opacity: 0;\r\n  }\r\n\r\n  .content-link-menu-general-xs {\r\n    display: none;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    text-align: center;\r\n    height: 100%;\r\n    width: 90%;\r\n    margin: 0 1rem;\r\n    border-radius: 3rem;\r\n    background: var(--orange_02);\r\n    animation: open-content-link-menu-general-xs 1s;\r\n    margin: 0;\r\n    .link-menu-general-xs {\r\n      margin: 0.5rem 0;\r\n      font-size: 2rem;\r\n      font-family: var(--font-family-strasua);\r\n      color: white;\r\n      letter-spacing: 0.2rem;\r\n    }\r\n  }\r\n\r\n  .animation-content-link-menu-general-xs {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0;\r\n    animation: open-link-menu-general-xs 1s;\r\n  }\r\n\r\n  // link\r\n\r\n  // link menu langue xs\r\n\r\n  .link-menu-container-langue-xs {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: start;\r\n    margin: 0;\r\n  }\r\n\r\n  .first-link-menu-xs-langue {\r\n    font-family: var(--font-family-strasua);\r\n    letter-spacing: 0.2rem;\r\n    font-size: 1.5rem;\r\n  }\r\n\r\n  .link-menu-xs-langue {\r\n    margin: 0.5rem 0;\r\n  }\r\n}\r\n.menu-langue-xs-link-mid {\r\n  margin-top: 0;\r\n  margin-bottom: 0;\r\n}\r\n\r\n// btn\r\n\r\n// btn-menu-xs\r\n\r\n.btn {\r\n  position: relative;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  height: 2rem;\r\n  width: 2rem;\r\n  margin: 0 2rem 0 0;\r\n}\r\n.btn-barre {\r\n  position: absolute;\r\n  height: 0.2rem;\r\n  width: 2.6rem;\r\n  background: var(--orange_02);\r\n  margin: 0;\r\n  transition: all 0.8s;\r\n}\r\n.btn-barre-1 {\r\n  transform-origin: 0 0;\r\n  left: 1.5px;\r\n}\r\n.btn-barre-2 {\r\n  top: 1.8rem;\r\n  transform-origin: 0 100%;\r\n  left: 1.5px;\r\n}\r\n\r\n// btn menu langue xs\r\n\r\n.btn-open-menu-langue-xs {\r\n  margin: 0 1rem 0 0;\r\n}\r\n.btn-close-menu-langue-xs-content {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 2.5rem;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  animation: btn-close-menu-langue-xs 1s;\r\n  @keyframes btn-close-menu-langue-xs {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\n\r\n.btn-close-menu-langue-xs-close {\r\n  opacity: 0;\r\n}\r\n\r\n.btn-close-menu-langue-xs {\r\n  margin: 0.8rem;\r\n  color: white;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n// btn menu general xs\r\n.btn-open-close-content-link-menu-general-xs {\r\n  margin-left: 1rem;\r\n  font-size: 2rem;\r\n  color: var(--orange_02);\r\n  transition: all 1s;\r\n}\r\n\r\n// animation\r\n\r\n@keyframes menu-xs-open {\r\n  0% {\r\n    transform: translateY(-100vh);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(0);\r\n  }\r\n}\r\n\r\n@keyframes menu-xs-close {\r\n  0% {\r\n    transform: translateY(0);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(-100vh);\r\n  }\r\n}\r\n\r\n// animation menu general xs\r\n\r\n.first-animation-menu-general-xs {\r\n  animation: first-animation-menu-general-xs 1.3s;\r\n  @keyframes first-animation-menu-general-xs {\r\n    0% {\r\n      transform: scaleY(0);\r\n    }\r\n    80% {\r\n      transform: scaleY(0);\r\n    }\r\n    100% {\r\n      transform: scaleY(1);\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes animation-container-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  80% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes open-content-link-menu-general-xs {\r\n  0% {\r\n    height: 0;\r\n  }\r\n  100% {\r\n    height: 100%;\r\n  }\r\n}\r\n\r\n.close-content-link-menu-general-xs {\r\n  animation: close-content-link-menu-general-xs 1s;\r\n  @keyframes close-content-link-menu-general-xs {\r\n    0% {\r\n      height: 20.8rem;\r\n    }\r\n    100% {\r\n      height: 0;\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes open-link-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  30% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n.close-link-menu-general-xs {\r\n  animation: close-link-menu-general-xs 1s;\r\n  @keyframes close-link-menu-general-xs {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 0;\r\n    }\r\n  }\r\n}\r\n\r\n// animation menu langue xs\r\n\r\n.animation-close-menu-langue-xs {\r\n  animation: menu-xs-langue-container-close 1s;\r\n  @keyframes menu-xs-langue-container-close {\r\n    0% {\r\n      height: 10rem;\r\n    }\r\n    40% {\r\n      width: 13rem;\r\n    }\r\n    50% {\r\n      height: 2.5rem;\r\n    }\r\n    100% {\r\n      height: 2.5rem;\r\n      width: 0;\r\n    }\r\n  }\r\n}\r\n// divers - menu\r\n\r\n.fa-globe {\r\n  font-size: 2.5rem;\r\n  color: var(--orange_02);\r\n}\r\n","@use \"media-queries\" as *;\r\n.mail-container {\r\n  grid-area: mail;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  width: 100%;\r\n  height: 5rem;\r\n  margin: 0;\r\n  // @include xs {\r\n  //   display: none;\r\n  // }\r\n}\r\n\r\n.mail-content-1 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(-96rem);\r\n  transition: all 1s;\r\n  border-radius: 0 3rem 3rem 0;\r\n  z-index: 0;\r\n  @include xs {\r\n    transform: none;\r\n  }\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n.mail-content-2 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(96rem);\r\n  transition: all 1s;\r\n  border-radius: 3rem 0 0 3rem;\r\n  z-index: 0;\r\n  @include xs {\r\n    transform: none;\r\n  }\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\n.contact {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  width: 20rem;\r\n  background-color: #eee;\r\n  color: #eee;\r\n  position: relative;\r\n  overflow: hidden;\r\n  p {\r\n    font-family: var(--font-family);\r\n    letter-spacing: 0.1rem;\r\n    font-size: 2rem;\r\n    font-weight: 400;\r\n  }\r\n  &:hover::before {\r\n    opacity: 1;\r\n  }\r\n  &.active {\r\n    background: white;\r\n    color: var(--blue);\r\n    transition: all 1s;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n\r\n.contact::before {\r\n  content: \"Email@exemple.com\";\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  color: var(--blue);\r\n  background: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  transition: all 1s;\r\n  font-weight: 400;\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family);\r\n  text-decoration: underline;\r\n  letter-spacing: 0.1rem;\r\n  border-radius: 0;\r\n  opacity: 0;\r\n}\r\n"],"sourceRoot":""}]);
+}
+@media (max-width: 767px) {
+  .copyright {
+    color: var(--orange_01);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .copyright {
+    color: var(--orange_01);
+  }
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_base.scss","webpack://./src/assets/styles/style.scss","webpack://./src/assets/styles/_classes.scss","webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_reset.scss","webpack://./src/assets/styles/_variables.scss","webpack://./src/assets/styles/_utils.scss","webpack://./src/assets/styles/_menu-langue.scss","webpack://./src/assets/styles/_menu-general.scss","webpack://./src/assets/styles/_fonts.scss","webpack://./src/assets/styles/_separator.scss","webpack://./src/assets/styles/_menu.scss","webpack://./src/assets/styles/_contact.scss"],"names":[],"mappings":"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","sourcesContent":["html {\n  font-size: 62.5%;\n}\nbody {\n  font-family: var(--font-family);\n  color: var(--text);\n  font-size: 1.6rem;\n  width: 100%;\n  // overflow-x: hidden;\n}\np {\n  margin: 1rem 0;\n  font-weight: 400 !important;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 1rem 0 2rem 0;\n}\nh2 {\n  margin: 2rem 1rem;\n}\nh3 {\n  font-weight: 400;\n  margin: 1rem 0.5rem 1rem 0.5rem;\n}\n\nul {\n  list-style: none;\n}\na {\n  color: var(--text);\n  text-decoration: none;\n}\nimg {\n  max-width: 100%;\n}\n","@use \"base\" as *;\r\n@use \"classes\" as *;\r\n@use \"media-queries\" as *;\r\n@use \"reset\" as *;\r\n@use \"variables\" as *;\r\n@use \"utils\" as *;\r\n@use \"menu-langue\" as *;\r\n@use \"menu-general\" as *;\r\n@use \"fonts\" as *;\r\n@use \"separator\" as *;\r\n@use \"menu\" as *;\r\n@use \"contact\" as *;\r\n\r\n// header\r\n\r\nheader {\r\n  grid-area: header;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 10rem;\r\n  background: white;\r\n  animation-name: header;\r\n  animation-duration: 1.8s;\r\n  width: 100%;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n\r\n  @keyframes header {\r\n    from {\r\n      transform: translateY(-10rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n  }\r\n  @include sm {\r\n    height: 8rem;\r\n  }\r\n  @include md {\r\n    height: 8rem;\r\n  }\r\n}\r\n.h1 {\r\n  margin-top: 2rem;\r\n  color: var(--green_02);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.2rem;\r\n  margin-left: 2rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n}\r\n\r\n// h1-xs\r\n\r\n.content-h1-xs {\r\n  display: none;\r\n}\r\n\r\n@include xs {\r\n  .content-h1-xs {\r\n    grid-area: h1-xs;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: calc(100% - 1rem);\r\n    margin: 0.5rem;\r\n  }\r\n}\r\n@include sm {\r\n  .content-h1-xs {\r\n    grid-area: h1-xs;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: calc(100% - 1rem);\r\n    margin: 0.5rem;\r\n  }\r\n}\r\n@include md {\r\n  .content-h1-xs {\r\n    grid-area: h1-xs;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: calc(100% - 1rem);\r\n    margin: 0.5rem;\r\n  }\r\n}\r\n.h1-xs {\r\n  grid-area: h1-xs;\r\n  color: var(--green_02);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 2.1rem;\r\n  letter-spacing: 0.2rem;\r\n}\r\n\r\n// logo header\r\n\r\n.a-img {\r\n  grid-area: img;\r\n  height: 10rem;\r\n  width: 25rem;\r\n  animation-name: logo-1;\r\n  animation-duration: 1.8s;\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n  @keyframes logo-1 {\r\n    from {\r\n      transform: translateY(5rem);\r\n    }\r\n    to {\r\n    }\r\n  }\r\n  @include xs {\r\n    height: 8rem;\r\n    width: 22rem;\r\n  }\r\n  @include sm {\r\n    height: 8rem;\r\n    width: 22rem;\r\n  }\r\n  @include md {\r\n    height: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n\r\n.repere-content {\r\n  position: absolute;\r\n  right: 16rem;\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  width: 100rem;\r\n  height: 10rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n  a {\r\n    color: var(--orange_02);\r\n    font-family: var(--font-family-strasua);\r\n    font-weight: 200;\r\n    font-size: 2rem;\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n// footer\r\n\r\nfooter {\r\n  grid-area: footer;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  position: relative;\r\n  overflow: hidden;\r\n  z-index: 0;\r\n  &.active::before {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\nfooter::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  bottom: -10rem;\r\n  background-color: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  border-radius: 3rem;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n  @include xs {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n  @include sm {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n  @include md {\r\n    bottom: 0;\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\n.text-footer {\r\n  font-family: var(--font-family-strasua);\r\n  font-size: 1.8rem;\r\n  letter-spacing: 0.2rem;\r\n  color: #eee;\r\n  margin: 0;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n  @include xs {\r\n    color: var(--orange_01);\r\n  }\r\n  @include sm {\r\n    color: var(--orange_01);\r\n  }\r\n  @include md {\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n\r\n.copyright {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #eee;\r\n  &.active {\r\n    transition: all 2s;\r\n    transition-delay: 1s;\r\n    color: var(--orange_01);\r\n  }\r\n  @include xs {\r\n    color: var(--orange_01);\r\n  }\r\n  @include sm {\r\n    color: var(--orange_01);\r\n  }\r\n  @include md {\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n",".title {\n  &-small {\n    letter-spacing: 0.5rem;\n    font-size: 1.6rem;\n    font-family: var(--font-family-small);\n  }\n}\n","/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1400px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n",":root {\r\n  // font-family\r\n  --font-family-strasua: \"strasua\";\r\n  --font-family-title: \"Cinzel Decorative\", cursive;\r\n  --font-family: \"Nunito Sans\", sans-serif;\r\n\r\n  // color\r\n  --text: #333;\r\n  --blue: #6eb2bd;\r\n  --orange_01: #df5b13;\r\n  --orange_02: #fd8342;\r\n  --green_01: #7ccbab;\r\n  --green_02: #11a67e;\r\n  --background: #d6d6d6;\r\n\r\n  // box-shadow\r\n  --box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),\r\n    0 1px 3px 1px rgba(60, 64, 67, 0.15);\r\n}\r\n",".mb_2 {\n  margin-bottom: 2rem !important;\n}\n.mb_5 {\n  margin-bottom: 5rem !important;\n}\n.mx_1 {\n  margin-left: 1rem;\n  margin-right: 1rem;\n}\n.my_1 {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n}\n",".leader {\r\n  color: var(--orange_01);\r\n}\r\n\r\n#menu-langue,\r\n#menu-langue ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-langue li {\r\n  display: inline-block;\r\n  position: relative;\r\n  border-radius: 8px 8px 0 0;\r\n}\r\n#menu-langue ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-langue ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-langue ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-langue li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-langue li:last-child {\r\n  // background: var(--orange_01);\r\n}\r\n/* background des liens sous menus */\r\n#menu-langue li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-langue li:last-child:hover {\r\n  background: white;\r\n}\r\n#menu-langue li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-langue a {\r\n  width: 15rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: arial;\r\n}\r\n#menu-langue ul a {\r\n  padding: 8px 0;\r\n  color: var(--orange_01);\r\n}\r\n#menu-langue li:hover li a {\r\n  color: var(--orange_01);\r\n  text-transform: inherit;\r\n}\r\n","#menu-general,\r\n#menu-general ul {\r\n  padding: 0;\r\n  margin: 0;\r\n  list-style: none;\r\n  text-align: center;\r\n}\r\n#menu-general li {\r\n  display: inline-block;\r\n  position: relative;\r\n  transition: all 1s;\r\n  &:hover {\r\n    border-radius: 8px 8px 0 0;\r\n  }\r\n}\r\n#menu-general ul li {\r\n  display: inherit;\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:hover {\r\n  border-radius: 0;\r\n}\r\n#menu-general ul li:last-child {\r\n  border-radius: 0 0 8px 8px;\r\n}\r\n#menu-general ul {\r\n  position: absolute;\r\n  z-index: 1000;\r\n  max-height: 0;\r\n  left: 0;\r\n  right: 0;\r\n  overflow: hidden;\r\n  -moz-transition: 0.7s all 0.2s;\r\n  -webkit-transition: 0.5s all 0.2s;\r\n  transition: 0.5s all 0.2s;\r\n}\r\n#menu-general li:hover ul {\r\n  max-height: 15em;\r\n}\r\n/* background des liens menus */\r\n\r\n#menu-general li:last-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n/* background des liens sous menus */\r\n#menu-general li:last-child li {\r\n  background: white;\r\n}\r\n/* background des liens menus et sous menus au survol */\r\n#menu-general li:first-child {\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n}\r\n#menu-general li:last-child li:hover {\r\n  transition: all 0.4s;\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  letter-spacing: 0.2rem;\r\n}\r\n/* les a href */\r\n#menu-general a {\r\n  width: 32rem;\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 8px 32px;\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.2rem;\r\n  font-weight: 200;\r\n  color: white;\r\n}\r\n#menu-general ul a {\r\n  padding: 8px 0;\r\n  color: white;\r\n}\r\n#menu-general li:hover li a {\r\n  color: var(--blue);\r\n  text-transform: inherit;\r\n}\r\n\r\n// #menu-demo2 li:hover a,\r\n// #menu-demo2 li li:hover a {\r\n// }\r\n","@font-face {\r\n  font-family: \"strasua\";\r\n  src: url(\"C:/Users/Azstras/OneDrive/Documents/polices/strasua.otf\")\r\n    format(opentype);\r\n}\r\n","@use \"media-queries\" as *;\r\n// separator\r\n\r\n.separator-1 {\r\n  margin: 1rem 20rem;\r\n  height: 6px;\r\n  border-radius: 5px;\r\n  width: 80rem;\r\n  background-color: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n.separator-2 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  margin: 0;\r\n  background: var(--green_02);\r\n  height: 2px;\r\n  width: 25rem;\r\n  grid-area: separator-2;\r\n  animation-name: separator-2;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-2 {\r\n    from {\r\n      transform: translateY(15rem);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    width: 22rem;\r\n  }\r\n  @include sm {\r\n    top: 8rem;\r\n    width: 22rem;\r\n  }\r\n  @include md {\r\n    top: 8rem;\r\n    width: 22rem;\r\n  }\r\n}\r\n.separator-3 {\r\n  position: fixed;\r\n  top: 10rem;\r\n  left: 25rem;\r\n  margin: 0;\r\n  background: var(--orange_01);\r\n  height: 2px;\r\n  width: 100%;\r\n  grid-area: separator-3;\r\n  animation-name: separator-3;\r\n  animation-duration: 1.8s;\r\n  z-index: 2;\r\n  @keyframes separator-3 {\r\n    from {\r\n      transform: scaleX(0);\r\n      opacity: 0;\r\n    }\r\n    to {\r\n      opacity: 1;\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n  @include xs {\r\n    top: 8rem;\r\n    left: 22rem;\r\n  }\r\n  @include sm {\r\n    top: 8rem;\r\n    left: 22rem;\r\n  }\r\n  @include md {\r\n    top: 8rem;\r\n    left: 22rem;\r\n  }\r\n}\r\n\r\n.separator-4 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  // border-radius: 100%;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    top: 0;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n.separator-4::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-6 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-6::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-9 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    left: 0;\r\n  }\r\n}\r\n.separator-9::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  left: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-11 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 2s;\r\n    top: 0;\r\n  }\r\n}\r\n\r\n.separator-11::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-14 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.9s;\r\n    right: 0;\r\n  }\r\n}\r\n.separator-14::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  right: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 0.8s;\r\n  z-index: -1;\r\n}\r\n.separator-15 {\r\n  height: 4rem;\r\n  width: 1rem;\r\n  margin: 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1.4s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-15::before {\r\n  content: \"\";\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: -4rem;\r\n  background: var(--blue);\r\n  transition: all 0.6s;\r\n  z-index: -1;\r\n}\r\n.separator-16 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-16::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-17 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-17::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-18 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-18::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n.separator-19 {\r\n  height: 2rem;\r\n  width: 2rem;\r\n  border-radius: 100%;\r\n  margin: 1rem 0;\r\n  position: relative;\r\n  z-index: 0;\r\n  overflow: hidden;\r\n  &.active::before {\r\n    transition-delay: 1s;\r\n    top: 0;\r\n  }\r\n}\r\n.separator-19::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -2rem;\r\n  background: var(--blue);\r\n  height: 100%;\r\n  width: 100%;\r\n  transition: all 1s;\r\n  z-index: -1;\r\n}\r\n\r\n.separator-20 {\r\n  margin-top: 4rem;\r\n  height: 6px;\r\n  width: 55rem;\r\n  border-radius: 5px;\r\n  background: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n\r\n// separator-container\r\n\r\n.separator-container-2 {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0;\r\n}\r\n\r\n// separator-ligne\r\n\r\n.content-separator-ligne {\r\n  grid-area: separator-ligne;\r\n  height: 4rem;\r\n  width: 100%;\r\n  display: flex;\r\n  margin: 0 0 0 0;\r\n}\r\n\r\n.container-separator-ligne {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .separator-ligne-1 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 50%;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1%;\r\n      border-radius: 3rem;\r\n      margin-left: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 100%;\r\n    transition: all 1s;\r\n  }\r\n  .separator-ligne-2 {\r\n    margin: 0;\r\n    height: 4rem;\r\n    width: 2rem;\r\n    position: relative;\r\n    &.active::before {\r\n      width: 1rem;\r\n      border-radius: 3rem;\r\n      margin-right: 1rem;\r\n    }\r\n  }\r\n  .separator-ligne-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    background: var(--green_01);\r\n    // background: #d6d6d6;\r\n    height: 4rem;\r\n    width: 106rem;\r\n    @include xxl {\r\n      width: 141.2rem;\r\n    }\r\n    right: 0;\r\n    transition: all 1s;\r\n  }\r\n}\r\n\r\n// separator xs\r\n\r\n.container-separator-xs-1 {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 2px;\r\n  width: 100%;\r\n  margin: 1rem 0.5rem;\r\n}\r\n.container-separator-xs-2 {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 2px;\r\n  width: 100%;\r\n  margin: 0;\r\n  margin: 0.5rem;\r\n}\r\n.separator-xs-1 {\r\n  height: 2px;\r\n  width: 75%;\r\n  background: #ddd;\r\n}\r\n.separator-xs-2 {\r\n  height: 2px;\r\n  width: 60%;\r\n  background: white;\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n.content-menu {\r\n  position: sticky;\r\n  top: 10.2rem;\r\n  grid-area: menu;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 5rem;\r\n  background: #eee;\r\n  z-index: 1;\r\n  animation-name: content-menu;\r\n  animation-duration: 3s;\r\n  margin: 0;\r\n  @keyframes content-menu {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.menu-container {\r\n  margin: 0 1rem;\r\n  height: 4rem;\r\n}\r\n\r\n.menu-container-general {\r\n  position: absolute;\r\n  top: 4rem;\r\n  display: none;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 7rem;\r\n  width: 105rem;\r\n  border-radius: 0 0 2rem 2rem;\r\n  background: #eee;\r\n  margin: 0;\r\n  animation-name: containerMenu;\r\n  animation-duration: 1.6s;\r\n\r\n  @keyframes containerMenu {\r\n    0% {\r\n      opacity: 0;\r\n      transform: translateY(-5rem);\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n      transform: translateY(0rem);\r\n    }\r\n  }\r\n}\r\n\r\n.menu-content-general {\r\n  position: relative;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 4rem;\r\n  width: 32rem;\r\n  background: linear-gradient(var(--green_01), var(--blue));\r\n  border-radius: 3rem;\r\n  margin: 0 2rem;\r\n  cursor: default;\r\n  transition: all 1s;\r\n  &:hover > .menu-container-general {\r\n    display: flex;\r\n  }\r\n  &:hover {\r\n    width: 100rem;\r\n    border-radius: 2rem 2rem 0 0;\r\n  }\r\n}\r\n\r\n.titre {\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  &:hover {\r\n    font-size: 2rem;\r\n  }\r\n}\r\n\r\n.titre-votre-besoins {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: default;\r\n}\r\n.titre-notre-reseau {\r\n  font-size: 2rem;\r\n  font-family: var(--font-family-strasua);\r\n  color: white;\r\n  letter-spacing: 0.2rem;\r\n  cursor: pointer;\r\n  &:hover {\r\n    font-size: 2.2rem;\r\n  }\r\n}\r\n\r\n.border-radius-1 {\r\n  border-radius: 0 0 0 8px;\r\n}\r\n.border-radius-3 {\r\n  border-radius: 0 0 8px 0;\r\n}\r\n\r\n// menu-langue\r\n\r\n.menu-langue {\r\n  margin-right: 1rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n}\r\n\r\n// menu mobiles\r\n\r\n.menu-xs,\r\n.menu-xs-content {\r\n  display: none;\r\n}\r\n\r\n@include xs {\r\n  .menu-xs {\r\n    display: flex;\r\n  }\r\n}\r\n@include sm {\r\n  .menu-xs {\r\n    display: flex;\r\n  }\r\n}\r\n@include md {\r\n  .menu-xs {\r\n    display: flex;\r\n  }\r\n}\r\n\r\n.menu-xs {\r\n  position: fixed;\r\n  top: 3rem;\r\n  right: 0;\r\n  width: 10%;\r\n  align-items: center;\r\n  justify-content: flex-end;\r\n  z-index: 5;\r\n  animation: menu-xs 2s;\r\n  margin: 0;\r\n  @keyframes menu-xs {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    40% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\n\r\n// menu-xs-open\r\n\r\n.menu-xs-content {\r\n  position: fixed;\r\n  display: none;\r\n  top: 0rem;\r\n  height: 100vh;\r\n  width: 100%;\r\n  margin: 0;\r\n  background: white;\r\n  z-index: 4;\r\n  animation: menu-xs 0.8s;\r\n  &.animate-open {\r\n    animation: menu-xs-open 0.8s;\r\n  }\r\n\r\n  &.animate-close {\r\n    animation: menu-xs-close 0.8s;\r\n  }\r\n}\r\n\r\n.menu-xs-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin: 0;\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n}\r\n\r\n// menu langue xs\r\n\r\n.menu-xs-langue {\r\n  display: flex;\r\n  width: 100%;\r\n  margin: 2.8rem 2rem 0 1rem;\r\n  a {\r\n    color: white;\r\n    font-family: var(--font-family-strasua);\r\n    letter-spacing: 0.2rem;\r\n    font-size: 1.5rem;\r\n    margin-left: 1rem;\r\n  }\r\n}\r\n.menu-xs-langue-content {\r\n  z-index: 3;\r\n  display: flex;\r\n  margin: 0;\r\n}\r\n\r\n.menu-xs-langue-container {\r\n  display: none;\r\n  flex-direction: column;\r\n  height: 10rem;\r\n  width: 13rem;\r\n  margin: 0;\r\n  background: var(--orange_02);\r\n  border-radius: 0.8rem;\r\n  animation: menu-xs-langue-container-open 1s;\r\n  @keyframes menu-xs-langue-container-open {\r\n    0% {\r\n      width: 0;\r\n      height: 2.5rem;\r\n    }\r\n    40% {\r\n      height: 2.5rem;\r\n    }\r\n    50% {\r\n      width: 13rem;\r\n    }\r\n    100% {\r\n      height: 10rem;\r\n    }\r\n  }\r\n}\r\n\r\n// menu general xs\r\n\r\n.menu-general-xs-content {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 100%;\r\n  width: 100%;\r\n  margin-top: 2rem;\r\n\r\n  a {\r\n    font-size: 2rem;\r\n    font-family: var(--font-family-strasua);\r\n    color: var(--orange_02);\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n.menu-general-xs-container {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 1.5rem 1rem;\r\n}\r\n\r\n.animation-menu-general-xs-container {\r\n  animation: animation-container-menu-general-xs 1.8s;\r\n}\r\n.menu-general-xs-content-opacity {\r\n  opacity: 0;\r\n}\r\n\r\n.content-link-menu-general-xs {\r\n  display: none;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  text-align: center;\r\n  height: 100%;\r\n  width: 90%;\r\n  margin: 0 1rem;\r\n  border-radius: 3rem;\r\n  background: var(--orange_02);\r\n  animation: open-content-link-menu-general-xs 1s;\r\n  margin: 0;\r\n  .link-menu-general-xs {\r\n    margin: 0.5rem 0;\r\n    font-size: 2rem;\r\n    font-family: var(--font-family-strasua);\r\n    color: white;\r\n    letter-spacing: 0.2rem;\r\n  }\r\n}\r\n\r\n.animation-content-link-menu-general-xs {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin: 0;\r\n  animation: open-link-menu-general-xs 1s;\r\n}\r\n\r\n// link\r\n\r\n// link menu langue xs\r\n\r\n.link-menu-container-langue-xs {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: start;\r\n  margin: 0;\r\n}\r\n\r\n.first-link-menu-xs-langue {\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.2rem;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n.link-menu-xs-langue {\r\n  margin: 0.5rem 0;\r\n}\r\n\r\n.menu-langue-xs-link-mid {\r\n  margin-top: 0;\r\n  margin-bottom: 0;\r\n}\r\n\r\n// btn\r\n\r\n// btn-menu-xs\r\n\r\n.btn {\r\n  position: relative;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  height: 2rem;\r\n  width: 2rem;\r\n  margin: 0 2rem 0 0;\r\n}\r\n.btn-barre {\r\n  position: absolute;\r\n  height: 0.2rem;\r\n  width: 2.6rem;\r\n  background: var(--orange_02);\r\n  margin: 0;\r\n  transition: all 0.8s;\r\n}\r\n.btn-barre-1 {\r\n  transform-origin: 0 0;\r\n  left: 1.5px;\r\n}\r\n.btn-barre-2 {\r\n  top: 1.8rem;\r\n  transform-origin: 0 100%;\r\n  left: 1.5px;\r\n}\r\n\r\n// btn menu langue xs\r\n\r\n.btn-open-menu-langue-xs {\r\n  margin: 0 1rem 0 0;\r\n}\r\n.btn-close-menu-langue-xs-content {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  height: 2.5rem;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  animation: btn-close-menu-langue-xs 1s;\r\n  @keyframes btn-close-menu-langue-xs {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\n\r\n.btn-close-menu-langue-xs-close {\r\n  opacity: 0;\r\n}\r\n\r\n.btn-close-menu-langue-xs {\r\n  margin: 0.8rem;\r\n  color: white;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n// btn menu general xs\r\n.btn-open-close-content-link-menu-general-xs {\r\n  margin-left: 1rem;\r\n  font-size: 2rem;\r\n  color: var(--orange_02);\r\n  transition: all 1s;\r\n}\r\n\r\n// animation\r\n\r\n@keyframes menu-xs-open {\r\n  0% {\r\n    transform: translateY(-100vh);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(0);\r\n  }\r\n}\r\n\r\n@keyframes menu-xs-close {\r\n  0% {\r\n    transform: translateY(0);\r\n  }\r\n\r\n  100% {\r\n    transform: translateY(-100vh);\r\n  }\r\n}\r\n\r\n// animation menu general xs\r\n\r\n.first-animation-menu-general-xs {\r\n  animation: first-animation-menu-general-xs 1.3s;\r\n  @keyframes first-animation-menu-general-xs {\r\n    0% {\r\n      transform: scaleY(0);\r\n    }\r\n    80% {\r\n      transform: scaleY(0);\r\n    }\r\n    100% {\r\n      transform: scaleY(1);\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes animation-container-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  80% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n@keyframes open-content-link-menu-general-xs {\r\n  0% {\r\n    height: 0;\r\n  }\r\n  100% {\r\n    height: 100%;\r\n  }\r\n}\r\n\r\n.close-content-link-menu-general-xs {\r\n  animation: close-content-link-menu-general-xs 1s;\r\n  @keyframes close-content-link-menu-general-xs {\r\n    0% {\r\n      height: 20.8rem;\r\n    }\r\n    100% {\r\n      height: 0;\r\n    }\r\n  }\r\n}\r\n\r\n@keyframes open-link-menu-general-xs {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n  30% {\r\n    opacity: 0;\r\n  }\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n.close-link-menu-general-xs {\r\n  animation: close-link-menu-general-xs 1s;\r\n  @keyframes close-link-menu-general-xs {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n    50% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 0;\r\n    }\r\n  }\r\n}\r\n\r\n// animation menu langue xs\r\n\r\n.animation-close-menu-langue-xs {\r\n  animation: menu-xs-langue-container-close 1s;\r\n  @keyframes menu-xs-langue-container-close {\r\n    0% {\r\n      height: 10rem;\r\n    }\r\n    40% {\r\n      width: 13rem;\r\n    }\r\n    50% {\r\n      height: 2.5rem;\r\n    }\r\n    100% {\r\n      height: 2.5rem;\r\n      width: 0;\r\n    }\r\n  }\r\n}\r\n// divers - menu\r\n\r\n.fa-globe {\r\n  font-size: 2.5rem;\r\n  color: var(--orange_02);\r\n}\r\n","@use \"media-queries\" as *;\r\n.mail-container {\r\n  grid-area: mail;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  width: 100%;\r\n  height: 5rem;\r\n  margin: 0;\r\n}\r\n\r\n.mail-content-1 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(-96rem);\r\n  transition: all 1s;\r\n  border-radius: 0 3rem 3rem 0;\r\n  z-index: 0;\r\n  @include xs {\r\n    transform: translateX(0);\r\n  }\r\n  @include sm {\r\n    transform: translateX(0);\r\n  }\r\n  @include md {\r\n    transform: translateX(0);\r\n  }\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n.mail-content-2 {\r\n  background: white;\r\n  height: 5rem;\r\n  width: calc(50% - 10rem);\r\n  margin: 0;\r\n  transform: translateX(96rem);\r\n  transition: all 1s;\r\n  border-radius: 3rem 0 0 3rem;\r\n  z-index: 0;\r\n  @include xs {\r\n    transform: translateX(0);\r\n  }\r\n  @include sm {\r\n    transform: translateX(0);\r\n  }\r\n  @include md {\r\n    transform: translateX(0);\r\n  }\r\n  &.active {\r\n    transform: translateX(0);\r\n    border-radius: 0;\r\n  }\r\n}\r\n\r\n.contact {\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  width: 20rem;\r\n  background-color: #eee;\r\n  color: #eee;\r\n  position: relative;\r\n  overflow: hidden;\r\n  p {\r\n    font-family: var(--font-family);\r\n    letter-spacing: 0.1rem;\r\n    font-size: 2rem;\r\n    font-weight: 400;\r\n  }\r\n  &:hover::before {\r\n    opacity: 1;\r\n  }\r\n  &.active {\r\n    background: white;\r\n    color: var(--blue);\r\n    transition: all 1s;\r\n    transition-delay: 0.8s;\r\n  }\r\n}\r\n\r\n.contact::before {\r\n  content: \"Email@exemple.com\";\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  color: var(--blue);\r\n  background: white;\r\n  height: 100%;\r\n  width: 100%;\r\n  position: absolute;\r\n  transition: all 1s;\r\n  font-weight: 400;\r\n  font-size: 1.8rem;\r\n  font-family: var(--font-family);\r\n  text-decoration: underline;\r\n  letter-spacing: 0.1rem;\r\n  border-radius: 0;\r\n  opacity: 0;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1486,6 +1701,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
 /* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
 /* Large desktop */
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
 .logo-content {
   grid-area: slogan-container;
   display: flex;
@@ -1494,14 +1713,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   flex-direction: column;
   height: 70rem;
 }
-@media (min-width: 2559px) {
-  .logo-content {
-    height: 104rem;
-  }
-}
 @media (max-width: 480px) {
   .logo-content {
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  .logo-content {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .logo-content {
+    display: none;
+  }
+}
+@media (min-width: 2559px) {
+  .logo-content {
+    height: 104rem;
   }
 }
 
@@ -1575,6 +1804,16 @@ div {
     grid: "img header" 8rem "menu-xs menu-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "h1-xs h1-xs" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
   }
 }
+@media (max-width: 767px) {
+  .container {
+    grid: "img header" 8rem "menu-xs menu-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "h1-xs h1-xs" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .container {
+    grid: "img header" 8rem "menu-xs menu-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "h1-xs h1-xs" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
+  }
+}
 
 .general-content {
   grid-area: general;
@@ -1597,6 +1836,16 @@ div {
     margin: 0;
   }
 }
+@media (max-width: 767px) {
+  .general-content .text-content-1 {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .text-content-1 {
+    margin: 0;
+  }
+}
 .general-content .sous-titre-1 {
   display: flex;
   justify-content: center;
@@ -1609,6 +1858,16 @@ div {
   overflow: hidden;
 }
 @media (max-width: 480px) {
+  .general-content .sous-titre-1 {
+    width: calc(100% - 4rem);
+  }
+}
+@media (max-width: 767px) {
+  .general-content .sous-titre-1 {
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .sous-titre-1 {
     width: calc(100% - 4rem);
   }
@@ -1632,6 +1891,16 @@ div {
     top: 0;
   }
 }
+@media (max-width: 767px) {
+  .general-content .sous-titre-1::before {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .sous-titre-1::before {
+    top: 0;
+  }
+}
 .general-content .text-container-1 {
   margin: 2rem;
   height: 28rem;
@@ -1642,6 +1911,18 @@ div {
   overflow: hidden;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-1 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-1 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-1 {
     height: auto;
     width: calc(100% - 4rem);
@@ -1674,6 +1955,16 @@ div {
     top: 0;
   }
 }
+@media (max-width: 767px) {
+  .general-content .text-container-1::before {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .text-container-1::before {
+    top: 0;
+  }
+}
 .general-content .sous-titre-2 {
   display: flex;
   justify-content: center;
@@ -1686,6 +1977,18 @@ div {
   overflow: hidden;
 }
 @media (max-width: 480px) {
+  .general-content .sous-titre-2 {
+    width: calc(100% - 4rem);
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .sous-titre-2 {
+    width: calc(100% - 4rem);
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .sous-titre-2 {
     width: calc(100% - 4rem);
     font-size: 1.8rem;
@@ -1710,12 +2013,32 @@ div {
     top: 0;
   }
 }
+@media (max-width: 767px) {
+  .general-content .sous-titre-2::before {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .sous-titre-2::before {
+    top: 0;
+  }
+}
 .general-content .text-container-2 {
   display: flex;
   flex-direction: row nowrap;
   margin: 0;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-2 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-2 {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-2 {
     flex-direction: column;
   }
@@ -1737,6 +2060,18 @@ div {
     width: calc(100% - 4rem);
   }
 }
+@media (max-width: 767px) {
+  .general-content .div-text-container-1 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .div-text-container-1 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .div-text-container-1.active::before {
   right: 0;
 }
@@ -1748,6 +2083,16 @@ div {
   font-weight: 700;
 }
 @media (max-width: 480px) {
+  .general-content .div-text-container-1 p {
+    margin: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .div-text-container-1 p {
+    margin: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .div-text-container-1 p {
     margin: 2rem;
   }
@@ -1764,6 +2109,16 @@ div {
   z-index: -1;
 }
 @media (max-width: 480px) {
+  .general-content .div-text-container-1::before {
+    right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .div-text-container-1::before {
+    right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .div-text-container-1::before {
     right: 0;
   }
@@ -1785,6 +2140,18 @@ div {
     width: calc(100% - 4rem);
   }
 }
+@media (max-width: 767px) {
+  .general-content .div-text-container-2 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .div-text-container-2 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .div-text-container-2.active::before {
   top: 0;
 }
@@ -1796,6 +2163,16 @@ div {
   font-weight: 700;
 }
 @media (max-width: 480px) {
+  .general-content .div-text-container-2 p {
+    margin: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .div-text-container-2 p {
+    margin: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .div-text-container-2 p {
     margin: 2rem;
   }
@@ -1816,6 +2193,16 @@ div {
     top: 0;
   }
 }
+@media (max-width: 767px) {
+  .general-content .div-text-container-2::before {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .div-text-container-2::before {
+    top: 0;
+  }
+}
 .general-content .div-text-container-3 {
   display: flex;
   border-radius: 3rem;
@@ -1827,6 +2214,18 @@ div {
   overflow: hidden;
 }
 @media (max-width: 480px) {
+  .general-content .div-text-container-3 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (max-width: 767px) {
+  .general-content .div-text-container-3 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .div-text-container-3 {
     height: auto;
     width: calc(100% - 4rem);
@@ -1847,6 +2246,16 @@ div {
     margin: 2rem;
   }
 }
+@media (max-width: 767px) {
+  .general-content .div-text-container-3 p {
+    margin: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .div-text-container-3 p {
+    margin: 2rem;
+  }
+}
 .general-content .div-text-container-3::before {
   content: "";
   position: absolute;
@@ -1859,6 +2268,16 @@ div {
   z-index: -1;
 }
 @media (max-width: 480px) {
+  .general-content .div-text-container-3::before {
+    left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .div-text-container-3::before {
+    left: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .div-text-container-3::before {
     left: 0;
   }
@@ -1880,6 +2299,18 @@ div {
     width: calc(100% - 4rem);
   }
 }
+@media (max-width: 767px) {
+  .general-content .text-container-3 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .text-container-3 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .text-container-3.active::before {
   top: 0;
 }
@@ -1891,6 +2322,16 @@ div {
   font-weight: 700;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-3 p {
+    margin: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-3 p {
+    margin: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-3 p {
     margin: 2rem;
   }
@@ -1907,6 +2348,16 @@ div {
   z-index: -1;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-3::before {
+    top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-3::before {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-3::before {
     top: 0;
   }
@@ -1928,6 +2379,18 @@ div {
     width: calc(100% - 4rem);
   }
 }
+@media (max-width: 767px) {
+  .general-content .text-container-4 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .text-container-4 {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .text-container-4.active::before {
   top: 0;
 }
@@ -1939,6 +2402,16 @@ div {
   font-weight: 700;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-4 p {
+    margin: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-4 p {
+    margin: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-4 p {
     margin: 2rem;
   }
@@ -1955,6 +2428,16 @@ div {
   z-index: -1;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-4::before {
+    top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-4::before {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-4::before {
     top: 0;
   }
@@ -1984,6 +2467,16 @@ div {
     width: calc(100% - 4rem);
   }
 }
+@media (max-width: 767px) {
+  .general-content .sous-titre-3 {
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .sous-titre-3 {
+    width: calc(100% - 4rem);
+  }
+}
 .general-content .sous-titre-3.active::before {
   top: 0;
 }
@@ -2003,6 +2496,16 @@ div {
     top: 0;
   }
 }
+@media (max-width: 767px) {
+  .general-content .sous-titre-3::before {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .sous-titre-3::before {
+    top: 0;
+  }
+}
 .general-content .text-container-5 {
   height: 25rem;
   width: 100rem;
@@ -2013,6 +2516,20 @@ div {
   left: -156rem;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-5 {
+    left: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-5 {
+    left: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-5 {
     left: 0;
     height: auto;
@@ -2051,6 +2568,20 @@ div {
     width: calc(100% - 4rem);
   }
 }
+@media (max-width: 767px) {
+  .general-content .text-container-6 {
+    right: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .text-container-6 {
+    right: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
 @media (min-width: 2559px) {
   .general-content .text-container-6 {
     right: -192rem;
@@ -2076,6 +2607,20 @@ div {
   left: -156rem;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-7 {
+    left: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-7 {
+    left: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-7 {
     left: 0;
     height: auto;
@@ -2108,6 +2653,20 @@ div {
   right: -156rem;
 }
 @media (max-width: 480px) {
+  .general-content .text-container-8 {
+    right: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (max-width: 767px) {
+  .general-content .text-container-8 {
+    right: 0;
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-8 {
     right: 0;
     height: auto;
@@ -2158,6 +2717,16 @@ div {
     opacity: 1;
   }
 }
+@media (max-width: 767px) {
+  .text-1 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-1 {
+    opacity: 1;
+  }
+}
 
 .text-2 {
   color: none;
@@ -2170,6 +2739,16 @@ div {
   opacity: 1;
 }
 @media (max-width: 480px) {
+  .text-2 {
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .text-2 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .text-2 {
     opacity: 1;
   }
@@ -2190,6 +2769,16 @@ div {
     opacity: 1;
   }
 }
+@media (max-width: 767px) {
+  .text-3 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-3 {
+    opacity: 1;
+  }
+}
 
 .text-4 {
   color: none;
@@ -2202,6 +2791,16 @@ div {
   opacity: 1;
 }
 @media (max-width: 480px) {
+  .text-4 {
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .text-4 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .text-4 {
     opacity: 1;
   }
@@ -2222,6 +2821,16 @@ div {
     opacity: 1;
   }
 }
+@media (max-width: 767px) {
+  .text-5 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-5 {
+    opacity: 1;
+  }
+}
 
 .text-6 {
   color: none;
@@ -2234,6 +2843,16 @@ div {
   opacity: 1;
 }
 @media (max-width: 480px) {
+  .text-6 {
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .text-6 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .text-6 {
     opacity: 1;
   }
@@ -2255,6 +2874,16 @@ div {
     opacity: 1;
   }
 }
+@media (max-width: 767px) {
+  .text-7 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-7 {
+    opacity: 1;
+  }
+}
 
 .text-8 {
   color: none;
@@ -2267,6 +2896,16 @@ div {
   opacity: 1;
 }
 @media (max-width: 480px) {
+  .text-8 {
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .text-8 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
   .text-8 {
     opacity: 1;
   }
@@ -2287,10 +2926,20 @@ div {
     opacity: 1;
   }
 }
+@media (max-width: 767px) {
+  .text-9 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-9 {
+    opacity: 1;
+  }
+}
 
 div {
   margin: 2rem 0;
-}`, "",{"version":3,"sources":["webpack://./src/_media-queries.scss","webpack://./src/_logo-slogan.scss","webpack://./src/index.scss"],"names":[],"mappings":"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","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 979px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// logo & slogan\r\n\r\n.logo-content {\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  height: 70rem;\r\n  @include xxl {\r\n    height: 104rem;\r\n  }\r\n  @include xs {\r\n    display: none;\r\n  }\r\n}\r\n.logo-container {\r\n  margin-top: 1rem;\r\n  margin-bottom: 2rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  .logo-2 {\r\n    height: 25rem;\r\n    width: 60rem;\r\n  }\r\n}\r\n.slogan-container {\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: flex;\r\n  min-width: 30rem;\r\n  border-radius: 0.8rem;\r\n  animation-name: apparition;\r\n}\r\n.h2 {\r\n  margin-left: 2rem;\r\n  margin-top: 3rem;\r\n  color: var(--blue);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.5rem;\r\n  animation-name: h2;\r\n  animation-duration: 1.8s;\r\n\r\n  @keyframes h2 {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\ndiv {\r\n  display: flex;\r\n}\r\ndiv {\r\n  margin: 0 1rem;\r\n}\r\n","@use \"media-queries\" as *;\r\n@use \"logo-slogan\" as *;\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  width: 100%;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n  @include xs {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .text-content-1 {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 100%;\r\n    text-align: center;\r\n    background: #d6d6d6;\r\n    @include xs {\r\n      margin: 0;\r\n    }\r\n  }\r\n  .sous-titre-1 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 30rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-1 {\r\n    margin: 2rem;\r\n    height: 28rem;\r\n    width: 110rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      margin-bottom: 2rem;\r\n    }\r\n  }\r\n  .text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .sous-titre-2 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 38rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-2 {\r\n    display: flex;\r\n    flex-direction: row nowrap;\r\n    margin: 0;\r\n    @include xs {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n\r\n  .div-text-container-1 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      right: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    right: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      right: 0;\r\n    }\r\n  }\r\n  .div-text-container-2 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -20rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n  .div-text-container-3 {\r\n    display: flex;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      left: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      left: 0;\r\n    }\r\n  }\r\n  .text-container-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 8rem;\r\n    width: 58rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-4 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 15rem;\r\n    width: 50rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-4::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  // text-content-2\r\n\r\n  .text-content-2 {\r\n    margin: 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #d6d6d6;\r\n  }\r\n\r\n  .sous-titre-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 25rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-5 {\r\n    height: 25rem;\r\n    width: 100rem;\r\n    border-radius: 3rem;\r\n    color: white;\r\n    background: var(--green_01);\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n\r\n  .text-container-6 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    overflow-x: hidden;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-7 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 2s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-8 {\r\n    height: 15rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    margin-bottom: 4rem;\r\n    position: relative;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .sous-titre {\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n.text-decoration-1 {\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.5rem;\r\n  font-size: 1.6rem;\r\n  font-weight: 300;\r\n  color: var(--orange_01);\r\n}\r\n\r\n.text-1 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-2 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-3 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  width: 100%;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// footer\r\n\r\n// .test {\r\n//   color: var(--orange_01);\r\n// }\r\n\r\n// menu\r\n\r\ndiv {\r\n  margin: 2rem 0;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_logo-slogan.scss","webpack://./src/index.scss"],"names":[],"mappings":"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","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1400px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// logo & slogan\r\n\r\n.logo-content {\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  height: 70rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n  @include xxl {\r\n    height: 104rem;\r\n  }\r\n}\r\n.logo-container {\r\n  margin-top: 1rem;\r\n  margin-bottom: 2rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  .logo-2 {\r\n    height: 25rem;\r\n    width: 60rem;\r\n  }\r\n}\r\n.slogan-container {\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: flex;\r\n  min-width: 30rem;\r\n  border-radius: 0.8rem;\r\n  animation-name: apparition;\r\n}\r\n.h2 {\r\n  margin-left: 2rem;\r\n  margin-top: 3rem;\r\n  color: var(--blue);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.5rem;\r\n  animation-name: h2;\r\n  animation-duration: 1.8s;\r\n\r\n  @keyframes h2 {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\ndiv {\r\n  display: flex;\r\n}\r\ndiv {\r\n  margin: 0 1rem;\r\n}\r\n","@import \"./assets/styles/media-queries\";\r\n@import \"./assets/styles/logo-slogan\";\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  width: 100%;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n  @include xs {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include sm {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include md {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .text-content-1 {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 100%;\r\n    text-align: center;\r\n    background: #d6d6d6;\r\n    @include xs {\r\n      margin: 0;\r\n    }\r\n    @include sm {\r\n      margin: 0;\r\n    }\r\n    @include md {\r\n      margin: 0;\r\n    }\r\n  }\r\n  .sous-titre-1 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 30rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-1 {\r\n    margin: 2rem;\r\n    height: 28rem;\r\n    width: 110rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      margin-bottom: 2rem;\r\n    }\r\n  }\r\n  .text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .sous-titre-2 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 38rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-2 {\r\n    display: flex;\r\n    flex-direction: row nowrap;\r\n    margin: 0;\r\n    @include xs {\r\n      flex-direction: column;\r\n    }\r\n    @include sm {\r\n      flex-direction: column;\r\n    }\r\n    @include md {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n\r\n  .div-text-container-1 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      right: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    right: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      right: 0;\r\n    }\r\n    @include sm {\r\n      right: 0;\r\n    }\r\n    @include md {\r\n      right: 0;\r\n    }\r\n  }\r\n  .div-text-container-2 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -20rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .div-text-container-3 {\r\n    display: flex;\r\n    border-radius: 3rem;\r\n    height: 20rem;\r\n    width: 58rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      left: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -58rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      left: 0;\r\n    }\r\n    @include sm {\r\n      left: 0;\r\n    }\r\n    @include md {\r\n      left: 0;\r\n    }\r\n  }\r\n  .text-container-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 8rem;\r\n    width: 58rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-4 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 15rem;\r\n    width: 50rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-4::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  // text-content-2\r\n\r\n  .text-content-2 {\r\n    margin: 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #d6d6d6;\r\n  }\r\n\r\n  .sous-titre-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 25rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-5 {\r\n    height: 25rem;\r\n    width: 100rem;\r\n    border-radius: 3rem;\r\n    color: white;\r\n    background: var(--green_01);\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n\r\n  .text-container-6 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    overflow-x: hidden;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-7 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 2s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-8 {\r\n    height: 15rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    margin-bottom: 4rem;\r\n    position: relative;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .sous-titre {\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n.text-decoration-1 {\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.5rem;\r\n  font-size: 1.6rem;\r\n  font-weight: 300;\r\n  color: var(--orange_01);\r\n}\r\n\r\n.text-1 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-2 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-3 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  width: 100%;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// footer\r\n\r\n// .test {\r\n//   color: var(--orange_01);\r\n// }\r\n\r\n// menu\r\n\r\ndiv {\r\n  margin: 2rem 0;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

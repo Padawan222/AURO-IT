@@ -1,5 +1,5 @@
-@use "media-queries" as *;
-@use "logo-slogan" as *;
+@import "./assets/styles/media-queries";
+@import "./assets/styles/logo-slogan";
 .container {
   display: grid;
   background: #eee;
@@ -14,6 +14,32 @@
     "footer footer" auto
     / 25rem auto;
   @include xs {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
+  @include sm {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
+  @include md {
     grid:
       "img header" 8rem
       "menu-xs menu-xs" auto
@@ -46,6 +72,12 @@
     @include xs {
       margin: 0;
     }
+    @include sm {
+      margin: 0;
+    }
+    @include md {
+      margin: 0;
+    }
   }
   .sous-titre-1 {
     display: flex;
@@ -58,6 +90,12 @@
     z-index: 0;
     overflow: hidden;
     @include xs {
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      width: calc(100% - 4rem);
+    }
+    @include md {
       width: calc(100% - 4rem);
     }
     &.active::before {
@@ -77,6 +115,12 @@
     @include xs {
       top: 0;
     }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
   }
   .text-container-1 {
     margin: 2rem;
@@ -87,6 +131,14 @@
     z-index: 0;
     overflow: hidden;
     @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
       height: auto;
       width: calc(100% - 4rem);
     }
@@ -115,6 +167,12 @@
     @include xs {
       top: 0;
     }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
   }
 
   .sous-titre-2 {
@@ -128,6 +186,14 @@
     z-index: 0;
     overflow: hidden;
     @include xs {
+      width: calc(100% - 4rem);
+      font-size: 1.8rem;
+    }
+    @include sm {
+      width: calc(100% - 4rem);
+      font-size: 1.8rem;
+    }
+    @include md {
       width: calc(100% - 4rem);
       font-size: 1.8rem;
     }
@@ -148,6 +214,12 @@
     @include xs {
       top: 0;
     }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
   }
 
   .text-container-2 {
@@ -155,6 +227,12 @@
     flex-direction: row nowrap;
     margin: 0;
     @include xs {
+      flex-direction: column;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+    @include md {
       flex-direction: column;
     }
   }
@@ -173,6 +251,14 @@
       height: auto;
       width: calc(100% - 4rem);
     }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       right: 0;
     }
@@ -183,6 +269,12 @@
       font-size: 1.8rem;
       font-weight: 700;
       @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
         margin: 2rem;
       }
     }
@@ -200,6 +292,12 @@
     @include xs {
       right: 0;
     }
+    @include sm {
+      right: 0;
+    }
+    @include md {
+      right: 0;
+    }
   }
   .div-text-container-2 {
     display: flex;
@@ -213,7 +311,14 @@
     overflow: hidden;
     @include xs {
       height: auto;
-
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
       width: calc(100% - 4rem);
     }
     &.active::before {
@@ -226,6 +331,12 @@
       font-size: 1.8rem;
       font-weight: 700;
       @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
         margin: 2rem;
       }
     }
@@ -243,6 +354,12 @@
     @include xs {
       top: 0;
     }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
   }
   .div-text-container-3 {
     display: flex;
@@ -257,6 +374,14 @@
       height: auto;
       width: calc(100% - 4rem);
     }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       left: 0;
     }
@@ -267,6 +392,12 @@
       font-size: 1.8rem;
       font-weight: 700;
       @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
         margin: 2rem;
       }
     }
@@ -284,6 +415,12 @@
     @include xs {
       left: 0;
     }
+    @include sm {
+      left: 0;
+    }
+    @include md {
+      left: 0;
+    }
   }
   .text-container-3 {
     display: flex;
@@ -299,6 +436,14 @@
       height: auto;
       width: calc(100% - 4rem);
     }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
@@ -309,6 +454,12 @@
       font-size: 1.8rem;
       font-weight: 700;
       @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
         margin: 2rem;
       }
     }
@@ -326,6 +477,12 @@
     @include xs {
       top: 0;
     }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
   }
   .text-container-4 {
     display: flex;
@@ -341,6 +498,14 @@
       height: auto;
       width: calc(100% - 4rem);
     }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
@@ -351,6 +516,12 @@
       font-size: 1.8rem;
       font-weight: 700;
       @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
         margin: 2rem;
       }
     }
@@ -366,6 +537,12 @@
     transition: all 1.8s;
     z-index: -1;
     @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
       top: 0;
     }
   }
@@ -395,6 +572,12 @@
     @include xs {
       width: calc(100% - 4rem);
     }
+    @include sm {
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      width: calc(100% - 4rem);
+    }
     &.active::before {
       top: 0;
     }
@@ -412,6 +595,12 @@
     @include xs {
       top: 0;
     }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
   }
 
   .text-container-5 {
@@ -423,6 +612,16 @@
     position: relative;
     left: -156rem;
     @include xs {
+      left: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      left: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
       left: 0;
       height: auto;
       width: calc(100% - 4rem);
@@ -456,6 +655,16 @@
       height: auto;
       width: calc(100% - 4rem);
     }
+    @include sm {
+      right: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      right: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     @include xxl {
       right: -192rem;
     }
@@ -479,6 +688,16 @@
     position: relative;
     left: -156rem;
     @include xs {
+      left: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      left: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
       left: 0;
       height: auto;
       width: calc(100% - 4rem);
@@ -507,6 +726,16 @@
     position: relative;
     right: -156rem;
     @include xs {
+      right: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      right: 0;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
       right: 0;
       height: auto;
       width: calc(100% - 4rem);
@@ -552,6 +781,12 @@
   @include xs {
     opacity: 1;
   }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-2 {
   color: none;
@@ -563,6 +798,12 @@
     opacity: 1;
   }
   @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -578,6 +819,12 @@
   @include xs {
     opacity: 1;
   }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-4 {
   color: none;
@@ -589,6 +836,12 @@
     opacity: 1;
   }
   @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -604,6 +857,12 @@
   @include xs {
     opacity: 1;
   }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-6 {
   color: none;
@@ -615,6 +874,12 @@
     opacity: 1;
   }
   @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -631,6 +896,12 @@
   @include xs {
     opacity: 1;
   }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-8 {
   color: none;
@@ -642,6 +913,12 @@
     opacity: 1;
   }
   @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -656,6 +933,12 @@
     opacity: 1;
   }
   @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }

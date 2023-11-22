@@ -6,9 +6,6 @@
   width: 100%;
   height: 5rem;
   margin: 0;
-  // @include xs {
-  //   display: none;
-  // }
 }
 
 .mail-content-1 {
@@ -21,7 +18,13 @@
   border-radius: 0 3rem 3rem 0;
   z-index: 0;
   @include xs {
-    transform: none;
+    transform: translateX(0);
+  }
+  @include sm {
+    transform: translateX(0);
+  }
+  @include md {
+    transform: translateX(0);
   }
   &.active {
     transform: translateX(0);
@@ -38,7 +41,13 @@
   border-radius: 3rem 0 0 3rem;
   z-index: 0;
   @include xs {
-    transform: none;
+    transform: translateX(0);
+  }
+  @include sm {
+    transform: translateX(0);
+  }
+  @include md {
+    transform: translateX(0);
   }
   &.active {
     transform: translateX(0);
