@@ -142,20 +142,18 @@ header {
 
 .repere-content {
   position: absolute;
-  right: 16rem;
-  display: flex;
+  right: 8rem;
+  display: none;
   justify-content: flex-end;
   align-items: center;
-  width: 100rem;
-  height: 10rem;
-  @include xs {
-    display: none;
-  }
+  width: 100%;
+  height: 8rem;
+  margin: 0;
   @include sm {
-    display: none;
+    display: flex;
   }
   @include md {
-    display: none;
+    display: flex;
   }
   a {
     color: var(--orange_02);

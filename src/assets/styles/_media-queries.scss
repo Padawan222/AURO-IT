@@ -6,7 +6,7 @@
 }
 /* Landscape phone to portrait tablet */
 @mixin sm {
-  @media (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     @content;
   }
 }
