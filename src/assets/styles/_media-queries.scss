@@ -18,7 +18,7 @@
 }
 /* Large desktop */
 @mixin xl {
-  @media (min-width: 1400px) and (max-width: 2559px) {
+  @media (min-width: 1200px) and (max-width: 2559px) {
     @content;
   }
 }
