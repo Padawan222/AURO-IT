@@ -1850,7 +1850,7 @@ div {
   align-items: center;
   width: 30rem;
   border-radius: 3rem;
-  color: var(--orange_01);
+  color: var(--orange_02);
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -1877,7 +1877,7 @@ div {
   content: "";
   position: absolute;
   top: -4rem;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -1941,7 +1941,7 @@ div {
   content: "";
   position: absolute;
   top: -28rem;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -1999,7 +1999,7 @@ div {
   content: "";
   position: absolute;
   top: -4rem;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -2101,7 +2101,7 @@ div {
   content: "";
   position: absolute;
   right: -100%;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -2183,7 +2183,7 @@ div {
   content: "";
   position: absolute;
   top: -20rem;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -2218,18 +2218,21 @@ div {
 }
 @media (max-width: 480px) {
   .general-content .div-text-container-3 {
+    min-height: 18rem;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .general-content .div-text-container-3 {
+    min-height: 18rem;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .general-content .div-text-container-3 {
+    min-height: 18rem;
     height: auto;
     width: calc(100% - 4rem);
   }
@@ -2263,7 +2266,7 @@ div {
   content: "";
   position: absolute;
   left: -100%;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -2343,7 +2346,7 @@ div {
   content: "";
   position: absolute;
   top: -28rem;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -2423,7 +2426,7 @@ div {
   content: "";
   position: absolute;
   top: -28rem;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -2487,7 +2490,7 @@ div {
   content: "";
   position: absolute;
   top: -4rem;
-  background: var(--green_01);
+  background: var(--green_02);
   height: 100%;
   width: 100%;
   border-radius: 3rem;
@@ -2510,43 +2513,31 @@ div {
   }
 }
 .general-content .text-container-5 {
-  height: 25rem;
-  width: 100rem;
+  height: auto;
+  width: auto;
+  max-width: 100rem;
   border-radius: 3rem;
   color: white;
-  background: var(--green_01);
-  position: relative;
-  left: -156rem;
+  background: var(--green_02);
+  opacity: 0;
 }
 @media (max-width: 480px) {
   .general-content .text-container-5 {
-    left: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .general-content .text-container-5 {
-    left: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-5 {
-    left: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-5 {
-    left: -192rem;
-  }
-}
-.general-content .text-container-5.active {
-  left: 0;
-  transition: all 1.8s;
 }
 .general-content .text-container-5 p {
   margin: 2rem 2rem;
@@ -2554,45 +2545,46 @@ div {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.general-content .animation-text-container-5 {
+  animation: animation-text-container-5 2s;
+  opacity: 1;
+}
+@keyframes animation-text-container-5 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .general-content .text-container-6 {
-  height: 20rem;
-  width: 100rem;
-  background: var(--green_01);
+  height: auto;
+  width: auto;
+  max-width: 100rem;
+  background: var(--green_02);
   color: white;
   border-radius: 3rem;
-  position: relative;
-  overflow-x: hidden;
-  right: -156rem;
+  opacity: 0;
 }
 @media (max-width: 480px) {
   .general-content .text-container-6 {
-    right: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .general-content .text-container-6 {
-    right: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-6 {
-    right: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-6 {
-    right: -192rem;
-  }
-}
-.general-content .text-container-6.active {
-  right: 0;
-  transition: all 1.8s;
 }
 .general-content .text-container-6 p {
   margin: 2rem 2rem;
@@ -2600,44 +2592,46 @@ div {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.general-content .animation-text-container-6 {
+  animation: animation-text-container-6 2s;
+  opacity: 1;
+}
+@keyframes animation-text-container-6 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .general-content .text-container-7 {
-  height: 20rem;
-  width: 100rem;
-  background: var(--green_01);
+  height: auto;
+  width: auto;
+  max-width: 100rem;
+  background: var(--green_02);
   color: white;
   border-radius: 3rem;
-  position: relative;
-  left: -156rem;
+  opacity: 0;
 }
 @media (max-width: 480px) {
   .general-content .text-container-7 {
-    left: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .general-content .text-container-7 {
-    left: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-7 {
-    left: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-7 {
-    left: -192rem;
-  }
-}
-.general-content .text-container-7.active {
-  left: 0;
-  transition: all 2s;
 }
 .general-content .text-container-7 p {
   margin: 2rem 2rem;
@@ -2645,51 +2639,67 @@ div {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.general-content .animation-text-container-7 {
+  animation: animation-text-container-7 2s;
+  opacity: 1;
+}
+@keyframes animation-text-container-7 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .general-content .text-container-8 {
-  height: 15rem;
-  width: 100rem;
-  background: var(--green_01);
+  height: auto;
+  width: auto;
+  max-width: 100rem;
+  background: var(--green_02);
   color: white;
   border-radius: 3rem;
   margin-bottom: 4rem;
-  position: relative;
-  right: -156rem;
+  opacity: 0;
 }
 @media (max-width: 480px) {
   .general-content .text-container-8 {
-    right: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .general-content .text-container-8 {
-    right: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .general-content .text-container-8 {
-    right: 0;
     height: auto;
     width: calc(100% - 4rem);
   }
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-8 {
-    right: -192rem;
-  }
-}
-.general-content .text-container-8.active {
-  right: 0;
-  transition: all 1.8s;
 }
 .general-content .text-container-8 p {
   margin: 2rem 2rem;
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   font-weight: 700;
+}
+.general-content .animation-text-container-8 {
+  animation: animation-text-container-8 2s;
+  opacity: 1;
+}
+@keyframes animation-text-container-8 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .general-content .sous-titre {
   font-weight: 400;
@@ -2942,7 +2952,7 @@ div {
 
 div {
   margin: 2rem 0;
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_logo-slogan.scss","webpack://./src/index.scss"],"names":[],"mappings":"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","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// logo & slogan\r\n\r\n.logo-content {\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  height: 70rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n  @include xxl {\r\n    height: 104rem;\r\n  }\r\n}\r\n.logo-container {\r\n  margin-top: 1rem;\r\n  margin-bottom: 2rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  .logo-2 {\r\n    height: 25rem;\r\n    width: 60rem;\r\n  }\r\n}\r\n.slogan-container {\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: flex;\r\n  min-width: 30rem;\r\n  border-radius: 0.8rem;\r\n  animation-name: apparition;\r\n}\r\n.h2 {\r\n  margin-left: 2rem;\r\n  margin-top: 3rem;\r\n  color: var(--blue);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.5rem;\r\n  animation-name: h2;\r\n  animation-duration: 1.8s;\r\n\r\n  @keyframes h2 {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\ndiv {\r\n  display: flex;\r\n}\r\ndiv {\r\n  margin: 0 1rem;\r\n}\r\n","@import \"./assets/styles/media-queries\";\r\n@import \"./assets/styles/logo-slogan\";\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  width: 100%;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n  @include xs {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include sm {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include md {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .text-content-1 {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 100%;\r\n    text-align: center;\r\n    background: #d6d6d6;\r\n    @include xs {\r\n      margin: 0;\r\n    }\r\n    @include sm {\r\n      margin: 0;\r\n    }\r\n    @include md {\r\n      margin: 0;\r\n    }\r\n  }\r\n  .sous-titre-1 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 30rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-1 {\r\n    margin: 2rem;\r\n    height: 28rem;\r\n    width: 110rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      margin-bottom: 2rem;\r\n    }\r\n  }\r\n  .text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .sous-titre-2 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 38rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-2 {\r\n    display: flex;\r\n    flex-direction: row nowrap;\r\n    margin: 0;\r\n    @include xs {\r\n      flex-direction: column;\r\n    }\r\n    @include sm {\r\n      flex-direction: column;\r\n    }\r\n    @include md {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n\r\n  .div-text-container-1 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    flex: 1;\r\n    height: auto;\r\n    width: auto;\r\n    margin: 2rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      right: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    right: -100%;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      right: 0;\r\n    }\r\n    @include sm {\r\n      right: 0;\r\n    }\r\n    @include md {\r\n      right: 0;\r\n    }\r\n  }\r\n  .div-text-container-2 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    flex: 1;\r\n\r\n    height: auto;\r\n    width: auto;\r\n\r\n    margin: 2rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -20rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .div-text-container-3 {\r\n    display: flex;\r\n    border-radius: 3rem;\r\n    flex: 1;\r\n\r\n    height: auto;\r\n    width: auto;\r\n\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      left: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -100%;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      left: 0;\r\n    }\r\n    @include sm {\r\n      left: 0;\r\n    }\r\n    @include md {\r\n      left: 0;\r\n    }\r\n  }\r\n  .text-container-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 8rem;\r\n    width: 58rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-4 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 15rem;\r\n    width: 50rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-4::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  // text-content-2\r\n\r\n  .text-content-2 {\r\n    margin: 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #d6d6d6;\r\n  }\r\n\r\n  .sous-titre-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 25rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_01);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-5 {\r\n    height: 25rem;\r\n    width: 100rem;\r\n    border-radius: 3rem;\r\n    color: white;\r\n    background: var(--green_01);\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n\r\n  .text-container-6 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    overflow-x: hidden;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-7 {\r\n    height: 20rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    left: -156rem;\r\n    @include xs {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      left: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      left: -192rem;\r\n    }\r\n    &.active {\r\n      left: 0;\r\n      transition: all 2s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .text-container-8 {\r\n    height: 15rem;\r\n    width: 100rem;\r\n    background: var(--green_01);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    margin-bottom: 4rem;\r\n    position: relative;\r\n    right: -156rem;\r\n    @include xs {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      right: 0;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include xxl {\r\n      right: -192rem;\r\n    }\r\n    &.active {\r\n      right: 0;\r\n      transition: all 1.8s;\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .sous-titre {\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n.text-decoration-1 {\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.5rem;\r\n  font-size: 1.6rem;\r\n  font-weight: 300;\r\n  color: var(--orange_01);\r\n}\r\n\r\n.text-1 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-2 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-3 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  width: 100%;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// footer\r\n\r\n// .test {\r\n//   color: var(--orange_01);\r\n// }\r\n\r\n// menu\r\n\r\ndiv {\r\n  margin: 2rem 0;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles/_media-queries.scss","webpack://./src/assets/styles/_logo-slogan.scss","webpack://./src/index.scss"],"names":[],"mappings":"AAAA,8BAAA;AAMA,uCAAA;AAMA,6CAAA;AAMA,kBAAA;AAlBA,8BAAA;AAMA,uCAAA;AAMA,6CAAA;AAMA,kBAAA;ACdA;EACE,2BAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,sBAAA;EACA,aAAA;ACKF;AFbE;ECEF;IAQI,aAAA;ECOF;AACF;AFZE;ECJF;IAWI,aAAA;ECSF;AACF;AFXE;ECVF;IAcI,aAAA;ECWF;AACF;AFLE;ECrBF;IAiBI,cAAA;ECaF;AACF;;ADXA;EACE,gBAAA;EACA,mBAAA;EACA,sBAAA;EACA,wBAAA;ACcF;ADbE;EACE;IACE,oBAAA;ECeJ;EDbE;IACE,oBAAA;ECeJ;AACF;ADbE;EACE,aAAA;EACA,YAAA;ACeJ;;ADZA;EACE,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,gBAAA;EACA,qBAAA;EACA,0BAAA;ACeF;;ADbA;EACE,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,uCAAA;EACA,gBAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;EACA,wBAAA;ACgBF;ADdE;EACE;IACE,UAAA;ECgBJ;EDdE;IACE,UAAA;ECgBJ;EDdE;IACE,UAAA;ECgBJ;AACF;;ADbA;EACE,aAAA;ACgBF;;ADdA;EACE,cAAA;ACiBF;;AA5FA;EACE,aAAA;EACA,gBAAA;EACA,WAAA;EACA,yLACE;AA8FJ;AFnGE;EEAF;IAcI,kOACE;EAwFJ;AACF;AFlGE;EENF;IA2BI,kOACE;EAgFJ;AACF;AFjGE;EEZF;IAwCI,kOACE;EAwEJ;AACF;;AA5DA;EACE,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,WAAA;EACA,SAAA;AA+DF;AA7DE;EACE,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,WAAA;EACA,kBAAA;EACA,mBAAA;AA+DJ;AFnIE;EE6DA;IASI,SAAA;EAiEJ;AACF;AFlIE;EEuDA;IAYI,SAAA;EAmEJ;AACF;AFjIE;EEiDA;IAeI,SAAA;EAqEJ;AACF;AAnEE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AAqEJ;AF7JE;EE+EA;IAWI,wBAAA;EAuEJ;AACF;AF5JE;EEyEA;IAcI,wBAAA;EAyEJ;AACF;AF3JE;EEmEA;IAiBI,wBAAA;EA2EJ;AACF;AA1EI;EACE,MAAA;AA4EN;AAzEE;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,oBAAA;EACA,WAAA;AA2EJ;AF1LE;EEsGA;IAWI,MAAA;EA6EJ;AACF;AFzLE;EEgGA;IAcI,MAAA;EA+EJ;AACF;AFxLE;EE0FA;IAiBI,MAAA;EAiFJ;AACF;AA/EE;EACE,YAAA;EACA,aAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AAiFJ;AFlNE;EE0HA;IASI,YAAA;IACA,wBAAA;EAmFJ;AACF;AFlNE;EEoHA;IAaI,YAAA;IACA,wBAAA;EAqFJ;AACF;AFlNE;EE8GA;IAiBI,YAAA;IACA,wBAAA;EAuFJ;AACF;AAtFI;EACE,MAAA;AAwFN;AAtFI;EACE,YAAA;EACA,cAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;AAwFN;AArFE;EACE,WAAA;EACA,kBAAA;EACA,WAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,oBAAA;EACA,WAAA;AAuFJ;AF1PE;EE0JA;IAWI,MAAA;EAyFJ;AACF;AFzPE;EEoJA;IAcI,MAAA;EA2FJ;AACF;AFxPE;EE8IA;IAiBI,MAAA;EA6FJ;AACF;AA1FE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AA4FJ;AFpRE;EE+KA;IAWI,wBAAA;IACA,iBAAA;EA8FJ;AACF;AFpRE;EEyKA;IAeI,wBAAA;IACA,iBAAA;EAgGJ;AACF;AFpRE;EEmKA;IAmBI,wBAAA;IACA,iBAAA;EAkGJ;AACF;AAjGI;EACE,MAAA;AAmGN;AAhGE;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,oBAAA;EACA,WAAA;AAkGJ;AFpTE;EEyMA;IAWI,MAAA;EAoGJ;AACF;AFnTE;EEmMA;IAcI,MAAA;EAsGJ;AACF;AFlTE;EE6LA;IAiBI,MAAA;EAwGJ;AACF;AArGE;EACE,aAAA;EACA,0BAAA;EACA,SAAA;AAuGJ;AFxUE;EE8NA;IAKI,sBAAA;EAyGJ;AACF;AFvUE;EEwNA;IAQI,sBAAA;EA2GJ;AACF;AFtUE;EEkNA;IAWI,sBAAA;EA6GJ;AACF;AA1GE;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,OAAA;EACA,YAAA;EACA,WAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AA4GJ;AFpWE;EE6OA;IAaI,YAAA;IACA,wBAAA;EA8GJ;AACF;AFpWE;EEuOA;IAiBI,YAAA;IACA,wBAAA;EAgHJ;AACF;AFpWE;EEiOA;IAqBI,YAAA;IACA,wBAAA;EAkHJ;AACF;AAjHI;EACE,QAAA;AAmHN;AAjHI;EACE,YAAA;EACA,cAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAmHN;AFhYE;EEwQE;IAOI,YAAA;EAqHN;AACF;AF/XE;EEkQE;IAUI,YAAA;EAuHN;AACF;AF9XE;EE4PE;IAaI,YAAA;EAyHN;AACF;AAtHE;EACE,WAAA;EACA,kBAAA;EACA,YAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,oBAAA;EACA,WAAA;AAwHJ;AF1ZE;EEyRA;IAWI,QAAA;EA0HJ;AACF;AFzZE;EEmRA;IAcI,QAAA;EA4HJ;AACF;AFxZE;EE6QA;IAiBI,QAAA;EA8HJ;AACF;AA5HE;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,OAAA;EAEA,YAAA;EACA,WAAA;EAEA,YAAA;EACA,YAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AA4HJ;AFtbE;EE6SA;IAeI,YAAA;IACA,wBAAA;EA8HJ;AACF;AFtbE;EEuSA;IAmBI,YAAA;IACA,wBAAA;EAgIJ;AACF;AFtbE;EEiSA;IAuBI,YAAA;IACA,wBAAA;EAkIJ;AACF;AAjII;EACE,MAAA;AAmIN;AAjII;EACE,YAAA;EACA,YAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAmIN;AFldE;EE0UE;IAOI,YAAA;EAqIN;AACF;AFjdE;EEoUE;IAUI,YAAA;EAuIN;AACF;AFhdE;EE8TE;IAaI,YAAA;EAyIN;AACF;AAtIE;EACE,WAAA;EACA,kBAAA;EACA,WAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,oBAAA;EACA,WAAA;AAwIJ;AF5eE;EE2VA;IAWI,MAAA;EA0IJ;AACF;AF3eE;EEqVA;IAcI,MAAA;EA4IJ;AACF;AF1eE;EE+UA;IAiBI,MAAA;EA8IJ;AACF;AA5IE;EACE,aAAA;EACA,mBAAA;EACA,OAAA;EACA,YAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AA8IJ;AFtgBE;EE+WA;IAWI,iBAAA;IACA,YAAA;IACA,wBAAA;EAgJJ;AACF;AFvgBE;EEyWA;IAgBI,iBAAA;IACA,YAAA;IACA,wBAAA;EAkJJ;AACF;AFxgBE;EEmWA;IAqBI,iBAAA;IACA,YAAA;IACA,wBAAA;EAoJJ;AACF;AAnJI;EACE,OAAA;AAqJN;AAnJI;EACE,YAAA;EACA,2BAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAqJN;AFriBE;EE2YE;IAOI,YAAA;EAuJN;AACF;AFpiBE;EEqYE;IAUI,YAAA;EAyJN;AACF;AFniBE;EE+XE;IAaI,YAAA;EA2JN;AACF;AAxJE;EACE,WAAA;EACA,kBAAA;EACA,WAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,kBAAA;EACA,WAAA;AA0JJ;AF/jBE;EE4ZA;IAWI,OAAA;EA4JJ;AACF;AF9jBE;EEsZA;IAcI,OAAA;EA8JJ;AACF;AF7jBE;EEgZA;IAiBI,OAAA;EAgKJ;AACF;AA9JE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AAgKJ;AFzlBE;EEgbA;IAWI,YAAA;IACA,wBAAA;EAkKJ;AACF;AFzlBE;EE0aA;IAeI,YAAA;IACA,wBAAA;EAoKJ;AACF;AFzlBE;EEoaA;IAmBI,YAAA;IACA,wBAAA;EAsKJ;AACF;AArKI;EACE,MAAA;AAuKN;AArKI;EACE,YAAA;EACA,2BAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAuKN;AFrnBE;EEycE;IAOI,YAAA;EAyKN;AACF;AFpnBE;EEmcE;IAUI,YAAA;EA2KN;AACF;AFnnBE;EE6bE;IAaI,YAAA;EA6KN;AACF;AA1KE;EACE,WAAA;EACA,kBAAA;EACA,WAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,oBAAA;EACA,WAAA;AA4KJ;AF/oBE;EE0dA;IAWI,MAAA;EA8KJ;AACF;AF9oBE;EEodA;IAcI,MAAA;EAgLJ;AACF;AF7oBE;EE8cA;IAiBI,MAAA;EAkLJ;AACF;AAhLE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AAkLJ;AFzqBE;EE8eA;IAWI,YAAA;IACA,wBAAA;EAoLJ;AACF;AFzqBE;EEweA;IAeI,YAAA;IACA,wBAAA;EAsLJ;AACF;AFzqBE;EEkeA;IAmBI,YAAA;IACA,wBAAA;EAwLJ;AACF;AAvLI;EACE,MAAA;AAyLN;AAvLI;EACE,YAAA;EACA,2BAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAyLN;AFrsBE;EEugBE;IAOI,YAAA;EA2LN;AACF;AFpsBE;EEigBE;IAUI,YAAA;EA6LN;AACF;AFnsBE;EE2fE;IAaI,YAAA;EA+LN;AACF;AA5LE;EACE,WAAA;EACA,kBAAA;EACA,WAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,oBAAA;EACA,WAAA;AA8LJ;AF/tBE;EEwhBA;IAWI,MAAA;EAgMJ;AACF;AF9tBE;EEkhBA;IAcI,MAAA;EAkMJ;AACF;AF7tBE;EE4gBA;IAiBI,MAAA;EAoMJ;AACF;AA/LE;EACE,SAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;EACA,WAAA;EACA,mBAAA;AAiMJ;AA9LE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;EACA,UAAA;EACA,gBAAA;AAgMJ;AFlwBE;EEyjBA;IAWI,wBAAA;EAkMJ;AACF;AFjwBE;EEmjBA;IAcI,wBAAA;EAoMJ;AACF;AFhwBE;EE6iBA;IAiBI,wBAAA;EAsMJ;AACF;AArMI;EACE,MAAA;AAuMN;AApME;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,2BAAA;EACA,YAAA;EACA,WAAA;EACA,mBAAA;EACA,kBAAA;EACA,WAAA;AAsMJ;AF/xBE;EEglBA;IAWI,MAAA;EAwMJ;AACF;AF9xBE;EE0kBA;IAcI,MAAA;EA0MJ;AACF;AF7xBE;EEokBA;IAiBI,MAAA;EA4MJ;AACF;AAzME;EACE,YAAA;EACA,WAAA;EACA,iBAAA;EACA,mBAAA;EACA,YAAA;EACA,2BAAA;EACA,UAAA;AA2MJ;AFvzBE;EEqmBA;IASI,YAAA;IACA,wBAAA;EA6MJ;AACF;AFvzBE;EE+lBA;IAaI,YAAA;IACA,wBAAA;EA+MJ;AACF;AFvzBE;EEylBA;IAiBI,YAAA;IACA,wBAAA;EAiNJ;AACF;AAhNI;EACE,iBAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAkNN;AA/ME;EACE,wCAAA;EACA,UAAA;AAiNJ;AAhNI;EACE;IACE,2BAAA;IACA,UAAA;EAkNN;EAhNI;IACE,wBAAA;IACA,UAAA;EAkNN;AACF;AA9ME;EACE,YAAA;EACA,WAAA;EACA,iBAAA;EACA,2BAAA;EACA,YAAA;EACA,mBAAA;EACA,UAAA;AAgNJ;AFt2BE;EE+oBA;IASI,YAAA;IACA,wBAAA;EAkNJ;AACF;AFt2BE;EEyoBA;IAaI,YAAA;IACA,wBAAA;EAoNJ;AACF;AFt2BE;EEmoBA;IAiBI,YAAA;IACA,wBAAA;EAsNJ;AACF;AArNI;EACE,iBAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAuNN;AApNE;EACE,wCAAA;EACA,UAAA;AAsNJ;AArNI;EACE;IACE,4BAAA;IACA,UAAA;EAuNN;EArNI;IACE,wBAAA;IACA,UAAA;EAuNN;AACF;AAnNE;EACE,YAAA;EACA,WAAA;EACA,iBAAA;EACA,2BAAA;EACA,YAAA;EACA,mBAAA;EACA,UAAA;AAqNJ;AFr5BE;EEyrBA;IASI,YAAA;IACA,wBAAA;EAuNJ;AACF;AFr5BE;EEmrBA;IAaI,YAAA;IACA,wBAAA;EAyNJ;AACF;AFr5BE;EE6qBA;IAiBI,YAAA;IACA,wBAAA;EA2NJ;AACF;AA1NI;EACE,iBAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AA4NN;AAzNE;EACE,wCAAA;EACA,UAAA;AA2NJ;AA1NI;EACE;IACE,2BAAA;IACA,UAAA;EA4NN;EA1NI;IACE,wBAAA;IACA,UAAA;EA4NN;AACF;AAzNE;EACE,YAAA;EACA,WAAA;EACA,iBAAA;EACA,2BAAA;EACA,YAAA;EACA,mBAAA;EACA,mBAAA;EACA,UAAA;AA2NJ;AFr8BE;EEkuBA;IAUI,YAAA;IACA,wBAAA;EA6NJ;AACF;AFr8BE;EE4tBA;IAcI,YAAA;IACA,wBAAA;EA+NJ;AACF;AFr8BE;EEstBA;IAkBI,YAAA;IACA,wBAAA;EAiOJ;AACF;AA/NI;EACE,iBAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;AAiON;AA9NE;EACE,wCAAA;EACA,UAAA;AAgOJ;AA/NI;EACE;IACE,4BAAA;IACA,UAAA;EAiON;EA/NI;IACE,wBAAA;IACA,UAAA;EAiON;AACF;AA9NE;EACE,gBAAA;EACA,sBAAA;EACA,uCAAA;AAgOJ;;AA5NA;EACE,uCAAA;EACA,sBAAA;EACA,iBAAA;EACA,gBAAA;EACA,uBAAA;AA+NF;;AA5NA;EACE,WAAA;EACA,UAAA;AA+NF;AA9NE;EACE,uBAAA;EACA,oDAAA;EACA,qBAAA;EACA,UAAA;AAgOJ;AFngCE;EE4xBF;IAUI,UAAA;EAiOF;AACF;AFlgCE;EEsxBF;IAaI,UAAA;EAmOF;AACF;AFjgCE;EEgxBF;IAgBI,UAAA;EAqOF;AACF;;AAnOA;EACE,WAAA;EACA,UAAA;AAsOF;AArOE;EACE,YAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AAuOJ;AF7hCE;EE+yBF;IAUI,UAAA;EAwOF;AACF;AF5hCE;EEyyBF;IAaI,UAAA;EA0OF;AACF;AF3hCE;EEmyBF;IAgBI,UAAA;EA4OF;AACF;;AA1OA;EACE,WAAA;EACA,UAAA;AA6OF;AA5OE;EACE,uBAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AA8OJ;AFvjCE;EEk0BF;IAUI,UAAA;EA+OF;AACF;AFtjCE;EE4zBF;IAaI,UAAA;EAiPF;AACF;AFrjCE;EEszBF;IAgBI,UAAA;EAmPF;AACF;;AAjPA;EACE,WAAA;EACA,UAAA;AAoPF;AAnPE;EACE,YAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AAqPJ;AFjlCE;EEq1BF;IAUI,UAAA;EAsPF;AACF;AFhlCE;EE+0BF;IAaI,UAAA;EAwPF;AACF;AF/kCE;EEy0BF;IAgBI,UAAA;EA0PF;AACF;;AAxPA;EACE,WAAA;EACA,UAAA;AA2PF;AA1PE;EACE,YAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AA4PJ;AF3mCE;EEw2BF;IAUI,UAAA;EA6PF;AACF;AF1mCE;EEk2BF;IAaI,UAAA;EA+PF;AACF;AFzmCE;EE41BF;IAgBI,UAAA;EAiQF;AACF;;AA/PA;EACE,WAAA;EACA,UAAA;AAkQF;AAjQE;EACE,YAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AAmQJ;AFroCE;EE23BF;IAUI,UAAA;EAoQF;AACF;AFpoCE;EEq3BF;IAaI,UAAA;EAsQF;AACF;AFnoCE;EE+2BF;IAgBI,UAAA;EAwQF;AACF;;AAtQA;EACE,WAAA;EACA,UAAA;EACA,WAAA;AAyQF;AAxQE;EACE,YAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AA0QJ;AFhqCE;EE84BF;IAWI,UAAA;EA2QF;AACF;AF/pCE;EEw4BF;IAcI,UAAA;EA6QF;AACF;AF9pCE;EEk4BF;IAiBI,UAAA;EA+QF;AACF;;AA7QA;EACE,WAAA;EACA,UAAA;AAgRF;AA/QE;EACE,YAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AAiRJ;AF1rCE;EEk6BF;IAUI,UAAA;EAkRF;AACF;AFzrCE;EE45BF;IAaI,UAAA;EAoRF;AACF;AFxrCE;EEs5BF;IAgBI,UAAA;EAsRF;AACF;;AAnRA;EACE,WAAA;EACA,UAAA;AAsRF;AArRE;EACE,uBAAA;EACA,oDAAA;EACA,sBAAA;EACA,UAAA;AAuRJ;AFptCE;EEs7BF;IAUI,UAAA;EAwRF;AACF;AFntCE;EEg7BF;IAaI,UAAA;EA0RF;AACF;AFltCE;EE06BF;IAgBI,UAAA;EA4RF;AACF;;AAjRA;EACE,cAAA;AAoRF","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n\r\n// logo & slogan\r\n\r\n.logo-content {\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  height: 70rem;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n  @include xxl {\r\n    height: 104rem;\r\n  }\r\n}\r\n.logo-container {\r\n  margin-top: 1rem;\r\n  margin-bottom: 2rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  .logo-2 {\r\n    height: 25rem;\r\n    width: 60rem;\r\n  }\r\n}\r\n.slogan-container {\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: flex;\r\n  min-width: 30rem;\r\n  border-radius: 0.8rem;\r\n  animation-name: apparition;\r\n}\r\n.h2 {\r\n  margin-left: 2rem;\r\n  margin-top: 3rem;\r\n  color: var(--blue);\r\n  font-family: var(--font-family-strasua);\r\n  font-weight: 200;\r\n  font-size: 3.1rem;\r\n  letter-spacing: 0.5rem;\r\n  animation-name: h2;\r\n  animation-duration: 1.8s;\r\n\r\n  @keyframes h2 {\r\n    0% {\r\n      opacity: 0;\r\n    }\r\n    80% {\r\n      opacity: 0;\r\n    }\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n}\r\ndiv {\r\n  display: flex;\r\n}\r\ndiv {\r\n  margin: 0 1rem;\r\n}\r\n","@import \"./assets/styles/media-queries\";\r\n@import \"./assets/styles/logo-slogan\";\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  width: 100%;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n  @include xs {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include sm {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include md {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .text-content-1 {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 100%;\r\n    text-align: center;\r\n    background: #d6d6d6;\r\n    @include xs {\r\n      margin: 0;\r\n    }\r\n    @include sm {\r\n      margin: 0;\r\n    }\r\n    @include md {\r\n      margin: 0;\r\n    }\r\n  }\r\n  .sous-titre-1 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 30rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_02);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-1 {\r\n    margin: 2rem;\r\n    height: 28rem;\r\n    width: 110rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      margin-bottom: 2rem;\r\n    }\r\n  }\r\n  .text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .sous-titre-2 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 38rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n      font-size: 1.8rem;\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-2 {\r\n    display: flex;\r\n    flex-direction: row nowrap;\r\n    margin: 0;\r\n    @include xs {\r\n      flex-direction: column;\r\n    }\r\n    @include sm {\r\n      flex-direction: column;\r\n    }\r\n    @include md {\r\n      flex-direction: column;\r\n    }\r\n  }\r\n\r\n  .div-text-container-1 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    flex: 1;\r\n    height: auto;\r\n    width: auto;\r\n    margin: 2rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      right: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 0 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-1::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    right: -100%;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      right: 0;\r\n    }\r\n    @include sm {\r\n      right: 0;\r\n    }\r\n    @include md {\r\n      right: 0;\r\n    }\r\n  }\r\n  .div-text-container-2 {\r\n    display: flex;\r\n    align-items: center;\r\n    border-radius: 3rem;\r\n    flex: 1;\r\n\r\n    height: auto;\r\n    width: auto;\r\n\r\n    margin: 2rem;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -20rem;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 0.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .div-text-container-3 {\r\n    display: flex;\r\n    border-radius: 3rem;\r\n    flex: 1;\r\n    height: auto;\r\n    width: auto;\r\n    margin: 2rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      min-height: 18rem;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      min-height: 18rem;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      min-height: 18rem;\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      left: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 2rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .div-text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -100%;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      left: 0;\r\n    }\r\n    @include sm {\r\n      left: 0;\r\n    }\r\n    @include md {\r\n      left: 0;\r\n    }\r\n  }\r\n  .text-container-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 8rem;\r\n    width: 58rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n  .text-container-4 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    height: 15rem;\r\n    width: 50rem;\r\n    border-radius: 3rem;\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n    p {\r\n      color: white;\r\n      margin: 1rem 2rem 1rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n      @include xs {\r\n        margin: 2rem;\r\n      }\r\n      @include sm {\r\n        margin: 2rem;\r\n      }\r\n      @include md {\r\n        margin: 2rem;\r\n      }\r\n    }\r\n  }\r\n  .text-container-4::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -28rem;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1.8s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  // text-content-2\r\n\r\n  .text-content-2 {\r\n    margin: 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    text-align: center;\r\n    width: 100%;\r\n    background: #d6d6d6;\r\n  }\r\n\r\n  .sous-titre-3 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 25rem;\r\n    border-radius: 3rem;\r\n    color: var(--orange_01);\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    @include xs {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      width: calc(100% - 4rem);\r\n    }\r\n    &.active::before {\r\n      top: 0;\r\n    }\r\n  }\r\n  .sous-titre-3::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: -4rem;\r\n    background: var(--green_02);\r\n    height: 100%;\r\n    width: 100%;\r\n    border-radius: 3rem;\r\n    transition: all 1s;\r\n    z-index: -1;\r\n    @include xs {\r\n      top: 0;\r\n    }\r\n    @include sm {\r\n      top: 0;\r\n    }\r\n    @include md {\r\n      top: 0;\r\n    }\r\n  }\r\n\r\n  .text-container-5 {\r\n    height: auto;\r\n    width: auto;\r\n    max-width: 100rem;\r\n    border-radius: 3rem;\r\n    color: white;\r\n    background: var(--green_02);\r\n    opacity: 0;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .animation-text-container-5 {\r\n    animation: animation-text-container-5 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-5 {\r\n      0% {\r\n        transform: translateX(100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .text-container-6 {\r\n    height: auto;\r\n    width: auto;\r\n    max-width: 100rem;\r\n    background: var(--green_02);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    opacity: 0;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .animation-text-container-6 {\r\n    animation: animation-text-container-6 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-6 {\r\n      0% {\r\n        transform: translateX(-100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .text-container-7 {\r\n    height: auto;\r\n    width: auto;\r\n    max-width: 100rem;\r\n    background: var(--green_02);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    opacity: 0;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .animation-text-container-7 {\r\n    animation: animation-text-container-7 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-7 {\r\n      0% {\r\n        transform: translateX(100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-container-8 {\r\n    height: auto;\r\n    width: auto;\r\n    max-width: 100rem;\r\n    background: var(--green_02);\r\n    color: white;\r\n    border-radius: 3rem;\r\n    margin-bottom: 4rem;\r\n    opacity: 0;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n\r\n    p {\r\n      margin: 2rem 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n  .animation-text-container-8 {\r\n    animation: animation-text-container-8 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-8 {\r\n      0% {\r\n        transform: translateX(-100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .sous-titre {\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n.text-decoration-1 {\r\n  font-family: var(--font-family-strasua);\r\n  letter-spacing: 0.5rem;\r\n  font-size: 1.6rem;\r\n  font-weight: 300;\r\n  color: var(--orange_01);\r\n}\r\n\r\n.text-1 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-2 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-3 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  width: 100%;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: var(--orange_01);\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// footer\r\n\r\n// .test {\r\n//   color: var(--orange_01);\r\n// }\r\n\r\n// menu\r\n\r\ndiv {\r\n  margin: 2rem 0;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3946,7 +3956,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle7.clientHeight;
   var topElementToTopViewport = textContainer5.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7) {
-    textContainer5.classList.add("active");
+    textContainer5.classList.add("animation-text-container-5");
   }
 });
 
@@ -3959,7 +3969,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle8.clientHeight;
   var topElementToTopViewport = textContainer6.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7) {
-    textContainer6.classList.add("active");
+    textContainer6.classList.add("animation-text-container-6");
   }
 });
 // text-container-7
@@ -3971,7 +3981,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle9.clientHeight;
   var topElementToTopViewport = textContainer7.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7) {
-    textContainer7.classList.add("active");
+    textContainer7.classList.add("animation-text-container-7");
   }
 });
 // text-container-8
@@ -3983,7 +3993,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle10.clientHeight;
   var topElementToTopViewport = textContainer8.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer8.classList.add("active");
+    textContainer8.classList.add("animation-text-container-8");
   }
 });
 

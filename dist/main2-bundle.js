@@ -1702,7 +1702,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
 .container {
   display: grid;
   background: #eee;
+  width: 100%;
   grid: "img header" 10rem "separator-2 separator-3" auto "slogan-container slogan-container" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/25rem auto;
+}
+@media (max-width: 480px) {
+  .container {
+    grid: "img header" 8rem "menu-xs menu-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "h1-xs h1-xs" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .container {
+    grid: "img header" 8rem "menu-xs menu-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "h1-xs h1-xs" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .container {
+    grid: "img header" 8rem "menu-xs menu-xs" auto "separator-2 separator-3" auto "slogan-container slogan-container" auto "h1-xs h1-xs" auto "menu menu" auto "general general" auto "mail mail" auto "footer footer" auto/22rem auto;
+  }
 }
 
 .cercle-content {
@@ -1713,6 +1729,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 480px) {
+  .cercle-content {
+    display: none;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .cercle-content {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .cercle-content {
+    display: none;
+  }
 }
 
 .cerlce-container {
@@ -1753,6 +1784,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   grid-area: general;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 0;
 }
 .general-content .text-content {
@@ -1760,8 +1792,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: var(--background);
+  width: 100%;
+  text-align: center;
+  background: #d6d6d6;
+}
+@media (max-width: 480px) {
+  .general-content .text-content {
+    margin: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .general-content .text-content {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .text-content {
+    margin: 0;
+  }
 }
 .general-content .text {
   width: 55rem;
@@ -1772,12 +1820,32 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   z-index: 0;
 }
 .general-content .text-container {
-  background: var(--blue);
-  width: 120rem;
+  background: var(--green_01);
+  height: auto;
+  width: auto;
+  max-width: 120rem;
   color: white;
   margin: 2rem;
   border-radius: 3rem;
   text-align: center;
+}
+@media (max-width: 480px) {
+  .general-content .text-container {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .general-content .text-container {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .general-content .text-container {
+    height: auto;
+    width: calc(100% - 4rem);
+  }
 }
 .general-content .text-container p {
   font-family: var(--font-family);
@@ -1787,245 +1855,185 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   font-weight: 700;
 }
 .general-content .text-container-2 {
-  position: relative;
-  background: none;
   z-index: 0;
   margin-top: 4rem;
+  opacity: 0;
 }
-.general-content .text-container-2.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-2 {
+  animation: animation-text-container-2 2s;
+  opacity: 1;
 }
-.general-content .text-container-2::before {
-  content: "";
-  position: absolute;
-  left: -170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-2::before {
-    left: -200rem;
+@keyframes animation-text-container-2 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-4 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-4.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-4 {
+  animation: animation-text-container-4 2s;
+  opacity: 1;
 }
-.general-content .text-container-4::before {
-  content: "";
-  position: absolute;
-  left: 170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-4::before {
-    left: 200rem;
+@keyframes animation-text-container-4 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-5 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-5.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-5 {
+  animation: animation-text-container-5 2s;
+  opacity: 1;
 }
-.general-content .text-container-5::before {
-  content: "";
-  position: absolute;
-  left: -170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-5::before {
-    left: -200rem;
+@keyframes animation-text-container-5 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-6 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-6.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-6 {
+  animation: animation-text-container-6 2s;
+  opacity: 1;
 }
-.general-content .text-container-6::before {
-  content: "";
-  position: absolute;
-  left: 170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-6::before {
-    left: 200rem;
+@keyframes animation-text-container-6 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-7 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-7.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-7 {
+  animation: animation-text-container-7 2s;
+  opacity: 1;
 }
-.general-content .text-container-7::before {
-  content: "";
-  position: absolute;
-  left: -170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-7::before {
-    left: -200rem;
+@keyframes animation-text-container-7 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-8 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-8.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-8 {
+  animation: animation-text-container-8 2s;
+  opacity: 1;
 }
-.general-content .text-container-8::before {
-  content: "";
-  position: absolute;
-  left: 170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-8::before {
-    left: 200rem;
+@keyframes animation-text-container-8 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-9 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-9.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-9 {
+  animation: animation-text-container-9 2s;
+  opacity: 1;
 }
-.general-content .text-container-9::before {
-  content: "";
-  position: absolute;
-  left: -170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-9::before {
-    left: -200rem;
+@keyframes animation-text-container-9 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-10 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-10.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-10 {
+  animation: animation-text-container-10 2s;
+  opacity: 1;
 }
-.general-content .text-container-10::before {
-  content: "";
-  position: absolute;
-  left: 170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-10::before {
-    left: 200rem;
+@keyframes animation-text-container-10 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-11 {
-  position: relative;
-  background: none;
   z-index: 0;
+  opacity: 0;
 }
-.general-content .text-container-11.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-11 {
+  animation: animation-text-container-11 2s;
+  opacity: 1;
 }
-.general-content .text-container-11::before {
-  content: "";
-  position: absolute;
-  left: -170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-11::before {
-    left: -200rem;
+@keyframes animation-text-container-11 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-container-12 {
   margin-bottom: 4rem;
-  position: relative;
-  background: none;
+  opacity: 0;
   z-index: 0;
 }
-.general-content .text-container-12.active::before {
-  left: 0;
-  transition: all 1.8s;
+.general-content .animation-text-container-12 {
+  animation: animation-text-container-12 2s;
+  opacity: 1;
 }
-.general-content .text-container-12::before {
-  content: "";
-  position: absolute;
-  left: 170rem;
-  background: var(--green_01);
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  z-index: -1;
-}
-@media (min-width: 2559px) {
-  .general-content .text-container-12::before {
-    left: 200rem;
+@keyframes animation-text-container-12 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .general-content .text-decoration {
@@ -2045,6 +2053,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition-delay: 0.8s;
   opacity: 1;
 }
+@media (max-width: 480px) {
+  .text-4 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-4 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-4 {
+    opacity: 1;
+  }
+}
 
 .text-5 {
   color: none;
@@ -2055,6 +2078,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
   transition-delay: 0.8s;
   opacity: 1;
+}
+@media (max-width: 480px) {
+  .text-5 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-5 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-5 {
+    opacity: 1;
+  }
 }
 
 .text-6 {
@@ -2067,6 +2105,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition-delay: 0.8s;
   opacity: 1;
 }
+@media (max-width: 480px) {
+  .text-6 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-6 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-6 {
+    opacity: 1;
+  }
+}
 
 .text-7 {
   color: none;
@@ -2077,6 +2130,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
   transition-delay: 0.8s;
   opacity: 1;
+}
+@media (max-width: 480px) {
+  .text-7 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-7 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-7 {
+    opacity: 1;
+  }
 }
 
 .text-8 {
@@ -2089,6 +2157,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition-delay: 0.8s;
   opacity: 1;
 }
+@media (max-width: 480px) {
+  .text-8 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-8 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-8 {
+    opacity: 1;
+  }
+}
 
 .text-9 {
   color: none;
@@ -2099,6 +2182,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
   transition-delay: 0.8s;
   opacity: 1;
+}
+@media (max-width: 480px) {
+  .text-9 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-9 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-9 {
+    opacity: 1;
+  }
 }
 
 .text-10 {
@@ -2111,6 +2209,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition-delay: 0.8s;
   opacity: 1;
 }
+@media (max-width: 480px) {
+  .text-10 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-10 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-10 {
+    opacity: 1;
+  }
+}
 
 .text-11 {
   color: none;
@@ -2121,6 +2234,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
   transition-delay: 0.8s;
   opacity: 1;
+}
+@media (max-width: 480px) {
+  .text-11 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-11 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-11 {
+    opacity: 1;
+  }
 }
 
 .text-12 {
@@ -2133,6 +2261,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition-delay: 0.8s;
   opacity: 1;
 }
+@media (max-width: 480px) {
+  .text-12 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-12 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-12 {
+    opacity: 1;
+  }
+}
 
 .text-13 {
   color: none;
@@ -2143,6 +2286,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
   transition-delay: 0.8s;
   opacity: 1;
+}
+@media (max-width: 480px) {
+  .text-13 {
+    opacity: 1;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .text-13 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .text-13 {
+    opacity: 1;
+  }
 }
 
 .separator-27 {
@@ -2161,7 +2319,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Landscape phones and down */
   100% {
     transform: scaleX(1);
   }
-}`, "",{"version":3,"sources":["webpack://./src/index/creation-d-app/_media-queries.scss","webpack://./src/index/creation-d-app/creation-d-app.scss"],"names":[],"mappings":"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","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 979px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n}\r\n.cercle-content {\r\n  margin: 0 0 0 0;\r\n  height: 35rem;\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n.cerlce-container {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 18rem;\r\n  width: 100rem;\r\n  border-radius: 3rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  p {\r\n    margin-top: 5rem;\r\n    font-weight: 400;\r\n    font-size: 3.2rem;\r\n    text-align: center;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n.img-content {\r\n  margin-right: 1rem;\r\n  height: 18rem;\r\n  width: 18rem;\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin: 0;\r\n\r\n  .text-content {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background: var(--background);\r\n  }\r\n  .text {\r\n    width: 55rem;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: 2rem;\r\n    overflow: hidden;\r\n    z-index: 0;\r\n  }\r\n\r\n  .text-container {\r\n    background: var(--blue);\r\n    width: 120rem;\r\n    color: white;\r\n    margin: 2rem;\r\n    border-radius: 3rem;\r\n    text-align: center;\r\n    p {\r\n      font-family: var(--font-family);\r\n      margin: 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n\r\n  .text-container-2 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    margin-top: 4rem;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n\r\n  .text-container-2::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -170rem;\r\n    @include xxl {\r\n      left: -200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n\r\n  .text-container-4 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-4::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: 170rem;\r\n    @include xxl {\r\n      left: 200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-5 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-5::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -170rem;\r\n    @include xxl {\r\n      left: -200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-6 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-6::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: 170rem;\r\n    @include xxl {\r\n      left: 200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-7 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-7::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -170rem;\r\n    @include xxl {\r\n      left: -200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-8 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-8::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: 170rem;\r\n    @include xxl {\r\n      left: 200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-9 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-9::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -170rem;\r\n    @include xxl {\r\n      left: -200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-10 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-10::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: 170rem;\r\n    @include xxl {\r\n      left: 200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-11 {\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-11::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: -170rem;\r\n    @include xxl {\r\n      left: -200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-container-12 {\r\n    margin-bottom: 4rem;\r\n    position: relative;\r\n    background: none;\r\n    z-index: 0;\r\n    &.active::before {\r\n      left: 0;\r\n      transition: all 1.8s;\r\n    }\r\n  }\r\n  .text-container-12::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    left: 170rem;\r\n    @include xxl {\r\n      left: 200rem;\r\n    }\r\n    background: var(--green_01);\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 3rem;\r\n    z-index: -1;\r\n  }\r\n  .text-decoration {\r\n    color: var(--orange_01);\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n// text\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-10 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-11 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-12 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-13 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// separator\r\n\r\n.separator-27 {\r\n  margin-top: 4rem;\r\n  height: 6px;\r\n  width: 52rem;\r\n  border-radius: 5px;\r\n  background: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index/creation-d-app/_media-queries.scss","webpack://./src/index/creation-d-app/creation-d-app.scss"],"names":[],"mappings":"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","sourcesContent":["/* Landscape phones and down */\r\n@mixin xs {\r\n  @media (max-width: 480px) {\r\n    @content;\r\n  }\r\n}\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n  @media (min-width: 480px) and (max-width: 767px) {\r\n    @content;\r\n  }\r\n}\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n  @media (min-width: 768px) and (max-width: 1400px) {\r\n    @content;\r\n  }\r\n}\r\n/* Large desktop */\r\n@mixin xl {\r\n  @media (min-width: 1200px) and (max-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n@mixin xxl {\r\n  @media (min-width: 2559px) {\r\n    @content;\r\n  }\r\n}\r\n","@use \"media-queries\" as *;\r\n.container {\r\n  display: grid;\r\n  background: #eee;\r\n  width: 100%;\r\n  grid:\r\n    \"img header\" 10rem\r\n    \"separator-2 separator-3\" auto\r\n    \"slogan-container slogan-container\" auto\r\n    \"menu menu\" auto\r\n    \"general general\" auto\r\n    \"mail mail\" auto\r\n    \"footer footer\" auto\r\n    / 25rem auto;\r\n  @include xs {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include sm {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n  @include md {\r\n    grid:\r\n      \"img header\" 8rem\r\n      \"menu-xs menu-xs\" auto\r\n      \"separator-2 separator-3\" auto\r\n      \"slogan-container slogan-container\" auto\r\n      \"h1-xs h1-xs\" auto\r\n      \"menu menu\" auto\r\n      \"general general\" auto\r\n      \"mail mail\" auto\r\n      \"footer footer\" auto\r\n      / 22rem auto;\r\n  }\r\n}\r\n.cercle-content {\r\n  margin: 0 0 0 0;\r\n  height: 35rem;\r\n  grid-area: slogan-container;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  @include xs {\r\n    display: none;\r\n  }\r\n  @include sm {\r\n    display: none;\r\n  }\r\n  @include md {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.cerlce-container {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 18rem;\r\n  width: 100rem;\r\n  border-radius: 3rem;\r\n  animation-name: logo-2;\r\n  animation-duration: 1.8s;\r\n  @keyframes logo-2 {\r\n    from {\r\n      transform: scaley(0);\r\n    }\r\n    to {\r\n      transform: scaley(1);\r\n    }\r\n  }\r\n  p {\r\n    margin-top: 5rem;\r\n    font-weight: 400;\r\n    font-size: 3.2rem;\r\n    text-align: center;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n    color: var(--orange_01);\r\n  }\r\n}\r\n.img-content {\r\n  margin-right: 1rem;\r\n  height: 18rem;\r\n  width: 18rem;\r\n}\r\n\r\n.general-content {\r\n  grid-area: general;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin: 0;\r\n\r\n  .text-content {\r\n    margin: 4rem 0 0 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 100%;\r\n    text-align: center;\r\n    background: #d6d6d6;\r\n    @include xs {\r\n      margin: 0;\r\n    }\r\n    @include sm {\r\n      margin: 0;\r\n    }\r\n    @include md {\r\n      margin: 0;\r\n    }\r\n  }\r\n  .text {\r\n    width: 55rem;\r\n    display: flex;\r\n    align-items: center;\r\n    margin: 2rem;\r\n    overflow: hidden;\r\n    z-index: 0;\r\n  }\r\n\r\n  .text-container {\r\n    background: var(--green_01);\r\n    height: auto;\r\n    width: auto;\r\n    max-width: 120rem;\r\n    color: white;\r\n    margin: 2rem;\r\n    border-radius: 3rem;\r\n    text-align: center;\r\n    @include xs {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include sm {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    @include md {\r\n      height: auto;\r\n      width: calc(100% - 4rem);\r\n    }\r\n    p {\r\n      font-family: var(--font-family);\r\n      margin: 2rem;\r\n      letter-spacing: 0.1rem;\r\n      font-size: 1.8rem;\r\n      font-weight: 700;\r\n    }\r\n  }\r\n\r\n  .text-container-2 {\r\n    z-index: 0;\r\n    margin-top: 4rem;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-2 {\r\n    animation: animation-text-container-2 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-2 {\r\n      0% {\r\n        transform: translateX(100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .text-container-4 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-4 {\r\n    animation: animation-text-container-4 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-4 {\r\n      0% {\r\n        transform: translateX(-100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-container-5 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-5 {\r\n    animation: animation-text-container-5 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-5 {\r\n      0% {\r\n        transform: translateX(100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .text-container-6 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-6 {\r\n    animation: animation-text-container-6 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-6 {\r\n      0% {\r\n        transform: translateX(-100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-container-7 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-7 {\r\n    animation: animation-text-container-7 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-7 {\r\n      0% {\r\n        transform: translateX(100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-container-8 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-8 {\r\n    animation: animation-text-container-8 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-8 {\r\n      0% {\r\n        transform: translateX(-100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-container-9 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-9 {\r\n    animation: animation-text-container-9 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-9 {\r\n      0% {\r\n        transform: translateX(100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-container-10 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n  .animation-text-container-10 {\r\n    animation: animation-text-container-10 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-10 {\r\n      0% {\r\n        transform: translateX(-100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .text-container-11 {\r\n    z-index: 0;\r\n    opacity: 0;\r\n  }\r\n\r\n  .animation-text-container-11 {\r\n    animation: animation-text-container-11 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-11 {\r\n      0% {\r\n        transform: translateX(100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-container-12 {\r\n    margin-bottom: 4rem;\r\n    opacity: 0;\r\n    z-index: 0;\r\n  }\r\n  .animation-text-container-12 {\r\n    animation: animation-text-container-12 2s;\r\n    opacity: 1;\r\n    @keyframes animation-text-container-12 {\r\n      0% {\r\n        transform: translateX(-100%);\r\n        opacity: 0;\r\n      }\r\n      100% {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n      }\r\n    }\r\n  }\r\n  .text-decoration {\r\n    color: var(--orange_01);\r\n    font-weight: 400;\r\n    letter-spacing: 0.5rem;\r\n    font-family: var(--font-family-strasua);\r\n  }\r\n}\r\n\r\n// text\r\n.text-4 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-5 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-6 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-7 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-8 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-9 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-10 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-11 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-12 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n.text-13 {\r\n  color: none;\r\n  opacity: 0;\r\n  &.active {\r\n    color: white;\r\n    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);\r\n    transition-delay: 0.8s;\r\n    opacity: 1;\r\n  }\r\n\r\n  @include xs {\r\n    opacity: 1;\r\n  }\r\n  @include sm {\r\n    opacity: 1;\r\n  }\r\n  @include md {\r\n    opacity: 1;\r\n  }\r\n}\r\n\r\n// separator\r\n\r\n.separator-27 {\r\n  margin-top: 4rem;\r\n  height: 6px;\r\n  width: 52rem;\r\n  border-radius: 5px;\r\n  background: var(--green_01);\r\n  animation-name: chargement;\r\n  animation-duration: 1.8s;\r\n  @keyframes chargement {\r\n    0% {\r\n      transform: scaleX(0);\r\n    }\r\n    100% {\r\n      transform: scaleX(1);\r\n    }\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2856,6 +3014,228 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// menu general
+
+var votreBesoincloseOpenMenu = document.querySelector(".votre-besoin-close-open-menu");
+var notreReseaucloseOpenMenu = document.querySelector(".notre-reseau-close-open-menu");
+notreReseaucloseOpenMenu.addEventListener("mouseover", function () {
+  votreBesoincloseOpenMenu.style.display = "none";
+});
+notreReseaucloseOpenMenu.addEventListener("mouseout", function () {
+  votreBesoincloseOpenMenu.style.display = "flex";
+});
+votreBesoincloseOpenMenu.addEventListener("mouseover", function () {
+  notreReseaucloseOpenMenu.style.display = "none";
+});
+votreBesoincloseOpenMenu.addEventListener("mouseout", function () {
+  notreReseaucloseOpenMenu.style.display = "flex";
+});
+
+// menu-xs
+
+var menuXsContent = document.querySelector(".menu-xs-content");
+var btnOpen = document.querySelector(".btn-open-close");
+var btnBarre1 = document.querySelector(".btn-barre-1");
+var btnBarre2 = document.querySelector(".btn-barre-2");
+var menuGeneralXsContent = document.querySelector(".menu-general-xs-content");
+
+// btn open/close
+
+btnOpen.addEventListener("click", function () {
+  var menuDisplay = getComputedStyle(menuXsContent).display;
+  menuXsContent.classList.remove("animate-open", "animate-close");
+  menuGeneralXsContent.classList.remove("menu-general-xs-content-opacity");
+  if (menuDisplay === "flex") {
+    menuXsContent.classList.add("animate-close");
+    menuGeneralXsContent.classList.add("menu-general-xs-content-opacity");
+    menuXsContent.addEventListener("animationend", function () {
+      menuXsContent.style.display = "none";
+      menuXsLangueContainer.style.display = "none";
+      contentLinkMenuGeneralXs.style.display = "none";
+      contentLinkMenuGeneralXs2.style.display = "none";
+      contentLinkMenuGeneralXs3.style.display = "none";
+      contentLinkMenuGeneralXs4.style.display = "none";
+      btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+      btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+      btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+      btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    }, {
+      once: true
+    });
+  } else {
+    menuXsContent.style.display = "flex";
+    menuXsContent.classList.add("animate-open");
+  }
+  var rotation1 = getRotationAngle(getComputedStyle(btnBarre1).transform);
+  var rotation2 = getRotationAngle(getComputedStyle(btnBarre2).transform);
+  btnBarre1.style.transform = rotation1 === 0 ? "rotate(45deg)" : "rotate(0)";
+  btnBarre2.style.transform = rotation2 === 0 ? "rotate(-45deg)" : "rotate(0)";
+});
+function getRotationAngle(transformValue) {
+  if (!transformValue) {
+    return 0;
+  }
+  var transformValues = transformValue.split("(");
+  if (transformValues.length < 2) {
+    return 0;
+  }
+  var matrixValues = transformValues[1].split(")")[0].split(",");
+  var a = parseFloat(matrixValues[0]);
+  var b = parseFloat(matrixValues[1]);
+  var c = parseFloat(matrixValues[2]);
+  var d = parseFloat(matrixValues[3]);
+  var angle = Math.atan2(b, a) * (180 / Math.PI);
+  var positiveAngle = angle < 0 ? angle + 360 : angle;
+  return positiveAngle;
+}
+
+// menu langue open/close
+
+var btnCloseMenuLangue = document.querySelector(".btn-close-menu-langue-xs");
+var btnOpenMenuLangue = document.querySelector(".btn-open-menu-langue-xs");
+var btnMenuXsContentlangueClose = document.querySelector(".btn-close-menu-langue-xs-content");
+var menuXsLangueContainer = document.querySelector(".menu-xs-langue-container");
+btnOpenMenuLangue.addEventListener("click", function () {
+  menuXsLangueContainer.style.display = "flex";
+  menuXsLangueContainer.classList.remove("animation-close-menu-langue-xs");
+  btnMenuXsContentlangueClose.classList.remove("btn-close-menu-langue-xs-close");
+});
+btnCloseMenuLangue.addEventListener("click", function () {
+  menuXsLangueContainer.classList.add("animation-close-menu-langue-xs");
+  setTimeout(function () {
+    menuXsLangueContainer.classList.remove("animation-close-menu-langue-xs");
+    menuXsLangueContainer.style.display = "none";
+  }, 990);
+});
+btnCloseMenuLangue.addEventListener("click", function () {
+  btnMenuXsContentlangueClose.classList.add("btn-close-menu-langue-xs-close");
+});
+
+// menu general xs
+
+// const  btn 1
+
+var contentLinkMenuGeneralXs = document.querySelector(".content-link-menu-general-xs");
+var btnOpenCloseContentLinkMenuGeneralXs = document.querySelector(".btn-open-close-content-link-menu-general-xs");
+var linkMenuGeneralXs = document.querySelector(".animation-content-link-menu-general-xs");
+
+// const btn 2
+
+var contentLinkMenuGeneralXs2 = document.querySelector(".content-link-menu-general-xs-2");
+var btnOpenCloseContentLinkMenuGeneralXs2 = document.querySelector(".btn-open-close-content-link-menu-general-xs-2");
+var linkMenuGeneralXs2 = document.querySelector(".animation-content-link-menu-general-xs-2");
+
+//  btn 3
+
+var contentLinkMenuGeneralXs3 = document.querySelector(".content-link-menu-general-xs-3");
+var btnOpenCloseContentLinkMenuGeneralXs3 = document.querySelector(".btn-open-close-content-link-menu-general-xs-3");
+var linkMenuGeneralXs3 = document.querySelector(".animation-content-link-menu-general-xs-3");
+
+//  btn 4
+
+var contentLinkMenuGeneralXs4 = document.querySelector(".content-link-menu-general-xs-4");
+var btnOpenCloseContentLinkMenuGeneralXs4 = document.querySelector(".btn-open-close-content-link-menu-general-xs-4");
+var linkMenuGeneralXs4 = document.querySelector(".animation-content-link-menu-general-xs-4");
+
+// btn 1
+
+btnOpenCloseContentLinkMenuGeneralXs.addEventListener("click", function () {
+  var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs).getPropertyValue("display");
+  if (menuDisplay === "none") {
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(90deg)";
+    contentLinkMenuGeneralXs.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
+  } else {
+    contentLinkMenuGeneralXs.classList.add("close-content-link-menu-general-xs");
+    linkMenuGeneralXs.classList.add("close-link-menu-general-xs");
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    setTimeout(function () {
+      contentLinkMenuGeneralXs.style.display = "none";
+      contentLinkMenuGeneralXs.classList.remove("close-content-link-menu-general-xs");
+      linkMenuGeneralXs.classList.remove("close-link-menu-general-xs");
+    }, 990);
+  }
+});
+
+// btn 2
+
+btnOpenCloseContentLinkMenuGeneralXs2.addEventListener("click", function () {
+  var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs2).getPropertyValue("display");
+  if (menuDisplay === "none") {
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(90deg)";
+    contentLinkMenuGeneralXs2.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
+  } else {
+    contentLinkMenuGeneralXs2.classList.add("close-content-link-menu-general-xs");
+    linkMenuGeneralXs2.classList.add("close-link-menu-general-xs");
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    setTimeout(function () {
+      contentLinkMenuGeneralXs2.style.display = "none";
+      contentLinkMenuGeneralXs2.classList.remove("close-content-link-menu-general-xs");
+      linkMenuGeneralXs2.classList.remove("close-link-menu-general-xs");
+    }, 990);
+  }
+});
+
+// btn 3
+
+btnOpenCloseContentLinkMenuGeneralXs3.addEventListener("click", function () {
+  var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs3).getPropertyValue("display");
+  if (menuDisplay === "none") {
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(90deg)";
+    contentLinkMenuGeneralXs3.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs4.style.display = "none";
+  } else {
+    contentLinkMenuGeneralXs3.classList.add("close-content-link-menu-general-xs");
+    linkMenuGeneralXs3.classList.add("close-link-menu-general-xs");
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    setTimeout(function () {
+      contentLinkMenuGeneralXs3.style.display = "none";
+      contentLinkMenuGeneralXs3.classList.remove("close-content-link-menu-general-xs");
+      linkMenuGeneralXs3.classList.remove("close-link-menu-general-xs");
+    }, 990);
+  }
+});
+// btn 4
+
+btnOpenCloseContentLinkMenuGeneralXs4.addEventListener("click", function () {
+  var menuDisplay = window.getComputedStyle(contentLinkMenuGeneralXs4).getPropertyValue("display");
+  if (menuDisplay === "none") {
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(90deg)";
+    contentLinkMenuGeneralXs4.style.display = "flex";
+    btnOpenCloseContentLinkMenuGeneralXs.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs2.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs2.style.display = "none";
+    btnOpenCloseContentLinkMenuGeneralXs3.style.transform = "rotate(0deg)";
+    contentLinkMenuGeneralXs3.style.display = "none";
+  } else {
+    contentLinkMenuGeneralXs4.classList.add("close-content-link-menu-general-xs");
+    linkMenuGeneralXs4.classList.add("close-link-menu-general-xs");
+    btnOpenCloseContentLinkMenuGeneralXs4.style.transform = "rotate(0deg)";
+    setTimeout(function () {
+      contentLinkMenuGeneralXs4.style.display = "none";
+      contentLinkMenuGeneralXs4.classList.remove("close-content-link-menu-general-xs");
+      linkMenuGeneralXs4.classList.remove("close-link-menu-general-xs");
+    }, 990);
+  }
+});
+
 // text-container-2
 
 var textContainer2 = document.querySelector(".text-container-2");
@@ -2865,7 +3245,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle.clientHeight;
   var topElementToTopViewport = textContainer2.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer2.classList.add("active");
+    textContainer2.classList.add("animation-text-container-2");
   }
 });
 
@@ -2878,7 +3258,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle2.clientHeight;
   var topElementToTopViewport = textContainer4.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer4.classList.add("active");
+    textContainer4.classList.add("animation-text-container-4");
   }
 });
 
@@ -2891,7 +3271,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle3.clientHeight;
   var topElementToTopViewport = textContainer5.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer5.classList.add("active");
+    textContainer5.classList.add("animation-text-container-5");
   }
 });
 // text-container-6
@@ -2903,7 +3283,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle4.clientHeight;
   var topElementToTopViewport = textContainer6.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer6.classList.add("active");
+    textContainer6.classList.add("animation-text-container-6");
   }
 });
 // text-container-7
@@ -2915,7 +3295,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle5.clientHeight;
   var topElementToTopViewport = textContainer7.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer7.classList.add("active");
+    textContainer7.classList.add("animation-text-container-7");
   }
 });
 // text-container-8
@@ -2927,7 +3307,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle6.clientHeight;
   var topElementToTopViewport = textContainer8.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer8.classList.add("active");
+    textContainer8.classList.add("animation-text-container-8");
   }
 });
 // text-container-9
@@ -2939,7 +3319,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle7.clientHeight;
   var topElementToTopViewport = textContainer9.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer9.classList.add("active");
+    textContainer9.classList.add("animation-text-container-9");
   }
 });
 // text-container-10
@@ -2951,7 +3331,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle8.clientHeight;
   var topElementToTopViewport = textContainer10.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer10.classList.add("active");
+    textContainer10.classList.add("animation-text-container-10");
   }
 });
 // text-container-11
@@ -2963,7 +3343,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle9.clientHeight;
   var topElementToTopViewport = textContainer11.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer11.classList.add("active");
+    textContainer11.classList.add("animation-text-container-11");
   }
 });
 // text-container-12
@@ -2975,7 +3355,7 @@ window.addEventListener("scroll", function () {
     clientHeight = _document$documentEle10.clientHeight;
   var topElementToTopViewport = textContainer12.getBoundingClientRect().top;
   if (scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8) {
-    textContainer12.classList.add("active");
+    textContainer12.classList.add("animation-text-container-12");
   }
 });
 

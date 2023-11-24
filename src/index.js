@@ -413,7 +413,7 @@ window.addEventListener("scroll", () => {
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
   ) {
-    textContainer5.classList.add("active");
+    textContainer5.classList.add("animation-text-container-5");
   }
 });
 
@@ -430,7 +430,7 @@ window.addEventListener("scroll", () => {
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
   ) {
-    textContainer6.classList.add("active");
+    textContainer6.classList.add("animation-text-container-6");
   }
 });
 // text-container-7
@@ -446,7 +446,7 @@ window.addEventListener("scroll", () => {
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
   ) {
-    textContainer7.classList.add("active");
+    textContainer7.classList.add("animation-text-container-7");
   }
 });
 // text-container-8
@@ -462,7 +462,7 @@ window.addEventListener("scroll", () => {
     scrollTop >
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
   ) {
-    textContainer8.classList.add("active");
+    textContainer8.classList.add("animation-text-container-8");
   }
 });
 

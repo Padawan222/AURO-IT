@@ -2,6 +2,7 @@
 .container {
   display: grid;
   background: #eee;
+  width: 100%;
   grid:
     "img header" 10rem
     "separator-2 separator-3" auto
@@ -11,6 +12,45 @@
     "mail mail" auto
     "footer footer" auto
     / 25rem auto;
+  @include xs {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
+  @include sm {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
+  @include md {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
 }
 .cercle-content {
   margin: 0 0 0 0;
@@ -20,7 +60,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include xs {
+    display: none;
+  }
+  @include sm {
+    display: none;
+  }
+  @include md {
+    display: none;
+  }
 }
+
 .cerlce-container {
   display: flex;
   align-items: center;
@@ -58,6 +108,7 @@
   grid-area: general;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 0;
 
   .text-content {
@@ -65,8 +116,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: var(--background);
+    width: 100%;
+    text-align: center;
+    background: #d6d6d6;
+    @include xs {
+      margin: 0;
+    }
+    @include sm {
+      margin: 0;
+    }
+    @include md {
+      margin: 0;
+    }
   }
   .text {
     width: 55rem;
@@ -78,12 +139,26 @@
   }
 
   .text-container {
-    background: var(--blue);
-    width: 120rem;
+    background: var(--green_01);
+    height: auto;
+    width: auto;
+    max-width: 120rem;
     color: white;
     margin: 2rem;
     border-radius: 3rem;
     text-align: center;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
     p {
       font-family: var(--font-family);
       margin: 2rem;
@@ -94,228 +169,190 @@
   }
 
   .text-container-2 {
-    position: relative;
-    background: none;
     z-index: 0;
     margin-top: 4rem;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
+    opacity: 0;
   }
-
-  .text-container-2::before {
-    content: "";
-    position: absolute;
-    left: -170rem;
-    @include xxl {
-      left: -200rem;
+  .animation-text-container-2 {
+    animation: animation-text-container-2 2s;
+    opacity: 1;
+    @keyframes animation-text-container-2 {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
 
   .text-container-4 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
+    opacity: 0;
   }
-  .text-container-4::before {
-    content: "";
-    position: absolute;
-    left: 170rem;
-    @include xxl {
-      left: 200rem;
+  .animation-text-container-4 {
+    animation: animation-text-container-4 2s;
+    opacity: 1;
+    @keyframes animation-text-container-4 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
   .text-container-5 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
+    opacity: 0;
+  }
+  .animation-text-container-5 {
+    animation: animation-text-container-5 2s;
+    opacity: 1;
+    @keyframes animation-text-container-5 {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
-  .text-container-5::before {
-    content: "";
-    position: absolute;
-    left: -170rem;
-    @include xxl {
-      left: -200rem;
-    }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
-  }
+
   .text-container-6 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
+    opacity: 0;
   }
-  .text-container-6::before {
-    content: "";
-    position: absolute;
-    left: 170rem;
-    @include xxl {
-      left: 200rem;
+  .animation-text-container-6 {
+    animation: animation-text-container-6 2s;
+    opacity: 1;
+    @keyframes animation-text-container-6 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
   .text-container-7 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
+    opacity: 0;
   }
-  .text-container-7::before {
-    content: "";
-    position: absolute;
-    left: -170rem;
-    @include xxl {
-      left: -200rem;
+  .animation-text-container-7 {
+    animation: animation-text-container-7 2s;
+    opacity: 1;
+    @keyframes animation-text-container-7 {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
   .text-container-8 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
+    opacity: 0;
   }
-  .text-container-8::before {
-    content: "";
-    position: absolute;
-    left: 170rem;
-    @include xxl {
-      left: 200rem;
+  .animation-text-container-8 {
+    animation: animation-text-container-8 2s;
+    opacity: 1;
+    @keyframes animation-text-container-8 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
   .text-container-9 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
+    opacity: 0;
   }
-  .text-container-9::before {
-    content: "";
-    position: absolute;
-    left: -170rem;
-    @include xxl {
-      left: -200rem;
+  .animation-text-container-9 {
+    animation: animation-text-container-9 2s;
+    opacity: 1;
+    @keyframes animation-text-container-9 {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
   .text-container-10 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
+    opacity: 0;
+  }
+  .animation-text-container-10 {
+    animation: animation-text-container-10 2s;
+    opacity: 1;
+    @keyframes animation-text-container-10 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
-  .text-container-10::before {
-    content: "";
-    position: absolute;
-    left: 170rem;
-    @include xxl {
-      left: 200rem;
-    }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
-  }
+
   .text-container-11 {
-    position: relative;
-    background: none;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
+    opacity: 0;
   }
-  .text-container-11::before {
-    content: "";
-    position: absolute;
-    left: -170rem;
-    @include xxl {
-      left: -200rem;
+
+  .animation-text-container-11 {
+    animation: animation-text-container-11 2s;
+    opacity: 1;
+    @keyframes animation-text-container-11 {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
   .text-container-12 {
     margin-bottom: 4rem;
-    position: relative;
-    background: none;
+    opacity: 0;
     z-index: 0;
-    &.active::before {
-      left: 0;
-      transition: all 1.8s;
-    }
   }
-  .text-container-12::before {
-    content: "";
-    position: absolute;
-    left: 170rem;
-    @include xxl {
-      left: 200rem;
+  .animation-text-container-12 {
+    animation: animation-text-container-12 2s;
+    opacity: 1;
+    @keyframes animation-text-container-12 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
-    background: var(--green_01);
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    z-index: -1;
   }
   .text-decoration {
     color: var(--orange_01);
@@ -335,6 +372,16 @@
     transition-delay: 0.8s;
     opacity: 1;
   }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-5 {
   color: none;
@@ -343,6 +390,16 @@
     color: white;
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8s;
+    opacity: 1;
+  }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -355,6 +412,16 @@
     transition-delay: 0.8s;
     opacity: 1;
   }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-7 {
   color: none;
@@ -363,6 +430,15 @@
     color: white;
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -375,6 +451,16 @@
     transition-delay: 0.8s;
     opacity: 1;
   }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-9 {
   color: none;
@@ -383,6 +469,16 @@
     color: white;
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8s;
+    opacity: 1;
+  }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -395,6 +491,16 @@
     transition-delay: 0.8s;
     opacity: 1;
   }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-11 {
   color: none;
@@ -403,6 +509,16 @@
     color: white;
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8s;
+    opacity: 1;
+  }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
@@ -415,6 +531,15 @@
     transition-delay: 0.8s;
     opacity: 1;
   }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
 }
 .text-13 {
   color: none;
@@ -423,6 +548,16 @@
     color: white;
     transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
     transition-delay: 0.8s;
+    opacity: 1;
+  }
+
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
     opacity: 1;
   }
 }
