@@ -59,7 +59,7 @@
   display: flex;
   justify-content: center;
   height: 5rem;
-  width: 20rem;
+  width: 40rem;
   background-color: #eee;
   color: #eee;
   position: relative;
@@ -82,7 +82,7 @@
 }
 
 .contact::before {
-  content: "Email@exemple.com";
+  content: "contact@auro-it-consulting.com";
   display: flex;
   justify-content: center;
   align-items: center;

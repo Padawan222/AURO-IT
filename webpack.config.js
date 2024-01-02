@@ -14,7 +14,7 @@ module.exports = {
     ),
     main4: path.join(
       __dirname,
-      "src/index/gestions-de-projet-et-de-programme/gestions-de-projet-et-de-programme.js"
+      "src/index/gestion-de-projet-et-de-programme/gestion-de-projet-et-de-programme.js"
     ),
     main5: path.join(__dirname, "src/index/grand-comptes/grand-comptes.js"),
     main6: path.join(__dirname, "src/index/nos-competences/nos-competences.js"),
@@ -76,7 +76,7 @@ module.exports = {
     ),
     catalan4: path.join(
       __dirname,
-      "src/catalan/cat-gestions-de-projet-et-de-programme/cat-gestions-de-projet-et-de-programme.js"
+      "src/catalan/cat-gestion-de-projet-et-de-programme/cat-gestion-de-projet-et-de-programme.js"
     ),
     catalan5: path.join(
       __dirname,
@@ -156,7 +156,7 @@ module.exports = {
     ),
     english4: path.join(
       __dirname,
-      "src/english/eng-gestions-de-projet-et-de-programme/eng-gestions-de-projet-et-de-programme.js"
+      "src/english/eng-gestion-de-projet-et-de-programme/eng-gestion-de-projet-et-de-programme.js"
     ),
     english5: path.join(
       __dirname,
@@ -236,7 +236,7 @@ module.exports = {
     ),
     spanish4: path.join(
       __dirname,
-      "src/spanish/spa-gestions-de-projet-et-de-programme/spa-gestions-de-projet-et-de-programme.js"
+      "src/spanish/spa-gestion-de-projet-et-de-programme/spa-gestion-de-projet-et-de-programme.js"
     ),
     spanish5: path.join(
       __dirname,
@@ -364,9 +364,9 @@ module.exports = {
       chunks: ["main3"],
     }),
     new HtmlWebpackPlugin({
-      filename: "gestions-de-projet-et-de-programme.html",
+      filename: "gestion-de-projet-et-de-programme.html",
       template:
-        "./src/index/gestions-de-projet-et-de-programme/gestions-de-projet-et-de-programme.html",
+        "./src/index/gestion-de-projet-et-de-programme/gestion-de-projet-et-de-programme.html",
       chunks: ["main4"],
     }),
     new HtmlWebpackPlugin({
@@ -475,9 +475,9 @@ module.exports = {
       chunks: ["catalan3"],
     }),
     new HtmlWebpackPlugin({
-      filename: "cat-gestions-de-projet-et-de-programme.html",
+      filename: "cat-gestion-de-projet-et-de-programme.html",
       template:
-        "./src/catalan/cat-gestions-de-projet-et-de-programme/cat-gestions-de-projet-et-de-programme.html",
+        "./src/catalan/cat-gestion-de-projet-et-de-programme/cat-gestion-de-projet-et-de-programme.html",
       chunks: ["catalan4"],
     }),
     new HtmlWebpackPlugin({
@@ -503,7 +503,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "cat-notre-reseau.html",
       template: "./src/catalan/cat-notre-reseau/cat-notre-reseau.html",
-      chunks: ["main9"],
+      chunks: ["catalan9"],
     }),
     new HtmlWebpackPlugin({
       filename: "cat-pme-organisations.html",
@@ -589,9 +589,9 @@ module.exports = {
       chunks: ["english3"],
     }),
     new HtmlWebpackPlugin({
-      filename: "eng-gestions-de-projet-et-de-programme.html",
+      filename: "eng-gestion-de-projet-et-de-programme.html",
       template:
-        "./src/english/eng-gestions-de-projet-et-de-programme/eng-gestions-de-projet-et-de-programme.html",
+        "./src/english/eng-gestion-de-projet-et-de-programme/eng-gestion-de-projet-et-de-programme.html",
       chunks: ["english4"],
     }),
     new HtmlWebpackPlugin({
@@ -703,9 +703,9 @@ module.exports = {
       chunks: ["spanish3"],
     }),
     new HtmlWebpackPlugin({
-      filename: "spa-gestions-de-projet-et-de-programme.html",
+      filename: "spa-gestion-de-projet-et-de-programme.html",
       template:
-        "./src/spanish/spa-gestions-de-projet-et-de-programme/spa-gestions-de-projet-et-de-programme.html",
+        "./src/spanish/spa-gestion-de-projet-et-de-programme/spa-gestion-de-projet-et-de-programme.html",
       chunks: ["spanish4"],
     }),
     new HtmlWebpackPlugin({

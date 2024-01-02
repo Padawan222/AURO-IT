@@ -149,9 +149,6 @@ header {
   width: 100%;
   height: 8rem;
   margin: 0;
-  @include sm {
-    display: flex;
-  }
   @include md {
     display: flex;
   }

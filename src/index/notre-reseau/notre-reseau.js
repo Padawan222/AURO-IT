@@ -298,6 +298,39 @@ btnOpenCloseContentLinkMenuGeneralXs4.addEventListener("click", () => {
   }
 });
 
+// text-container-2
+
+const textContainer2 = document.querySelector(".text-container-2");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer2.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
+  ) {
+    textContainer2.classList.add("animation-text-container-2");
+  }
+});
+// text-4
+
+const text4 = document.querySelector(".text-4");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text4.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
+  ) {
+    text4.classList.add("active");
+  }
+});
+
 // mail-content-1
 
 const mailContent1 = document.querySelector(".mail-content-1");

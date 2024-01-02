@@ -1,4 +1,4 @@
-import "./cat-tpe-associations.scss";
+import "./gestion-de-projet-et-de-programme.scss";
 import "C:/Users/Azstras/OneDrive/Bureau/AURO-IT/src/assets/styles/style.scss";
 
 // menu general
@@ -476,6 +476,118 @@ window.addEventListener("scroll", () => {
     textContainer13.classList.add("animation-text-container-13");
   }
 });
+// text-container-14
+
+const textContainer14 = document.querySelector(".text-container-14");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer14.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer14.classList.add("animation-text-container-14");
+  }
+});
+// text-container-15
+
+const textContainer15 = document.querySelector(".text-container-15");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer15.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer15.classList.add("animation-text-container-15");
+  }
+});
+// text-container-16
+
+const textContainer16 = document.querySelector(".text-container-16");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer16.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer16.classList.add("animation-text-container-16");
+  }
+});
+// text-container-17
+
+const textContainer17 = document.querySelector(".text-container-17");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer17.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer17.classList.add("animation-text-container-17");
+  }
+});
+// text-container-18
+
+const textContainer18 = document.querySelector(".text-container-18");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer18.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer18.classList.add("animation-text-container-18");
+  }
+});
+// text-container-19
+
+const textContainer19 = document.querySelector(".text-container-19");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer19.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer19.classList.add("animation-text-container-19");
+  }
+});
+// text-container-20
+
+const textContainer20 = document.querySelector(".text-container-20");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer20.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer20.classList.add("animation-text-container-20");
+  }
+});
 
 // text-4
 
@@ -655,6 +767,118 @@ window.addEventListener("scroll", () => {
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
   ) {
     text14.classList.add("active");
+  }
+});
+// text-15
+
+const text15 = document.querySelector(".text-15");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text15.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text15.classList.add("active");
+  }
+});
+// text-16
+
+const text16 = document.querySelector(".text-16");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text16.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text16.classList.add("active");
+  }
+});
+// text-17
+
+const text17 = document.querySelector(".text-17");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text17.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text17.classList.add("active");
+  }
+});
+// text-18
+
+const text18 = document.querySelector(".text-18");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text18.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text18.classList.add("active");
+  }
+});
+// text-19
+
+const text19 = document.querySelector(".text-19");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text19.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text19.classList.add("active");
+  }
+});
+// text-20
+
+const text20 = document.querySelector(".text-20");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text20.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text20.classList.add("active");
+  }
+});
+// text-21
+
+const text21 = document.querySelector(".text-21");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text21.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+  ) {
+    text21.classList.add("active");
   }
 });
 

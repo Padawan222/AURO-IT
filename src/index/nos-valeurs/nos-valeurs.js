@@ -298,6 +298,74 @@ btnOpenCloseContentLinkMenuGeneralXs4.addEventListener("click", () => {
   }
 });
 
+// text-container-2
+
+const textContainer2 = document.querySelector(".text-container-2");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer2.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer2.classList.add("animation-text-container-2");
+  }
+});
+
+// text-container-4
+
+const textContainer4 = document.querySelector(".text-container-4");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = textContainer4.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    textContainer4.classList.add("animation-text-container-4");
+  }
+});
+
+// text-4
+
+const text4 = document.querySelector(".text-4");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text4.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text4.classList.add("active");
+  }
+});
+
+// text-5
+
+const text5 = document.querySelector(".text-5");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = text5.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+  ) {
+    text5.classList.add("active");
+  }
+});
+
 // mail-content-1
 
 const mailContent1 = document.querySelector(".mail-content-1");

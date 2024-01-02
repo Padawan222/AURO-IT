@@ -75,7 +75,6 @@
   align-items: center;
   justify-content: center;
   height: 18rem;
-  width: 100rem;
   border-radius: 3rem;
   animation-name: logo-2;
   animation-duration: 1.8s;
@@ -159,17 +158,17 @@
     @include xs {
       height: auto;
       width: calc(100% - 4rem);
-      min-width: none;
+      min-width: 1rem;
     }
     @include sm {
       height: auto;
       width: calc(100% - 4rem);
-      min-width: none;
+      min-width: 1rem;
     }
     @include md {
       height: auto;
       width: calc(100% - 4rem);
-      min-width: none;
+      min-width: 1rem;
     }
     p {
       font-family: var(--font-family);
@@ -614,7 +613,7 @@
 .separator-23 {
   margin-top: 4rem;
   height: 6px;
-  width: 124rem;
+  width: 107.7rem;
   border-radius: 5px;
   background: var(--green_01);
   animation-name: chargement;

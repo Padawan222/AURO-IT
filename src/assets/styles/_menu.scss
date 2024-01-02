@@ -36,8 +36,10 @@
 }
 
 .menu-container {
+  display: flex;
   margin: 0 1rem;
   height: 4rem;
+  align-items: center;
 }
 
 .menu-container-general {
@@ -46,7 +48,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  height: 7rem;
+  height: 10rem;
   width: 105rem;
   border-radius: 0 0 2rem 2rem;
   background: #eee;
@@ -335,6 +337,7 @@
   flex-direction: column;
   align-items: start;
   margin: 0;
+  margin-top: 5px;
 }
 
 .first-link-menu-xs-langue {
@@ -344,12 +347,7 @@
 }
 
 .link-menu-xs-langue {
-  margin: 0.5rem 0;
-}
-
-.menu-langue-xs-link-mid {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0.2rem 0;
 }
 
 // btn
