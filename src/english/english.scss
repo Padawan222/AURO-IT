@@ -1,37 +1,984 @@
+@import "../assets/styles/media-queries";
+@import "../assets/styles/logo-slogan";
 .container {
   display: grid;
   background: #eee;
+  width: 100%;
   grid:
     "img header" 10rem
     "separator-2 separator-3" auto
-    "slogan-container slogan-container"
+    "slogan-container slogan-container" auto
     "menu menu" auto
-    "arrow arrow"
     "general general" auto
+    "mail mail" auto
+    "footer footer" auto
     / 25rem auto;
+  @include xs {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
+  @include sm {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
+  @include md {
+    grid:
+      "img header" 8rem
+      "menu-xs menu-xs" auto
+      "separator-2 separator-3" auto
+      "slogan-container slogan-container" auto
+      "h1-xs h1-xs" auto
+      "menu menu" auto
+      "general general" auto
+      "mail mail" auto
+      "footer footer" auto
+      / 22rem auto;
+  }
 }
 
-.general {
+.general-content {
   grid-area: general;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
   margin: 0;
-  background: #ddd;
-  .text {
-    margin: 8rem 0 2.5rem;
-    height: min-content;
-    width: calc(100% - 20%);
-    background: #eee;
-    border-radius: 3rem;
+
+  .text-content-1 {
+    margin: 4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     text-align: center;
-    border-left: 1px solid var(--blue);
-    border-right: 1px solid var(--blue);
-    box-shadow: var(--box-shadow);
-    p {
-      font-weight: 400;
-      font-size: 1.9rem;
-      padding: 2rem 3rem;
+    background: #d6d6d6;
+    @include xs {
+      margin: 0;
+    }
+    @include sm {
+      margin: 0;
+    }
+    @include md {
+      margin: 0;
     }
   }
+  .sous-titre-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    border-radius: 3rem;
+    color: var(--orange_01);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      top: 0;
+    }
+  }
+  .sous-titre-1::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 0.8s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
+  }
+  .text-container-1 {
+    margin: 2rem;
+    height: 28rem;
+    width: 110rem;
+    border-radius: 3rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      top: 0;
+    }
+    p {
+      color: white;
+      margin: 0 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  }
+  .text-container-1::before {
+    content: "";
+    position: absolute;
+    top: -28rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 0.8s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
+  }
+
+  .sous-titre-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38rem;
+    border-radius: 3rem;
+    color: var(--orange_01);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      width: calc(100% - 4rem);
+      font-size: 1.8rem;
+    }
+    @include sm {
+      width: calc(100% - 4rem);
+      font-size: 1.8rem;
+    }
+    @include md {
+      width: calc(100% - 4rem);
+      font-size: 1.8rem;
+    }
+    &.active::before {
+      top: 0;
+    }
+  }
+  .sous-titre-2::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 0.8s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
+  }
+
+  .text-container-2 {
+    display: flex;
+    flex-direction: row nowrap;
+
+    margin: 0;
+    @include xs {
+      flex-direction: column;
+      height: 80rem;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  .div-text-container-1 {
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    flex: 1;
+    height: auto;
+    width: auto;
+    margin: 2rem;
+    margin: 2rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      right: 0;
+    }
+    p {
+      color: white;
+      margin: 0 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
+        margin: 2rem;
+      }
+    }
+  }
+  .div-text-container-1::before {
+    content: "";
+    position: absolute;
+    right: -100%;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 0.8s;
+    z-index: -1;
+    @include xs {
+      right: 0;
+    }
+    @include sm {
+      right: 0;
+    }
+    @include md {
+      right: 0;
+    }
+  }
+  .div-text-container-2 {
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    flex: 1;
+
+    height: auto;
+    width: auto;
+
+    margin: 2rem;
+    margin: 2rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      top: 0;
+    }
+    p {
+      color: white;
+      margin: 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
+        margin: 2rem;
+      }
+    }
+  }
+  .div-text-container-2::before {
+    content: "";
+    position: absolute;
+    top: -20rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 0.8s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
+  }
+  .div-text-container-3 {
+    display: flex;
+    border-radius: 3rem;
+    flex: 1;
+    height: auto;
+    width: auto;
+    margin: 2rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      min-height: 18rem;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      min-height: 18rem;
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      left: 0;
+    }
+    p {
+      color: white;
+      margin: 2rem 2rem 1rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
+        margin: 2rem;
+      }
+    }
+  }
+  .div-text-container-3::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 1s;
+    z-index: -1;
+    @include xs {
+      left: 0;
+    }
+    @include sm {
+      left: 0;
+    }
+    @include md {
+      left: 0;
+    }
+  }
+  .text-container-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 58rem;
+    border-radius: 3rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      top: 0;
+    }
+    p {
+      color: white;
+      margin: 1rem 2rem 1rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
+        margin: 2rem;
+      }
+    }
+  }
+  .text-container-3::before {
+    content: "";
+    position: absolute;
+    top: -28rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 1.8s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
+  }
+  .text-container-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 50rem;
+    border-radius: 3rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      top: 0;
+    }
+    p {
+      color: white;
+      margin: 1rem 2rem 1rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      @include xs {
+        margin: 2rem;
+      }
+      @include sm {
+        margin: 2rem;
+      }
+      @include md {
+        margin: 2rem;
+      }
+    }
+  }
+  .text-container-4::before {
+    content: "";
+    position: absolute;
+    top: -28rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 1.8s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
+  }
+
+  // text-content-2
+
+  .text-content-2 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background: #d6d6d6;
+  }
+
+  .sous-titre-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    border-radius: 3rem;
+    color: var(--orange_01);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include xs {
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      width: calc(100% - 4rem);
+    }
+    &.active::before {
+      top: 0;
+    }
+  }
+  .sous-titre-3::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    background: var(--green_01);
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    transition: all 1s;
+    z-index: -1;
+    @include xs {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
+    @include md {
+      top: 0;
+    }
+  }
+
+  .text-container-5 {
+    height: auto;
+    width: auto;
+    max-width: 100rem;
+    border-radius: 3rem;
+    color: white;
+    background: var(--green_01);
+    opacity: 0;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+  .animation-text-container-5 {
+    animation: animation-text-container-5 2s;
+    opacity: 1;
+    @keyframes animation-text-container-5 {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  .text-container-6 {
+    height: auto;
+    width: auto;
+    max-width: 100rem;
+    background: var(--green_01);
+    color: white;
+    border-radius: 3rem;
+    opacity: 0;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+  .animation-text-container-6 {
+    animation: animation-text-container-6 2s;
+    opacity: 1;
+    @keyframes animation-text-container-6 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  .text-container-7 {
+    height: auto;
+    width: auto;
+    max-width: 100rem;
+    background: var(--green_01);
+    color: white;
+    border-radius: 3rem;
+    opacity: 0;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+  .animation-text-container-7 {
+    animation: animation-text-container-7 2s;
+    opacity: 1;
+    @keyframes animation-text-container-7 {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+  .text-container-8 {
+    height: auto;
+    width: auto;
+    max-width: 100rem;
+    background: var(--green_01);
+    color: white;
+    border-radius: 3rem;
+    margin-bottom: 4rem;
+    opacity: 0;
+    @include xs {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include sm {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+    @include md {
+      height: auto;
+      width: calc(100% - 4rem);
+    }
+
+    p {
+      margin: 2rem 2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+  .animation-text-container-8 {
+    animation: animation-text-container-8 2s;
+    opacity: 1;
+    @keyframes animation-text-container-8 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+  .sous-titre {
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    font-family: var(--font-family-strasua);
+  }
+}
+
+.text-decoration-1 {
+  font-family: var(--font-family-strasua);
+  letter-spacing: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--orange_01);
+}
+
+.text-1 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: var(--orange_01);
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+.text-2 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: white;
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+.text-3 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: var(--orange_01);
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+.text-4 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: white;
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+.text-5 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: white;
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+.text-6 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: white;
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+.text-7 {
+  color: none;
+  opacity: 0;
+  width: 100%;
+  &.active {
+    color: white;
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+.text-8 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: white;
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+
+.text-9 {
+  color: none;
+  opacity: 0;
+  &.active {
+    color: var(--orange_01);
+    transition: all 0.8s cubic-bezier(1, -0.01, 1, 0.99);
+    transition-delay: 0.8s;
+    opacity: 1;
+  }
+  @include xs {
+    opacity: 1;
+  }
+  @include sm {
+    opacity: 1;
+  }
+  @include md {
+    opacity: 1;
+  }
+}
+
+// footer
+
+// .test {
+//   color: var(--orange_01);
+// }
+
+// menu
+
+div {
+  margin: 2rem 0;
 }

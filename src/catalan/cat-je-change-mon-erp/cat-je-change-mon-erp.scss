@@ -121,17 +121,20 @@
     background: #d6d6d6;
     @include xs {
       margin: 0;
-      height: 80vh;
+      height: auto;
     }
     @include sm {
       margin: 0;
-      height: 80vh;
+      min-height: 100vh;
+      height: auto;
     }
     @include md {
       margin: 0;
-      height: 80vh;
+      min-height: 100vh;
+      height: auto;
     }
   }
+
   .text {
     width: 55rem;
     display: flex;

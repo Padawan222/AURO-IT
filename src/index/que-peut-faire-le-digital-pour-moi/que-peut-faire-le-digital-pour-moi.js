@@ -556,38 +556,8 @@ window.addEventListener("scroll", () => {
     textContainer18.classList.add("animation-text-container-18");
   }
 });
-// text-container-19
 
-const textContainer19 = document.querySelector(".text-container-19");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = textContainer19.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    textContainer19.classList.add("animation-text-container-19");
-  }
-});
-// text-container-20
-
-const textContainer20 = document.querySelector(".text-container-20");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = textContainer20.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    textContainer20.classList.add("animation-text-container-20");
-  }
-}); // text-4
+// text-4
 
 const text4 = document.querySelector(".text-4");
 
@@ -845,38 +815,6 @@ window.addEventListener("scroll", () => {
     (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
   ) {
     text19.classList.add("active");
-  }
-});
-// text-20
-
-const text20 = document.querySelector(".text-20");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = text20.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
-  ) {
-    text20.classList.add("active");
-  }
-});
-// text-21
-
-const text21 = document.querySelector(".text-21");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = text21.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
-  ) {
-    text21.classList.add("active");
   }
 });
 

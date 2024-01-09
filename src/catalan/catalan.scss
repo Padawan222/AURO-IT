@@ -229,6 +229,7 @@
     flex-direction: row nowrap;
     margin: 0;
     @include xs {
+      height: 80rem;
       flex-direction: column;
     }
     @include sm {

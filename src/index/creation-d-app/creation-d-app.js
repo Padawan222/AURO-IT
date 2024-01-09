@@ -348,22 +348,7 @@ window.addEventListener("scroll", () => {
     textContainer5.classList.add("animation-text-container-5");
   }
 });
-// text-container-6
 
-const textContainer6 = document.querySelector(".text-container-6");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = textContainer6.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    textContainer6.classList.add("animation-text-container-6");
-  }
-});
 // text-container-7
 
 const textContainer7 = document.querySelector(".text-container-7");
@@ -511,22 +496,7 @@ window.addEventListener("scroll", () => {
     text6.classList.add("active");
   }
 });
-// text-7
 
-const text7 = document.querySelector(".text-7");
-
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight } = document.documentElement;
-
-  const topElementToTopViewport = text7.getBoundingClientRect().top;
-
-  if (
-    scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
-  ) {
-    text7.classList.add("active");
-  }
-});
 // text-8
 
 const text8 = document.querySelector(".text-8");

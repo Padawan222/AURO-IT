@@ -248,6 +248,7 @@
   margin: 0;
   background: var(--orange_02);
   border-radius: 0.8rem;
+
   animation: menu-xs-langue-container-open 1s;
   @keyframes menu-xs-langue-container-open {
     0% {
@@ -289,6 +290,7 @@
   justify-content: center;
   align-items: center;
   margin: 1.5rem 1rem;
+  text-align: center;
 }
 
 .animation-menu-general-xs-container {
