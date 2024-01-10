@@ -689,7 +689,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "spanish.html",
       template: "./src/spanish/spanish.html",
-      chunks: ["spanish"],
+      chunks: ["spanish1"],
     }),
     new HtmlWebpackPlugin({
       filename: "spa-creation-d-app.html",

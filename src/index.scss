@@ -89,6 +89,7 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
+    margin-top: 4rem;
     @include xs {
       width: calc(100% - 4rem);
     }

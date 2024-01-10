@@ -283,6 +283,9 @@
     font-family: var(--font-family-strasua);
     color: var(--orange_02);
     letter-spacing: 0.2rem;
+    @include xs {
+      width: 25rem;
+    }
   }
 }
 .menu-general-xs-container {

@@ -172,7 +172,7 @@
 }
 .text-container-2 {
   z-index: 0;
-  margin-top: 4rem;
+  margin-top: 4rem !important;
   opacity: 0;
 }
 .animation-text-container-2 {
@@ -488,7 +488,7 @@
   }
 }
 .text-container-20 {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
   opacity: 0;
   z-index: 0;
 }

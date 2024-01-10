@@ -120,14 +120,18 @@
     background: #d6d6d6;
     @include xs {
       margin: 0;
+      height: auto;
+      min-height: 100vh;
     }
     @include sm {
       margin: 0;
-      min-height: 80vh;
+      min-height: 100vh;
+      height: auto;
     }
     @include md {
       margin: 0;
-      min-height: 80vh;
+      min-height: 100vh;
+      height: auto;
     }
     @include xxl {
       min-height: 100vh;
@@ -178,7 +182,7 @@
 }
 .text-container-2 {
   z-index: 0;
-  margin-top: 4rem;
+  margin-top: 4rem !important;
   opacity: 0;
 }
 .animation-text-container-2 {
@@ -199,6 +203,7 @@
 .text-container-4 {
   z-index: 0;
   opacity: 0;
+  margin-bottom: 4rem !important;
 }
 .animation-text-container-4 {
   animation: animation-text-container-4 2s;

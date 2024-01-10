@@ -171,7 +171,7 @@
 
   .text-container-2 {
     z-index: 0;
-    margin-top: 4rem;
+    margin-top: 4rem !important;
     opacity: 0;
   }
   .animation-text-container-2 {
@@ -192,7 +192,7 @@
   .text-container-4 {
     z-index: 0;
     opacity: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 4rem !important;
   }
   .animation-text-container-4 {
     animation: animation-text-container-4 2s;
