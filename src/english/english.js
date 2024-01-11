@@ -308,7 +308,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     sousTitre1.classList.add("active");
   }
@@ -325,7 +325,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     sousTitre2.classList.add("active");
   }
@@ -342,7 +342,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     sousTitre3.classList.add("active");
   }
@@ -359,7 +359,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer1.classList.add("active");
   }
@@ -376,7 +376,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer3.classList.add("active");
   }
@@ -393,7 +393,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer4.classList.add("active");
   }
@@ -459,7 +459,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer8.classList.add("animation-text-container-8");
   }
@@ -476,7 +476,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     DivTextContainer1.classList.add("active");
   }
@@ -493,7 +493,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     DivTextContainer2.classList.add("active");
   }
@@ -510,7 +510,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     DivTextContainer3.classList.add("active");
   }
@@ -527,7 +527,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text1.classList.add("active");
   }
@@ -544,7 +544,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text2.classList.add("active");
   }
@@ -561,7 +561,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text3.classList.add("active");
   }
@@ -578,7 +578,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text4.classList.add("active");
   }
@@ -595,7 +595,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text5.classList.add("active");
   }
@@ -612,7 +612,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text6.classList.add("active");
   }
@@ -629,7 +629,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text7.classList.add("active");
   }
@@ -646,7 +646,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text8.classList.add("active");
   }
@@ -663,7 +663,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text9.classList.add("active");
   }

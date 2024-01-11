@@ -318,6 +318,7 @@
 
   .text-container-11 {
     z-index: 0;
+    margin-bottom: 4rem !important;
     opacity: 0;
   }
 
@@ -327,25 +328,6 @@
     @keyframes animation-text-container-11 {
       0% {
         transform: translateX(100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-  }
-  .text-container-12 {
-    margin-bottom: 4rem !important;
-    opacity: 0;
-    z-index: 0;
-  }
-  .animation-text-container-12 {
-    animation: animation-text-container-12 2s;
-    opacity: 1;
-    @keyframes animation-text-container-12 {
-      0% {
-        transform: translateX(-100%);
         opacity: 0;
       }
       100% {

@@ -309,7 +309,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     sousTitre1.classList.add("active");
   }

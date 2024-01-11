@@ -309,7 +309,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer2.classList.add("animation-text-container-2");
   }
@@ -326,7 +326,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer4.classList.add("animation-text-container-4");
   }
@@ -343,7 +343,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer5.classList.add("animation-text-container-5");
   }
@@ -360,7 +360,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer7.classList.add("animation-text-container-7");
   }
@@ -376,7 +376,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer8.classList.add("animation-text-container-8");
   }
@@ -392,7 +392,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer9.classList.add("animation-text-container-9");
   }
@@ -408,7 +408,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer10.classList.add("animation-text-container-10");
   }
@@ -424,25 +424,25 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     textContainer11.classList.add("animation-text-container-11");
   }
 });
-// text-container-12
+// text-container-6
 
-const textContainer12 = document.querySelector(".text-container-12");
+const textContainer6 = document.querySelector(".text-container-6");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = textContainer12.getBoundingClientRect().top;
+  const topElementToTopViewport = textContainer6.getBoundingClientRect().top;
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
-    textContainer12.classList.add("animation-text-container-12");
+    textContainer6.classList.add("animation-text-container-6");
   }
 });
 
@@ -457,7 +457,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text4.classList.add("active");
   }
@@ -474,7 +474,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text5.classList.add("active");
   }
@@ -491,7 +491,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text6.classList.add("active");
   }
@@ -508,7 +508,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text8.classList.add("active");
   }
@@ -524,7 +524,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text9.classList.add("active");
   }
@@ -540,7 +540,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text10.classList.add("active");
   }
@@ -556,7 +556,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text11.classList.add("active");
   }
@@ -573,26 +573,26 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
     text12.classList.add("active");
   }
 });
 
-// text-13
+// text-7
 
-const text13 = document.querySelector(".text-13");
+const text7 = document.querySelector(".text-7");
 
 window.addEventListener("scroll", () => {
   const { scrollTop, clientHeight } = document.documentElement;
 
-  const topElementToTopViewport = text13.getBoundingClientRect().top;
+  const topElementToTopViewport = text7.getBoundingClientRect().top;
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.9
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1
   ) {
-    text13.classList.add("active");
+    text7.classList.add("active");
   }
 });
 

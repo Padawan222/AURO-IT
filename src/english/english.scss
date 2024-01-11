@@ -89,7 +89,7 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
-    margin-top: 4rem !important ;
+    margin-top: 4rem;
     @include xs {
       width: calc(100% - 4rem);
     }
@@ -124,9 +124,12 @@
     }
   }
   .text-container-1 {
-    margin: 2rem;
-    height: 28rem;
+    display: flex;
+    align-items: center;
+    height: auto;
+
     width: 110rem;
+    margin: 2rem;
     border-radius: 3rem;
     position: relative;
     z-index: 0;
@@ -148,11 +151,10 @@
     }
     p {
       color: white;
-      margin: 0 2rem;
+      margin: 2rem;
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
-      margin-bottom: 2rem;
     }
   }
   .text-container-1::before {
@@ -226,11 +228,12 @@
   .text-container-2 {
     display: flex;
     flex-direction: row nowrap;
+    height: auto;
+    min-height: 26rem;
 
     margin: 0;
     @include xs {
       flex-direction: column;
-      height: 80rem;
     }
     @include sm {
       flex-direction: column;
@@ -243,6 +246,7 @@
   .div-text-container-1 {
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 3rem;
     flex: 1;
     height: auto;
@@ -307,12 +311,11 @@
   .div-text-container-2 {
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 3rem;
     flex: 1;
-
     height: auto;
     width: auto;
-
     margin: 2rem;
     margin: 2rem;
     position: relative;
@@ -320,6 +323,7 @@
     overflow: hidden;
     @include xs {
       height: auto;
+      min-height: 24rem;
       width: calc(100% - 4rem);
     }
     @include sm {
@@ -353,7 +357,7 @@
   .div-text-container-2::before {
     content: "";
     position: absolute;
-    top: -20rem;
+    top: -22rem;
     background: var(--green_01);
     height: 100%;
     width: 100%;
@@ -372,6 +376,8 @@
   }
   .div-text-container-3 {
     display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 3rem;
     flex: 1;
     height: auto;
@@ -381,6 +387,7 @@
     z-index: 0;
     overflow: hidden;
     @include xs {
+      min-height: 24rem;
       height: auto;
       width: calc(100% - 4rem);
     }
@@ -399,7 +406,7 @@
     }
     p {
       color: white;
-      margin: 2rem 2rem 1rem 2rem;
+      margin: 1rem 2rem 1rem 2rem;
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
@@ -438,7 +445,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8rem;
+    height: auto;
     width: 58rem;
     border-radius: 3rem;
     position: relative;
@@ -461,7 +468,7 @@
     }
     p {
       color: white;
-      margin: 1rem 2rem 1rem 2rem;
+      margin: 2rem;
       letter-spacing: 0.1rem;
       font-size: 1.8rem;
       font-weight: 700;
@@ -747,7 +754,7 @@
     background: var(--green_01);
     color: white;
     border-radius: 3rem;
-    margin-bottom: 4rem !important;
+    margin-bottom: 4rem;
     opacity: 0;
     @include xs {
       height: auto;
